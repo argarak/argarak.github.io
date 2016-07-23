@@ -1,0 +1,16 @@
+extends header
+
+block content
+  link(rel="stylesheet" href="/css/index.css")
+
+  script(src="/js/processing.min.js")
+  canvas(data-processing-sources="/processing/Hex.pde /processing/YAHG.pde")
+
+  #timeGreeting(ng-controller="indexGreeting")
+    noscript
+      | <i>Hello</i>, and welcome to <b>Argarak's Nexus</b>
+    | <i>{{getGreeting()}}</i>, and welcome to <b>Argarak's Nexus</b>  
+
+  #overlay
+  #version
+    | v3 - Angled Ink-Pug

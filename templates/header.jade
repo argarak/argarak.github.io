@@ -1,0 +1,34 @@
+doctype html
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+  title
+    block title
+      = locals.name
+  meta(name="description" content="")
+  meta(name="viewport" content="width=device-width")
+  
+  // CSS (see config.json for referenced files)
+  each href in locals.css 
+    link(rel="stylesheet" href=href)
+  
+  each src in locals.js
+    script(src=src)
+    
+mixin navbarEntry(href, src, tooltip, index)
+  li
+    a(href=href)
+      img(src=src)
+    md-tooltip(md-direction="right" class="tooltip" + index)= tooltip  
+    
+body
+  .app(ng-app="nexus" layout="column")
+    noscript
+      .noscript-message= locals.noscript
+    .container(layout="row" ng-controller="mainController" flex)
+      md-sidenav#sidenav(md-is-locked-open="$mdMedia('gt-md')" md-component-id="left" class="md-sidenav-left")
+        md-content(layout-padding="" layout="column" layout-align="center")
+          each item in locals.navbar
+            +navbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])      
+      md-content#main-content(flex)
+        block content

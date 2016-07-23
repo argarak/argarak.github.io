@@ -1,0 +1,58 @@
+{
+    "ignore": ["templates/*.#"],
+    "locals": {
+        "url": "http://localhost:8080",
+        "name": "Argarak's Nexus",
+        "navbar": [
+            ["nexus.svg",     "/",          "Home",      0],
+            ["about.svg",     "/about",     "About",     1],
+            ["blog.svg",      "/blog",      "Blog",      2],
+            ["programs.svg",  "/programs",  "Programs",  3],
+            ["archive.svg",   "/archive",   "Archive",   4],
+            ["microblog.svg", "/microblog", "Microblog", 5],
+            ["rss.svg",       "/feed.xml",  "RSS",       6]
+        ],
+        "css": [
+            "/css/angular-material.min.css",
+            "/css/main.css",
+            "/css/flow-text.css",
+            "/js/highlight/default.css"
+        ],
+        "js": [
+            "/js/angular.min.js",
+            "/js/angular-animate.min.js",
+            "/js/angular-aria.min.js",
+            "/js/angular-messages.min.js",
+            "/js/angular-material.min.js",
+            "/js/highlight/highlight.pack.js",
+            "/js/angularMain.js",
+            "/js/feednami.min.js"
+        ],
+        "licenseTitle": "Licensing Information",
+        "licenseText": "All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.",
+        "dataTitle": "Article Data",
+        "noscript": "This site really sucks without Javascript enabled... you will miss proper styling, an animated background and Angular support for the rest of the pages, which gives them their full functionality... so please enable it."
+    },
+    "plugins": [
+        "./plugins/paginator.coffee",
+        "./node_modules/wintersmith-stylus/"
+    ],
+    "require": {
+        "moment": "moment",
+        "_": "underscore",
+        "typogr": "typogr"
+    },
+    "jade": {
+        "pretty": true
+    },
+    "markdown": {
+        "smartLists": true,
+        "smartypants": true
+    },
+    "paginator": {
+        "articles": "articles",
+        "template": "blog.jade",
+        "first": "/blog/index.html",
+        "perPage": 900
+    }
+}

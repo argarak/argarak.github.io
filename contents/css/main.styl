@@ -1,0 +1,136 @@
+
+body-color      = #111
+sidenav-color   = #010101
+navbarColors    = (#F44336 #E91E63 #9C27B0 #673AB7 #3F51B5 #2196F3 #009688)
+post-width      = 70vw
+
+important-background(color)
+  background color !important
+
+@font-face
+  font-family Roboto
+  font-style normal
+  font-weight 300
+  src url(/font/roboto/Roboto-Light.eot)
+  src url(/font/roboto/Roboto-Light.woff2) format('woff2'),
+      url(/font/roboto/Roboto-Light.woff) format('woff'),
+      url(/font/roboto/Roboto-Light.ttf) format('truetype');
+
+@font-face
+  font-family 'Material Icons'
+  font-style normal
+  font-weight 300
+  src url(/font/material-design-icons/Material-Design-Icons.eot)
+  src url(/font/material-design-icons/Material-Design-Icons.woff2) format('woff2'),
+      url(/font/material-design-icons/Material-Design-Icons.woff) format('woff'),
+      url(/font/material-design-icons/Material-Design-Icons.ttf) format('truetype');
+
+@font-face
+  font-family "Ubuntu-Mono"
+  font-style normal
+  font-weight 300
+  src url(/font/ubuntu-mono/UbuntuMono-R.ttf) format('truetype');
+  
+
+body
+  background body-color
+
+*
+  font-family Roboto, sans-serif
+  outline 0px none !important
+  line-height 1.5
+
+// From https://google.github.io/material-design-icons/
+.material-icons
+  font-family 'Material Icons'
+  font-weight normal
+  font-style normal
+  font-size 24px
+  display inline-block
+  line-height 1
+  text-transform none
+  letter-spacing normal
+  word-wrap normal
+  white-space nowrap
+  direction ltr
+  -webkit-font-smoothing antialiased
+  text-rendering optimizeLegibility
+  -moz-osx-font-smoothing grayscale
+  font-feature-settings 'liga'
+
+.app
+  height 100vh
+
+#sidenav
+  width 80px
+  z-index 999
+  *
+    background sidenav-color
+  md-content
+    height 100vh
+
+md-tooltip
+  margin-left 10px
+  *
+    border-radius 0 !important
+    padding 10px !important
+    *
+      font-size 17px !important
+      line-height 1 !important
+
+for colorIndex in range(0, length(navbarColors) - 1)
+  .tooltip{colorIndex} *
+    // Stylus did not work with the !important placed here
+    important-background(navbarColors[colorIndex])
+
+a
+  text-decoration none
+
+.hr-margin
+  margin-top 0
+
+.transparent
+  background rgba(0, 0, 0, 0)
+
+.more
+  float right
+
+.opaque-tooltip *
+  important-background(#000)
+
+#main-content
+  background-color body-color
+  color #bbb
+  #title
+    width 70vw
+    margin auto
+    font-size 60px
+    font-weight 300 !important
+  #post
+    width post-width
+    margin auto
+    font-weight 300 !important
+
+code
+code *
+  font-family "Ubuntu-Mono", Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif !important;
+
+.toolbar-padding
+  padding-bottom 10px
+
+#post p img
+  width post-width
+  padding 5px
+  border 15px solid #2c2c2c
+  filter brightness(0.4)
+
+.post-item
+  margin 0
+  margin-left 50px
+
+.noscript-message
+  margin auto
+  width 100vw
+  color white
+  text-align center
+  background #000

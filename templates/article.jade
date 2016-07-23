@@ -1,0 +1,20 @@
+extends header
+
+block prepend title
+  | #{ page.title + ' - '}
+
+block content
+  md-toolbar.md-tall.toolbar-padding
+    span(flex)
+    h1#title.md-toolbar-tools
+      span.md-flex= page.title
+      span(flex)
+      - alertLicense   = "\"" + locals.licenseTitle + "\", \"" + locals.licenseText + "\", \"I Agree\""
+      md-button.md-icon-button(ng-click="showAlert($event, " + alertLicense + ");" aria-label="Licensing")
+        md-tooltip.opaque-tooltip(md-direction="bottom")
+          | Licensing Info.
+        md-icon(md-svg-src="/icons/file.svg")
+      md-button.md-icon-button(aria-label="Date")
+        md-tooltip.opaque-tooltip(md-direction="bottom")= page.metadata.date
+        md-icon(md-svg-src="/icons/time.svg")
+  #post.flow-text!= typogr(page.html).typogrify()
