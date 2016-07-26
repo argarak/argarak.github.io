@@ -1,6 +1,6 @@
 hljs.initHighlightingOnLoad();
 
-var app = angular.module("nexus", ["ngMaterial", "ngAnimate"])
+var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox", "truncate"])
                  .config(function($mdThemingProvider) {
                      $mdThemingProvider.theme('default')
                                        .primaryPalette("red")

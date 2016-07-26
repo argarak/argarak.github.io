@@ -6,8 +6,8 @@ block prepend title
 block content
   md-toolbar.md-tall.toolbar-padding
     span(flex)
-    h1#title.md-toolbar-tools
-      span.md-flex= page.title
+    h1#title.md-toolbar-tools= page.title
+      span.md-flex
       span(flex)
       - alertLicense   = "\"" + locals.licenseTitle + "\", \"" + locals.licenseText + "\", \"I Agree\""
       md-button.md-icon-button(ng-click="showAlert($event, " + alertLicense + ");" aria-label="Licensing")

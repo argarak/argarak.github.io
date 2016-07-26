@@ -1,5 +1,8 @@
 extends header
 
+block prepend title
+  | Blog - 
+
 block content
   - var articleTitles = [];
   - for(var i = 0; i < articles.length; i++) {
@@ -33,15 +36,15 @@ block content
     #post.flow-text
       each article in articles
         - console.log(article)
-        md-card.transparent(ng-hide="hideObject[\"" + article.title + "\"]")
-          md-card-title
-            md-card-title-text
-              h2
-                .inline
-                  a(href=article.url)= article.title
-                    if article.hasMore
-                      a.more(href=article.url) >>
-          md-card-content
-            section.content
-              if article.intro.length > 0
-                != typogr(article.intro).typogrify()
+        .flex
+          md-card.no-shadow.transparent(ng-hide="hideObject[\"" + article.title + "\"]")
+            md-card-title
+              md-card-title-text
+                h2
+                  .inline
+                    a(href=article.url)= article.title
+                  hr.pink-hr          
+            md-card-content
+              section.content
+                if article.intro.length > 0
+                  != typogr(article.intro).typogrify()           

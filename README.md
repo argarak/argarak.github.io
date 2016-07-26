@@ -12,14 +12,25 @@ The code is a lot cleaner and smaller in size making it more efficient.
 However, now the website without Javascript is nearly useless.
 
 ## TODO
-* Responsive Design
+
 * Programs and Microblog sections
-* Titles for all pages
 * More backgrounds for index.jade
 * License headers
 
 ## License
 
 Copyright (c) 2016 Jakub Kukiełka
-Licensed under the Apache License (see LICENSE for more details).
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 

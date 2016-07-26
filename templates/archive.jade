@@ -1,5 +1,8 @@
 extends header
 
+block prepend title
+  | Archive - 
+
 block content
   - var archives = _.chain(env.helpers.getArticles(contents)).groupBy(function(item) {
   -   return item.date.getFullYear();

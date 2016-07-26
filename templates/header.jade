@@ -7,6 +7,7 @@ head
       = locals.name
   meta(name="description" content="")
   meta(name="viewport" content="width=device-width")
+  link(rel="shortcut icon" href="/favicon.ico?")
   
   // CSS (see config.json for referenced files)
   each href in locals.css 
@@ -26,9 +27,11 @@ body
     noscript
       .noscript-message= locals.noscript
     .container(layout="row" ng-controller="mainController" flex)
-      md-sidenav#sidenav(md-is-locked-open="$mdMedia('gt-md')" md-component-id="left" class="md-sidenav-left")
+      md-sidenav#sidenav(md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left")
         md-content(layout-padding="" layout="column" layout-align="center")
           each item in locals.navbar
-            +navbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])      
+            +navbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])
+      md-button.sidenav-fab.md-fab.md-fab-bottom-right(hide-gt-sm aria-label="FAB" ng-click="openLeftMenu()")
+        md-icon(md-svg-src="/icons/menu.svg")
       md-content#main-content(flex)
         block content
