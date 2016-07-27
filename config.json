@@ -24,6 +24,7 @@
             "/js/angular-aria.min.js",
             "/js/angular-messages.min.js",
             "/js/angular-material.min.js",
+            "/js/angular-sanitize.js",
             "/js/highlight/highlight.pack.js",
             "/js/mdLightbox.js",
             "/js/angularMain.js",
@@ -33,7 +34,9 @@
         "licenseTitle": "Licensing Information",
         "licenseText": "All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.",
         "dataTitle": "Article Data",
-        "noscript": "This site really sucks without Javascript enabled... you will miss proper styling, an animated background and Angular support for the rest of the pages, which gives them their full functionality... so please enable it."
+        "noscript": "This site really sucks without Javascript enabled... you will miss proper styling, an animated background and Angular support for the rest of the pages, which gives them their full functionality... so please enable it.",
+        "noteDelete": "<a href='https://pumpyourself.com/argarak'>argarak</a> deleted a note",
+        "imageDelete": "<a href='https://pumpyourself.com/argarak'>argarak</a> deleted an image"
     },
     "plugins": [
         "./plugins/paginator.coffee",

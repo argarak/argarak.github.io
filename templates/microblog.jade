@@ -4,5 +4,15 @@ block prepend title
   | Microblog - 
 
 block content
-  #microblog(ng-controller="microblogController")
-    #posts {{getPosts()}}
+  #post.flex-items(flex ng-controller="microblogController" ng-init="fetch()")
+    md-progress-circular.progress-fixed(ng-hide="articlesLoaded" md-mode="indeterminate")
+    md-list(flex)
+      md-list-item.md-3-line(ng-repeat="item in entries" ng-click="null" ng-href="{{item.link}}"
+                             ng-if="item.description != null && item.description != \"" + 
+                             locals.noteDelete + "\" && item.description != \"" + 
+                             locals.imageDelete + "\"") 
+        img.md-avatar(ng-src="{{image}}" aria-label="{{item.author}}")
+        .md-list-item-next(layout="column")
+          h3 {{item.author}}
+          h4 {{formatDate(item.date)}}
+          p(ng-bind-html="item.description")

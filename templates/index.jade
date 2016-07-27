@@ -1,8 +1,12 @@
 extends header
 
+block meta
+  meta(name="Description" content="A development blog written by an unexperienced developer. " +
+  "Mostly about web development and microcontroller based projects.")
+
 block content
   link(rel="stylesheet" href="/css/index.css")
-
+  
   script(src="/js/processing.min.js")
   canvas(data-processing-sources="/processing/Hex.pde /processing/YAHG.pde")
 

@@ -1,6 +1,6 @@
 hljs.initHighlightingOnLoad();
 
-var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox", "truncate"])
+var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox", "truncate", "ngSanitize"])
                  .config(function($mdThemingProvider) {
                      $mdThemingProvider.theme('default')
                                        .primaryPalette("red")
@@ -121,36 +121,56 @@ app.controller("blogController", function($scope, $timeout, $q, $log, $rootScope
     }
 });
 
-app.controller("microblogController", function($scope) {
-    $scope.get = function() {
-        var url = 'https://pump2rss.com/feed/argarak@pumpyourself.com.atom';
+app.controller("programsController", function($scope, $http) {
+    $scope.method = "GET";
+    $scope.url = "https://api.github.com/users/argarak/repos";
+    $scope.repo = '/icons/repo.svg';
+    $scope.programsLoaded = false;
+
+    $scope.fetch = function() {
+        $scope.code = null;
+        $scope.response = null;
+
+        $http({method: $scope.method, url: $scope.url}).
+        then(function(response) {
+            $scope.status = response.status;
+            $scope.data = response.data;
+            $scope.programsLoaded = true;
+        }, function(response) {
+            $scope.data = response.data || "Request failed";
+            $scope.status = response.status;
+            $scope.programsLoaded = true;
+        });
+    }
+
+    $scope.formatDate = function(date) {
+        return date.replace(/[^\d.:-]/g, ' ');
+    }
+});
+
+app.controller("microblogController", function($scope, $sce) {
+    $scope.image = "https://avatars0.githubusercontent.com/u/13645600?v=3&s=460";
+    $scope.articlesLoaded = false;
+    var self = this;
+
+    $scope.fetch = function() {
+        var url = "https://pump2rss.com/feed/argarak@pumpyourself.com.atom";
         feednami.load(url, function(result) {
             if(result.error) {
                 console.log(result.error);
             } else {
-                for(var i = 0; i < result.feed.entries.length; i++) {
-                    if(result.feed.entries[i].description != null &&
-                       result.feed.entries[i].description != "<a href='https://pumpyourself.com/argarak'>argarak</a> deleted a note" &&
-                       result.feed.entries[i].description != "<a href='https://pumpyourself.com/argarak'>argarak</a> deleted an image") {
-                     
-                    }
-                }
+                $scope.entries = result.feed.entries;
+                $scope.articlesLoaded = true;
+                $scope.$apply();
             }
         });
+    }
 
+    $scope.trustHtml = function(html) {
+        
+    }
+
+    $scope.formatDate = function(date) {
+        return date.replace(/[^\d.:-]/g, ' ');
     }
 });
-
-/* app.directive('CustomDirective', function(){
- *     return {
- *         restrict:  'E',
- *         link: function(scope, element, attrs){
- *             scope.$watch('invoice_html_template', function(){
- *                 var template = scope.invoice_html_template;
- *                 element.html(template);
- *                 $compile(element.contents())(scope);
- *             });
- *         },
- *         template: '<div>{{$scope.invoiceTemplate}}</div>'
- *     }
- * });*/
