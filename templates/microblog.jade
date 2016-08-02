@@ -1,18 +1,15 @@
-extends header
-
-block prepend title
-  | Microblog - 
-
-block content
-  #post.flex-items(flex ng-controller="microblogController" ng-init="fetch()")
-    md-progress-circular.progress-fixed(ng-hide="articlesLoaded" md-mode="indeterminate")
-    md-list(flex)
-      md-list-item.md-3-line(ng-repeat="item in entries" ng-click="null" ng-href="{{item.link}}"
-                             ng-if="item.description != null && item.description != \"" + 
-                             locals.noteDelete + "\" && item.description != \"" + 
-                             locals.imageDelete + "\"") 
-        img.md-avatar(ng-src="{{image}}" aria-label="{{item.author}}")
-        .md-list-item-next(layout="column")
-          h3 {{item.author}}
-          h4 {{formatDate(item.date)}}
-          p(ng-bind-html="item.description")
+#post.flex-items(flex ng-controller="microblogController" ng-init="fetch()")
+  md-progress-circular.progress-fixed(ng-hide="articlesLoaded" md-mode="indeterminate")
+  md-list(flex)
+    md-list-item.md-3-line(ng-repeat="item in entries"
+                           ng-if="item.description != null && item.description != \"" + 
+                           locals.noteDelete + "\" && item.description != \"" + 
+                           locals.imageDelete + "\"") 
+      img.md-avatar(ng-src="{{image}}" aria-label="{{item.author}}")
+      .md-list-item-next(layout="column")
+        h3 {{item.author}}
+        h4 {{formatDate(item.date)}}
+        p(ng-bind-html="item.description")
+        a.permalink(ng-href="{{item.link}}") 
+          md-icon.pink-link(md-svg-src="/icons/link.svg")
+          |  Permalink

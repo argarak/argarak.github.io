@@ -36,7 +36,7 @@ I use the Dvorak keyboard but I am awful at typing - ironic to say for a program
 
 ------
 
-Send complaints here: <kzer-za@cryptolab.net>.
+For e-mail protection, decode this base32 string to see my e-mail address. `NN5GK4RNPJQUAY3SPFYHI33MMFRC43TFOQFA====`. (In GNU/Linux open up a terminal and use the `echo` command to output the string to stdout and then pipe `|` it into the command `base32 -d`.)
 
 If you want to send encrypted mail, use my public key: [https://sks-keyservers.net/pks/lookup?op=get&search=0x8D8D23075F93F925](https://sks-keyservers.net/pks/lookup?op=get&search=0x8D8D23075F93F925).
 

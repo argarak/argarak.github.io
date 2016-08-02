@@ -1,0 +1,235 @@
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/font/roboto/Roboto-Light.eot");
+  src: url("/font/roboto/Roboto-Light.woff2") format('woff2'), url("/font/roboto/Roboto-Light.woff") format('woff'), url("/font/roboto/Roboto-Light.ttf") format('truetype');
+}
+@font-face {
+  font-family: "Ubuntu-Mono";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/font/ubuntu-mono/UbuntuMono-R.ttf") format('truetype');
+}
+body {
+  background: #111;
+}
+* {
+  font-family: Roboto, sans-serif;
+  outline: 0px none !important;
+  line-height: 1.5;
+}
+.app {
+  height: 100vh;
+}
+#sidenav {
+  list-style-type: none;
+  width: 80px !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  z-index: 999;
+}
+#sidenav * {
+  background: #010101;
+}
+#sidenav md-content {
+  height: 100vh;
+  width: 80px !important;
+}
+#sidenav md-content li {
+  max-width: 64px !important;
+}
+md-tooltip {
+  margin-left: 10px;
+}
+md-tooltip * {
+  border-radius: 0 !important;
+  padding: 10px !important;
+}
+md-tooltip * * {
+  font-size: 17px !important;
+  line-height: 1 !important;
+}
+.tooltip0 * {
+  background: #f44336 !important;
+}
+.tooltip1 * {
+  background: #e91e63 !important;
+}
+.tooltip2 * {
+  background: #9c27b0 !important;
+}
+.tooltip3 * {
+  background: #673ab7 !important;
+}
+.tooltip4 * {
+  background: #3f51b5 !important;
+}
+.tooltip5 * {
+  background: #2196f3 !important;
+}
+.tooltip6 * {
+  background: #009688 !important;
+}
+a {
+  text-decoration: none;
+}
+.hr-margin {
+  margin-top: 0;
+}
+.transparent {
+  background: rgba(0,0,0,0);
+}
+.more {
+  float: right;
+}
+.opaque-tooltip * {
+  background: #000 !important;
+}
+#main-content {
+  background-color: #111;
+  color: #bbb;
+}
+#main-content #title {
+  width: 70vw;
+  font-size: 3vw;
+  margin: auto;
+  font-weight: 300 !important;
+  line-height: 1 !important;
+}
+@media screen and (max-width: 1450px) {
+  #main-content #title {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  #main-content #title {
+    font-size: 5vw;
+  }
+}
+@media screen and (max-width: 470px) {
+  #main-content #title {
+    font-size: 7vw;
+  }
+}
+#main-content #post {
+  width: 70vw;
+  margin: auto;
+  font-weight: 300 !important;
+}
+@media screen and (max-width: 960px) {
+  #main-content #post {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  #main-content #post {
+    width: 90vw;
+  }
+}
+code,
+code * {
+  font-family: "Ubuntu-Mono", Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif !important;
+}
+.toolbar-padding {
+  top: 0;
+  height: 200px !important;
+  min-height: unset !important;
+  max-height: unset !important;
+  padding-bottom: 50px;
+}
+.figure {
+  text-align: center;
+}
+.figure img {
+  max-width: 20vw;
+  padding: 5px;
+  border: 15px solid #2c2c2c;
+  filter: brightness(0.4);
+}
+.figure .caption {
+  background: #010101;
+  padding: 10px;
+}
+.post-item {
+  margin: 0;
+  margin-left: 50px;
+}
+.noscript-message {
+  margin: auto;
+  width: 100vw;
+  color: #fff;
+  text-align: center;
+  background: #000;
+}
+strong {
+  font-weight: bold;
+}
+.pink-hr {
+  color: #e91e63;
+  border: 1px solid;
+}
+#input-0 {
+  color: #000;
+  width: 100vw;
+}
+.image-dialog {
+  text-align: center;
+  overflow: hidden;
+}
+.image-dialog img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.sidenav-fab {
+  z-index: 999 !important;
+}
+md-dialog {
+  background-color: #111 !important;
+}
+.no-shadow {
+  box-shadow: none !important;
+}
+md-list-item {
+  margin: 20px 0;
+}
+md-list-item .md-list-item-next * {
+  margin: 0 !important;
+}
+.repo-icon {
+  margin: 0 32px !important;
+}
+.sub-programs {
+  margin-bottom: 32px;
+}
+.progress-fixed {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.color-bar {
+  postiton: relative;
+  height: 88px;
+  width: 3px;
+}
+.md-avatar {
+  border-radius: 0 !important;
+}
+.small-lang {
+  font-size: 15px;
+  float: right;
+}
+blockquote {
+  padding-left: 30px;
+  border-left: 3px solid #ccc;
+}
+.permalink {
+  display: flex;
+}
+.permalink .pink-link {
+  margin-right: 5px !important;
+  color: #e91e63;
+}

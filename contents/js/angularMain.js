@@ -1,6 +1,23 @@
-hljs.initHighlightingOnLoad();
+/*
+ * Copyright (c) 2016 Jakub Kukiełka
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 
-var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox", "truncate", "ngSanitize"])
+var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
+                                   "truncate", "ngSanitize", "ui.router",
+                                   "hj.gsapifyRouter"])
                  .config(function($mdThemingProvider) {
                      $mdThemingProvider.theme('default')
                                        .primaryPalette("red")
@@ -9,6 +26,52 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox", "tru
                      $mdThemingProvider.theme('light')
                                        .primaryPalette("red")
                                        .accentPalette("pink");
+                 })
+                 .config(["$stateProvider", "$urlRouterProvider", "gsapifyRouterProvider", function($stateProvider, $urlRouterProvider, gsapifyRouterProvider) {
+                     gsapifyRouterProvider.defaults = {
+                         enter: 'fade',
+                         leave: 'fade',
+                     };
+
+                     gsapifyRouterProvider.transition('slideLeft', {
+                         duration: 10,
+                         ease: 'Quint.easeInOut',
+                         css: {
+                             y: '-100%',
+                         }
+                     });
+
+                     gsapifyRouterProvider.transition('slideRight', {
+                         duration: 10,
+                         ease: 'Quint.easeInOut',
+                         delay: 0.5,
+                         css: {
+                             y: '100%',
+                         }
+                     });
+
+                     $urlRouterProvider.otherwise("/home");
+
+                     $stateProvider
+                         .state("navbar", {
+                             url: "/:name",
+                             templateUrl: function($stateParams) {
+                                 return "/" + $stateParams.name + "/index.html";
+                             },
+                             controller: function($rootScope, $scope, $stateParams) {
+                                 $rootScope.$stateParams = $stateParams;
+                                 $scope.name = $stateParams.name;
+                             }
+                         })
+                         .state("blog", {
+                             url: "/articles/:name",
+                             templateUrl: function($stateParams) {
+                                 return "/articles/" + $stateParams.name + "/index.html";
+                             }
+                         });
+                 }])
+                 .run(function() {
+                     hljs.initHighlightingOnLoad();
                  });
 
 app.controller("mainController", function($scope, $mdSidenav, $mdDialog) {
@@ -164,10 +227,6 @@ app.controller("microblogController", function($scope, $sce) {
                 $scope.$apply();
             }
         });
-    }
-
-    $scope.trustHtml = function(html) {
-        
     }
 
     $scope.formatDate = function(date) {

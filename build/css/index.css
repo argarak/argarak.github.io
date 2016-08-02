@@ -1,0 +1,87 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#timeGreeting {
+  font-size: 3rem;
+  color: #fff;
+  z-index: 333;
+  position: fixed;
+  right: 20px;
+  bottom: calc(50% - 3rem);
+  width: 40vw;
+  text-align: right;
+}
+#main {
+  z-index: 1;
+  padding: 50px;
+  margin-left: 90px;
+}
+#overlay {
+  position: absolute;
+  z-index: 30;
+  background: rgba(0,0,0,0.96);
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+}
+#version {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  right: 0;
+  color: #222;
+  margin: 15px;
+}
+@media screen and (max-width: 960px) {
+  #version {
+    right: unset;
+    left: 0;
+  }
+}
+@media screen and (max-width: 1600px) {
+  #timeGreeting {
+    width: 45vw;
+  }
+}
+@media screen and (max-width: 1420px) {
+  #timeGreeting {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #timeGreeting {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 1065px) {
+  #timeGreeting {
+    font-size: 2.7rem;
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 993px) {
+  #timeGreeting {
+    font-size: 4vw;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+  }
+}
+@media screen and (max-width: 560px) {
+  #timeGreeting {
+    font-size: 6vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  #timeGreeting {
+    word-wrap: break-word;
+  }
+}
+@media screen and (max-width: 400px) {
+  #timeGreeting {
+    font-size: 7vw;
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Blog - Argarak's Nexus
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.ico?">
+  <!-- CSS (see config.json for referenced files)-->
+  <link rel="stylesheet" href="/css/angular-material.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/flow-text.css">
+  <link rel="stylesheet" href="/js/highlight/default.css">
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/angular-animate.min.js"></script>
+  <script src="/js/angular-aria.min.js"></script>
+  <script src="/js/angular-messages.min.js"></script>
+  <script src="/js/angular-material.min.js"></script>
+  <script src="/js/angular-sanitize.js"></script>
+  <script src="/js/highlight/highlight.pack.js"></script>
+  <script src="/js/mdLightbox.js"></script>
+  <script src="/js/angularMain.js"></script>
+  <script src="/js/feednami.min.js"></script>
+  <script src="/js/truncate.js"></script>
+</head>
+<body>
+  <div ng-app="nexus" layout="column" class="app">
+    <noscript>
+      <div class="noscript-message">This site really sucks without Javascript enabled... you will miss proper styling, an animated background and Angular support for the rest of the pages, which gives them their full functionality... so please enable it.</div>
+    </noscript>
+    <div layout="row" ng-controller="mainController" flex class="container">
+      <md-sidenav id="sidenav" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left">
+        <md-content layout-padding="" layout="column" layout-align="center">
+          <li class="navbarLi"><a href="/"><img src="/navbar/nexus.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip0">Home</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/about"><img src="/navbar/about.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip1">About</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/blog"><img src="/navbar/blog.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip2">Blog</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/programs"><img src="/navbar/programs.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip3">Programs</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/archive"><img src="/navbar/archive.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip4">Archive</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/microblog"><img src="/navbar/microblog.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip5">Microblog</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/feed.xml"><img src="/navbar/rss.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip6">RSS</md-tooltip>
+          </li>
+        </md-content>
+      </md-sidenav>
+      <md-button hide-gt-sm aria-label="FAB" ng-click="openLeftMenu()" class="sidenav-fab md-fab md-fab-bottom-right">
+        <md-icon md-svg-src="/icons/menu.svg"></md-icon>
+      </md-button>
+      <md-content id="main-content" flex>
+        <div ng-controller="blogController as ctrl" ng-init="createHideObject([&quot;The Evolution of Argarak's Nexus&quot;,&quot;Operating System Review - AROS&quot;,&quot;A new series! Reviews of obscure operating systems.&quot;,&quot;I've finally took the time to create a half-decent Emacs config.&quot;])" class="blog">
+          <md-toolbar layout="row" flex layout-align="center">
+            <div class="md-toolbar-tools"><span flex></span>
+              <md-autocomplete ng-disabled="ctrl.isDisabled" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text-change="ctrl.searchTextChange(ctrl.searchText)" md-search-text="ctrl.searchText" md-selected-item-change="ctrl.selectedItemChange(item, [&quot;/articles/nexus-evolution/&quot;,&quot;/articles/aros-review/&quot;,&quot;/articles/a-new-series/&quot;,&quot;/articles/finally-a-good-conf/&quot;])" md-items="item in ctrl.querySearch(ctrl.searchText, [&quot;The Evolution of Argarak's Nexus&quot;,&quot;Operating System Review - AROS&quot;,&quot;A new series! Reviews of obscure operating systems.&quot;,&quot;I've finally took the time to create a half-decent Emacs config.&quot;])" md-item-text="item.display" md-min-length="0" placeholder="Search blog posts...">
+                <md-item-template><span md-highlight-text="ctrl.searchText" md-highlight-flags="^i" class="autocomplete-text">{{item.display}}</span></md-item-template>
+                <md-not-found>No blog posts matching "{{ctrl.searchText}}" were found.</md-not-found>
+              </md-autocomplete>
+            </div>
+          </md-toolbar>
+          <div id="post" class="flow-text">
+            <div class="flex">
+              <md-card ng-hide="hideObject[&quot;The Evolution of Argarak's Nexus&quot;]" class="no-shadow transparent">
+                <md-card-title>
+                  <md-card-title-text>
+                    <h2>
+                      <div class="inline"><a href="/articles/nexus-evolution/">The Evolution of Argarak's Nexus</a></div>
+                      <hr class="pink-hr">
+                    </h2>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                  <section class="content"><p>Argarak’s Nexus has has drastically evolved in a short period of time (approximately one year). Let’s take a look back at what Argarak’s Nexus&nbsp;was.</p>
+<hr>
+<p><strong><span class="caps">NOTE</span>: This was written before version 3 of this website! Some information may be invalid to the current&nbsp;version.</strong></p>
+
+                  </section>
+                </md-card-content>
+              </md-card>
+            </div>
+            <div class="flex">
+              <md-card ng-hide="hideObject[&quot;Operating System Review - AROS&quot;]" class="no-shadow transparent">
+                <md-card-title>
+                  <md-card-title-text>
+                    <h2>
+                      <div class="inline"><a href="/articles/aros-review/">Operating System Review - AROS</a></div>
+                      <hr class="pink-hr">
+                    </h2>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                  <section class="content"><p><span class="caps">AROS</span> (AROS Research Operating System, ooh yet another <a href="https://en.wikipedia.org/wiki/Recursive_acronym">recursive acronym</a>) is an Operating System aiming to be <span class="caps">API</span> compatible with Amiga 3.x systems. It is free software, however it does have <a href="http://www.evillabs.net/AROS/Audit-2012-03-14/AROS-trunk.txt">licensing issues.</a>. For the review, I have chosen the Icaros Desktop (version v2.1.2) distribution as it is the most developed and stable (to my&nbsp;knowledge).</p>
+
+                  </section>
+                </md-card-content>
+              </md-card>
+            </div>
+            <div class="flex">
+              <md-card ng-hide="hideObject[&quot;A new series! Reviews of obscure operating systems.&quot;]" class="no-shadow transparent">
+                <md-card-title>
+                  <md-card-title-text>
+                    <h2>
+                      <div class="inline"><a href="/articles/a-new-series/">A new series! Reviews of obscure operating systems.</a></div>
+                      <hr class="pink-hr">
+                    </h2>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                  <section class="content"><p>The first epic series which will span across many parts and include many operating systems. I hope that this will be my first actually running series, as I have never managed to make one stable&nbsp;yet.</p>
+<p>The first review should come in a week or so, but do not be surprised if I don’t (I’m not an active&nbsp;blogger).</p>
+<p>(<span class="caps">EDIT</span>: The series should start about August or September as I will be busy during June to August due to projects I have to complete. I will hopefully have time to document them on this&nbsp;blog)</p>
+
+                  </section>
+                </md-card-content>
+              </md-card>
+            </div>
+            <div class="flex">
+              <md-card ng-hide="hideObject[&quot;I've finally took the time to create a half-decent Emacs config.&quot;]" class="no-shadow transparent">
+                <md-card-title>
+                  <md-card-title-text>
+                    <h2>
+                      <div class="inline"><a href="/articles/finally-a-good-conf/">I've finally took the time to create a half-decent Emacs config.</a></div>
+                      <hr class="pink-hr">
+                    </h2>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                  <section class="content"><p>As you may know, I use Emacs for my text-editing needs. I think it’s the best editor ever made <begin [editor war](https://en.wikipedia.org/wiki/Editor_war) here>. I’m kidding of course. Vi(m) is probably a great editor too - I might take the time to learn it and use Emacs with evil-mode - I really don’t care what editor you use - Emacs, Vi(m), nano, ed, or even the one person who edits all of their text by appending it with <code>echo</code> or <code>cat</code>. <em>Insert <span class="caps">XKCD</span> meme&nbsp;here…</em></p>
+
+                  </section>
+                </md-card-content>
+              </md-card>
+            </div>
+          </div>
+        </div>
+      </md-content>
+    </div>
+  </div>
+</body>

@@ -4,13 +4,13 @@
         "url": "http://localhost:8080",
         "name": "Argarak's Nexus",
         "navbar": [
-            ["nexus.svg",     "/",          "Home",      0],
-            ["about.svg",     "/about",     "About",     1],
-            ["blog.svg",      "/blog",      "Blog",      2],
-            ["programs.svg",  "/programs",  "Programs",  3],
-            ["archive.svg",   "/archive",   "Archive",   4],
-            ["microblog.svg", "/microblog", "Microblog", 5],
-            ["rss.svg",       "/feed.xml",  "RSS",       6]
+            ["nexus.svg",     "home",      "Home",      0],
+            ["about.svg",     "about",     "About",     1],
+            ["blog.svg",      "blog",      "Blog",      2],
+            ["programs.svg",  "programs",  "Programs",  3],
+            ["archive.svg",   "archive",   "Archive",   4],
+            ["microblog.svg", "microblog", "Microblog", 5],
+            ["rss.svg",       "/feed.xml", "RSS",       6]
         ],
         "css": [
             "/css/angular-material.min.css",
@@ -29,7 +29,10 @@
             "/js/mdLightbox.js",
             "/js/angularMain.js",
             "/js/feednami.min.js",
-            "/js/truncate.js"
+            "/js/truncate.js",
+            "/js/angular-ui-router.js",
+            "/js/TweenMax.min.js",
+            "/js/angular-gsapify-router.js"
         ],
         "licenseTitle": "Licensing Information",
         "licenseText": "All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.",

@@ -13,9 +13,9 @@ However, now the website without Javascript is nearly useless.
 
 ## TODO
 
-* Programs and Microblog sections
 * More backgrounds for index.jade
 * License headers
+* Testing
 
 ## License
 

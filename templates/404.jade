@@ -1,0 +1,30 @@
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+  title
+    block title
+      = locals.name
+  meta(name="description" content="")
+  meta(name="viewport" content="width=device-width")
+  link(rel="shortcut icon" href="/favicon.ico?")
+  block meta
+  
+  // CSS (see config.json for referenced files)
+  each href in locals.css 
+    link(rel="stylesheet" href=href)
+  
+  each src in locals.js
+    script(src=src)
+    
+  script(src="/js/ngConsole.js")
+  script(src="/404/app.js")
+  
+  style.
+    .console {
+      background-color: "#111" !important;
+    }
+  
+body(ng-app="app404")
+  .terminalContainer(ng-controller="consoleController")
+    ng-console(options="options")
+    

@@ -1,33 +1,27 @@
-extends header
+- var archives = _.chain(env.helpers.getArticles(contents)).groupBy(function(item) {
+-   return item.date.getFullYear();
+- }).value();
 
-block prepend title
-  | Archive - 
+- for(var archive in archives) {
+-   archives[archive] = _.groupBy(archives[archive], function(item) { return item.date.getMonth(); });
+- }
 
-block content
-  - var archives = _.chain(env.helpers.getArticles(contents)).groupBy(function(item) {
-  -   return item.date.getFullYear();
-  - }).value();
-  
-  - for(var archive in archives) {
-  -   archives[archive] = _.groupBy(archives[archive], function(item) { return item.date.getMonth(); });
-  - }
-  
-  md-toolbar.md-tall.toolbar-padding
+md-toolbar.md-tall.toolbar-padding
+  span(flex)
+  h1#title.md-toolbar-tools
+    span.md-flex
+      | Archive
     span(flex)
-    h1#title.md-toolbar-tools
-      span.md-flex
-        | Archive
-      span(flex)
-      - var years = _.chain(archives).keys().reverse().value();
-  #post.flow-text(ng-controller="getMonth")
-    each year in years
-      - var months = archives[year];
-      - var monthsK = _.chain(months).keys().reverse().value();
-      h2.year-section= year
-        hr.hr-margin
-        each month in monthsK
-          h3.month-section
-            | {{getMonth(#{month})}}
-            each item in months[month]
-              h4.post-item
-                a(href=item.url)= " > " + item.title
+    - var years = _.chain(archives).keys().reverse().value();
+#post.flow-text(ng-controller="getMonth")
+  each year in years
+    - var months = archives[year];
+    - var monthsK = _.chain(months).keys().reverse().value();
+    h2.year-section= year
+      hr.hr-margin
+      each month in monthsK
+        h3.month-section
+          | {{getMonth(#{month})}}
+          each item in months[month]
+            h4.post-item
+              a(href=item.url)= " > " + item.title

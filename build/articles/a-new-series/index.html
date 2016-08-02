@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>A new series! Reviews of obscure operating systems. - Argarak's Nexus
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.ico?">
+  <!-- CSS (see config.json for referenced files)-->
+  <link rel="stylesheet" href="/css/angular-material.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/flow-text.css">
+  <link rel="stylesheet" href="/js/highlight/default.css">
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/angular-animate.min.js"></script>
+  <script src="/js/angular-aria.min.js"></script>
+  <script src="/js/angular-messages.min.js"></script>
+  <script src="/js/angular-material.min.js"></script>
+  <script src="/js/angular-sanitize.js"></script>
+  <script src="/js/highlight/highlight.pack.js"></script>
+  <script src="/js/mdLightbox.js"></script>
+  <script src="/js/angularMain.js"></script>
+  <script src="/js/feednami.min.js"></script>
+  <script src="/js/truncate.js"></script>
+</head>
+<body>
+  <div ng-app="nexus" layout="column" class="app">
+    <noscript>
+      <div class="noscript-message">This site really sucks without Javascript enabled... you will miss proper styling, an animated background and Angular support for the rest of the pages, which gives them their full functionality... so please enable it.</div>
+    </noscript>
+    <div layout="row" ng-controller="mainController" flex class="container">
+      <md-sidenav id="sidenav" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left">
+        <md-content layout-padding="" layout="column" layout-align="center">
+          <li class="navbarLi"><a href="/"><img src="/navbar/nexus.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip0">Home</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/about"><img src="/navbar/about.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip1">About</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/blog"><img src="/navbar/blog.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip2">Blog</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/programs"><img src="/navbar/programs.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip3">Programs</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/archive"><img src="/navbar/archive.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip4">Archive</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/microblog"><img src="/navbar/microblog.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip5">Microblog</md-tooltip>
+          </li>
+          <li class="navbarLi"><a href="/feed.xml"><img src="/navbar/rss.svg"></a>
+            <md-tooltip md-direction="right" class="tooltip6">RSS</md-tooltip>
+          </li>
+        </md-content>
+      </md-sidenav>
+      <md-button hide-gt-sm aria-label="FAB" ng-click="openLeftMenu()" class="sidenav-fab md-fab md-fab-bottom-right">
+        <md-icon md-svg-src="/icons/menu.svg"></md-icon>
+      </md-button>
+      <md-content id="main-content" flex>
+        <md-toolbar class="md-tall toolbar-padding"><span flex></span>
+          <h1 id="title" class="md-toolbar-tools">A new series! Reviews of obscure operating systems.<span class="md-flex"></span><span flex></span>
+            <md-button ng-click="showAlert($event, &quot;Licensing Information&quot;, &quot;All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.&quot;, &quot;I Agree&quot;);" aria-label="Licensing" class="md-icon-button">
+              <md-tooltip md-direction="bottom" class="opaque-tooltip">Licensing Info.</md-tooltip>
+              <md-icon md-svg-src="/icons/file.svg"></md-icon>
+            </md-button>
+            <md-button aria-label="Date" class="md-icon-button">
+              <md-tooltip md-direction="bottom" class="opaque-tooltip"></md-tooltip>
+              <md-icon md-svg-src="/icons/time.svg"></md-icon>
+            </md-button></h1>
+        </md-toolbar>
+        <div id="post" class="flow-text"><p>The first epic series which will span across many parts and include many operating systems. I hope that this will be my first actually running series, as I have never managed to make one stable&nbsp;yet.</p>
+<p>The first review should come in a week or so, but do not be surprised if I don’t (I’m not an active&nbsp;blogger).</p>
+<p>(<span class="caps">EDIT</span>: The series should start about August or September as I will be busy during June to August due to projects I have to complete. I will hopefully have time to document them on this&nbsp;blog)</p>
+<hr>
+<p>I hope to only look at free software operating systems (or at least partially) however I will look at abandon-ware and some old closed source systems if I run out of&nbsp;ideas.</p>
+<p>I am pretty confident in this series as I do have knowledge of some systems which are obscure (even if you don’t think their uncommon, I aim to have the operating system clear less than 0.5% of the operating system market share - but no-one will actually publish the data since how will they get it when it’s about the usage of OSes no-one uses on a day-to-day&nbsp;basis?).</p>
+<p>A few rules for this&nbsp;series:</p>
+<ul>
+<li>No mobile&nbsp;OSes</li>
+<li>No <span class="caps">GNU</span>/Linux distributions (however, if they are interesting enough, I will make a independent&nbsp;review)</li>
+<li>Third-party software for the <span class="caps">OS</span> will not be mentioned unless it is interesting, necessary for the review, or something I want to test&nbsp;out.</li>
+<li>I test the operating system for current usability, I don’t give exemptions to incomplete code or not enough drivers for either <span class="caps">QEMU</span> or the three computers I will test the systems&nbsp;on:</li>
+<li>My computer (workstation), “elephant”: (it’s bad, I know)
+<ul>
+<li>Processor : 2x <span class="caps">AMD</span> Athlon(tm) II X2 240&nbsp;Processor</li>
+<li>Memory : <span class="caps">9986MB</span> (4266MB&nbsp;used)</li>
+<li>OpenGL Renderer : Gallium 0.4 on <span class="caps">AMD</span> RS780 (DRM 2.43.0, LLVM&nbsp;3.8.0)</li>
+</ul></li>
+<li>An <span class="caps">IBM</span> Thinkpad R40e built in&nbsp;2003</li>
+<li>Some Acer Aspire laptop that is not mine, I’ll only fallback to it if all else&nbsp;fails.</li>
+<li>I will not write a review if nothing I try works, I will give it a honourable mention at the end of another&nbsp;review.</li>
+</ul>
+<p>Anyway, I will use this layout for each of my reviews (might change throughout time however I will add it here if there’s a&nbsp;change).</p>
+<ul>
+<li>A quick (or long) summary of what the <span class="caps">OS</span> is and what it wants to&nbsp;achieve</li>
+<li>My experience with the system on my physical&nbsp;machines</li>
+<li>Design of the graphical user interface and how usable it is (if there is&nbsp;one)</li>
+<li>Reviews of interesting programs included with the&nbsp;system</li>
+<li>Looking back at what the operating system wants to achieve and if it has been&nbsp;achieved</li>
+<li>A final thought and a mark out of this list (The operating system should be able&nbsp;to):</li>
+<li>Display a 32-bit colour interface with a suitable&nbsp;resolution</li>
+<li>Multiple monitor&nbsp;support</li>
+<li>Alternate keyboard layouts support&nbsp;(Dvorak)</li>
+<li>Playback of common video, music and image&nbsp;files</li>
+<li>Word processing or some writing&nbsp;program</li>
+<li>Compilation of code (most likely C however, other languages will&nbsp;do)</li>
+<li>Browse the internet (third-party software may be&nbsp;required)</li>
+<li>Some interesting or niche feature that makes the operating system stand&nbsp;out</li>
+<li>A&nbsp;conclusion</li>
+</ul>
+<p>Now when I say operating system some of you may shout at me “<span class="caps">OPERATING</span> SYSTEMS ARE NOT GRAPHICAL USER INTERFACES!!!!” and you are correct. In practise, you never interact with the operating systems, programs and libraries do, and you interact with the programs. However, I’ll look how usable the programs are, which use the operating system. I will not look into technical details about the system or look at any underlying code (unless I already have previous&nbsp;knowledge).</p>
+<p>I hope you enjoy this new&nbsp;series.</p>
+</div>
+      </md-content>
+    </div>
+  </div>
+</body>

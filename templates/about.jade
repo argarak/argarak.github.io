@@ -1,13 +1,7 @@
-extends header
-
-block prepend title
-  | About - 
-
-block content
-  md-toolbar.md-tall.toolbar-padding
+md-toolbar.md-tall.toolbar-padding
+  span(flex)
+  h1#title.md-toolbar-tools
+    span.md-flex
+      | About
     span(flex)
-    h1#title.md-toolbar-tools
-      span.md-flex
-        | About
-      span(flex)
-  #post.flow-text!=contents["bio.markdown"].html
+#post.flow-text!=contents["bio.markdown"].html
