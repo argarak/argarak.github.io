@@ -81,7 +81,7 @@ Of course, I made many little abandoned blogs (i.e [https://argarak.wordpress.co
  
 I have been interested in secure and private providers of email, and so I went over to [prism-break](https://prism-break.org/en/) and went over to the Email Accounts section of the site and I found the group Autistici/Inventiati who provided many kinds of services, but my main goal was to finally break away from Google Mail and my spam-filled email account to a safer, private and trustworthy provider. So I signed up, sent them a request and they accepted it! Which was great. 
 
-I don't use email often, especially for domestic communications, but without it, it would be difficult to contact developers, make accounts and use or subscribe to mailing lists.
+I don't use email often, especially for ~~domestic~~ day-to-day communications, but without it, it would be difficult to contact developers, make accounts and use or subscribe to mailing lists.
 
 Anyway, I heard that A/I were offering a blogging service, which was intriguing, so I set one up. The service was called "Noblogs" and I chose the URL "nexus.noblogs.org". Version 1 has began.
 

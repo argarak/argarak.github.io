@@ -9,7 +9,7 @@
 - }
 
 .blog(ng-controller="blogController as ctrl" ng-init="createHideObject([" + articleTitles + "])")
-  md-toolbar(layout="row" flex layout-align="center")
+  md-toolbar.md-whiteframe-5dp(layout="row" flex layout-align="center")
     .md-toolbar-tools
       span(flex)
       md-autocomplete(
@@ -29,7 +29,6 @@
           | No blog posts matching "{{ctrl.searchText}}" were found.
   #post.flow-text
     each article in articles
-      - console.log(article)
       .flex
         md-card.no-shadow.transparent(ng-hide="hideObject[\"" + article.title + "\"]")
           md-card-title

@@ -3,12 +3,19 @@ meta(name="Description" content="A development blog written by an unexperienced 
 
 link(rel="stylesheet" href="/css/index.css")
 
-script(src="/js/processing.min.js")
-canvas(data-processing-sources="/processing/Hex.pde /processing/YAHG.pde")
-
-#timeGreeting(ng-controller="indexGreeting")
-  | <i>{{getGreeting()}}</i>, and welcome to <b>Argarak's Nexus</b>  
-
-#overlay
+md-content.home-content(flex layout="column" ng-controller="homeController as hc")
+  #homecontent(flex layout="row" layout-sm="column" layout-xs="column" ng-style="{'background-color': color}")
+    #halfone(flex="40" flex-sm="100" flex-xs="100" layout="column" layout-align="center")
+      #title(flex="90" animchange="title" layout="column" layout-align="center")
+        #date(layout="row" layout-sm="column" layout-xs="column")
+          hr.inlinehr(flex)
+          | {{date}} • Argarak
+          hr.inlinehr(flex)
+        | {{title}}
+      #color(flex="100" ng-style="{'background-color': color}")
+    #halftwo(flex="60" flex-xs="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center")
+      #intro.flow-text(animchange="intro" flex="90" layout="column" layout-align="center" ng-bind-html="intro | introFilter | trusted")
+  #progress
+    md-progress-linear(md-mode="determinate" value="{{determinateValue}}")
 #version
   | v3 - Angled Ink-Pug

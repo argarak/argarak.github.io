@@ -1,0 +1,21 @@
+
+<meta name="Description" content="A development blog written by an unexperienced developer. Mostly about web development and microcontroller based projects."/>
+<link rel="stylesheet" href="/css/index.css"/>
+<md-content flex="flex" layout="column" ng-controller="homeController as hc">
+  <div id="homecontent" flex="flex" layout="row" layout-xs="column" ng-init="hc.loadArticles([undefined])">
+    <div id="halfone" flex="40" layout="column" layout-align="center">
+      <div id="title" flex="90" layout="column" layout-align="center">
+        <div id="date" layout="row">{{date}} • Argarak
+          <hr flex="flex" class="inlinehr"/>
+        </div>{{title}}
+      </div>
+    </div>
+    <div id="halftwo" flex="60" layout="row" layout-align="center">
+      <div id="intro" flex="90" layout="column" layout-align="center" class="flow-text">{{intro}}</div>
+    </div>
+  </div>
+  <div id="progress">
+    <md-progress-linear md-mode="determinate" value="{{determinateValue}}"></md-progress-linear>
+  </div>
+</md-content>
+<div id="version">v3 - Angled Ink-Pug</div>

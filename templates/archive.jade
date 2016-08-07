@@ -24,4 +24,4 @@ md-toolbar.md-tall.toolbar-padding
           | {{getMonth(#{month})}}
           each item in months[month]
             h4.post-item
-              a(href=item.url)= " > " + item.title
+              a(ui-sref="blog({ name: \"" + item.url.substring(10, item.url.length - 1) + "\" })")= " > " + item.title

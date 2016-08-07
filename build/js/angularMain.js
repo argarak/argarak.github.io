@@ -1,7 +1,25 @@
-hljs.initHighlightingOnLoad();
+/*
+ * Copyright (c) 2016 Jakub Kukiełka
+ *
+ * This file is part of argarak.github.io.
+ *
+ * argarak.github.io is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * argarak.github.io is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with argarak.github.io. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
-var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox", "truncate",
-                                   "ngSanitize"])
+var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
+                                   "truncate", "ngSanitize", "ui.router"])
                  .config(function($mdThemingProvider) {
                      $mdThemingProvider.theme('default')
                                        .primaryPalette("red")
@@ -10,6 +28,31 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox", "tru
                      $mdThemingProvider.theme('light')
                                        .primaryPalette("red")
                                        .accentPalette("pink");
+                 })
+                 .config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
+                                                                           $urlRouterProvider) {
+                     $urlRouterProvider.otherwise("/home");
+
+                     $stateProvider
+                         .state("navbar", {
+                             url: "/:name",
+                             templateUrl: function($stateParams) {
+                                 return "/" + $stateParams.name + "/index.html";
+                             },
+                             controller: function($rootScope, $scope, $stateParams) {
+                                 $rootScope.$stateParams = $stateParams;
+                                 $scope.name = $stateParams.name;
+                             }
+                         })
+                         .state("blog", {
+                             url: "/articles/:name",
+                             templateUrl: function($stateParams) {
+                                 return "/articles/" + $stateParams.name + "/index.html";
+                             }
+                         });
+                 }])
+                 .run(function() {
+                     hljs.initHighlightingOnLoad();
                  });
 
 app.controller("mainController", function($scope, $mdSidenav, $mdDialog) {
@@ -31,21 +74,27 @@ app.controller("mainController", function($scope, $mdSidenav, $mdDialog) {
     }
 });
 
-app.controller("indexGreeting", function($scope) {
-    $scope.getGreeting = function() {
-        var d = new Date();
-        var hrs = d.getHours();
+app.controller("homeController", function($scope, $interval, $log, $http) {
+    var self = this;
+    self.articleIndex = 0;
 
-        if(hrs >= 6 && hrs < 12) {
-            return "Good Morning";
-        } else if(hrs >= 12 && hrs < 18) {
-            return "Good Afternoon";
-        } else if(hrs >= 18 && hrs < 21) {
-            return "Good Evening";
-        } else {
-            return "Good Night";
+    $http.get("/article.js").then(function(out) {
+        $scope.title = out.data._wrapped[0].metadata.title;
+        $scope.date = out.data._wrapped[0].metadata.date;
+        $scope.intro = out.data._wrapped[0].markdown;
+    }, function(out) {
+        console.log("Failed to GET /article.js");
+    });
+
+    $scope.determinateValue = 0;
+    $interval(function() {
+        $scope.determinateValue += 1;
+        if($scope.determinateValue > 100) {
+            $scope.determinateValue = 0;
+            self.articleIndex++;
+            //self.update(self.articleIndex);
         }
-    }
+    }, 100);
 });
 
 app.controller("getMonth", function($scope) {
@@ -58,7 +107,8 @@ app.controller("getMonth", function($scope) {
     }
 });
 
-app.controller("blogController", function($scope, $timeout, $q, $log, $rootScope, $window) {
+app.controller("blogController", function($scope, $timeout, $q, $log,
+                                          $rootScope, $window, $state) {
     var self = this;
     this.isDisabled = false;
     this.querySearch = querySearch;
@@ -111,7 +161,10 @@ app.controller("blogController", function($scope, $timeout, $q, $log, $rootScope
     function selectedItemChange(item, urls) {
         var itemName = item.display
         var names = Object.getOwnPropertyNames($scope.hideObject);
-        $window.location.href = urls[names.indexOf(itemName)];
+        $state.go("blog", {
+            name: urls[names.indexOf(itemName)]
+                .substring(10, urls[names.indexOf(itemName)].length - 1)
+        });
     }
 
     function createFilterFor(query) {
@@ -170,55 +223,4 @@ app.controller("microblogController", function($scope, $sce) {
     $scope.formatDate = function(date) {
         return date.replace(/[^\d.:-]/g, ' ');
     }
-});
-
-var app404 = angular.module("app404", ["ngConsole"]);
-
-app404.controller("consoleController", function($scope) {
-    // All this stuff is entirely OPTIONAL.
-    $scope.options = {};
-
-    // If true, console will be hidden, and will open by pressing º key.
-    $scope.options.fixed = true;
-
-    // If true and fixed=true, console will be displayed at fullscreen when open.
-    $scope.options.fullscreen = true;
-
-    // If true and fixed=true, console will start open.
-    $scope.options.open = true;
-
-    // This number will set a custom height for the console.
-    $scope.options.customHeight = 350;
-
-    // This string will replace the 'ngConsole>' prefix.
-    $scope.options.customPrefix = "[ramfs /]# ";
-
-    // This will load a theme at startup.
-    $scope.options.customTheme = {
-        name: "nexus",
-        data: {
-            bg: "#111",
-            color: "#bbb",
-            boldColor: "#E91E63",
-            fontsize: 16,
-            fontfamily: "monospace"
-        },
-        labels: {
-            bg: "Dark Gray",
-            color: "Light gray",
-            boldColor: "Pink"
-        }
-    };
-
-    // This will make these commands available for users.
-    $scope.options.customCommands = [
-        {
-            name: 'home',
-            description: 'Takes you back to the home page.',
-            params: false,
-            action: function(printLn, params) {
-                window.location = "/";
-            }
-        }
-    ];
 });

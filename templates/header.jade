@@ -34,15 +34,17 @@ html(ng-app="nexus")
         md-tooltip(md-direction="right" class="tooltip" + index)= tooltip  
 
   body
+    a(href="/librejs/license.html" style="display: none;" data-jslicense="1")
     .app(layout="column")
       noscript
-        .noscript-message= locals.noscript
+        .noscript-message
+          .text!= locals.noscript
       .container(layout="row" ng-controller="mainController" flex)
-        md-sidenav#sidenav(md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left")
+        md-sidenav#sidenav.md-whiteframe-3dp(md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left")
           md-content(layout-padding="" layout="column" layout-align="center")
             each item in locals.navbar
               +navbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])
         md-button.sidenav-fab.md-fab.md-fab-bottom-right(hide-gt-sm aria-label="FAB" ng-click="openLeftMenu()")
           md-icon(md-svg-src="/icons/menu.svg")
         md-content#main-content(flex)
-          ui-view.gsapify-router(autoscroll="true")
+          ui-view

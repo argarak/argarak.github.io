@@ -1,16 +1,25 @@
+# I was really lazy so instead of modifying the existing
+# paginator code, I just copied it and used different
+# env. variables.
+#
+# It works and requires less effort - I only need it for
+# two pages...
+
 module.exports = (env, callback) ->
   ### Paginator plugin. Defaults can be overridden in config.json
       e.g. "paginator": {"perPage": 10} ###
 
+  file = "contents/articles.json"
+
   defaults =
-    template: 'blog.jade' # template that renders pages
+    template: 'home.jade' # template that renders pages
     articles: 'articles' # directory containing contents to paginate
-    first: 'index.html' # filename/url for first page
+    first: '/home/index.html' # filename/url for first page
     filename: 'page/%d/index.html' # filename for rest of pages
-    perPage: 2 # number of articles per page
+    perPage: 900 # number of articles per page
 
   # assign defaults any option not set in the config file
-  options = env.config.paginator or {}
+  options = env.config.indexpage or {}
   for key, value of defaults
     options[key] ?= defaults[key]
 
@@ -59,7 +68,10 @@ module.exports = (env, callback) ->
 
     # find all articles
     articles = getArticles contents
+    obj = {}
 
+    obj.articles = articles
+    
     # populate pages
     numPages = Math.ceil articles.length / options.perPage
     pages = []

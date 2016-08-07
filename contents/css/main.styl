@@ -1,6 +1,6 @@
 
-body-color      = #111
-sidenav-color   = #010101
+body-color      = #0e0e0e
+sidenav-color   = #070707
 navbarColors    = (#F44336 #E91E63 #9C27B0 #673AB7 #3F51B5 #2196F3 #009688)
 post-width      = 70vw
 accent          = #E91E63
@@ -45,7 +45,8 @@ body
     background sidenav-color
   md-content
     height 100vh
-    width 80px !important
+    min-height 500px
+    
     li
       max-width 64px !important
 
@@ -80,7 +81,7 @@ a
 
 #main-content
   background-color body-color
-  color #bbb
+  color #aaa
   #title
     width post-width
     font-size 3vw
@@ -131,9 +132,25 @@ code *
 .noscript-message
   margin auto
   width 100vw
+  height 100vh
+  position fixed
+  z-index 99999
   color white
   text-align center
   background #000
+  .text
+    position fixed
+    top 50%
+    left 50%
+    margin-right -50%
+    transform translate(-50%, -50%)
+    h1
+      font-size 50px
+    *
+     margin 0 !important
+     line-height 1
+    .noscript-footer
+      color #666
 
 strong
   font-weight bold
@@ -142,9 +159,9 @@ strong
   color rgb(233, 30, 99)
   border 1px solid
 
-#input-0
+md-autocomplete
   color #000
-  width 100vw
+  width 1000000px !important
 
 .image-dialog
   text-align center
@@ -202,3 +219,64 @@ blockquote
   .pink-link
     margin-right 5px !important
     color accent
+
+@keyframes fadeIn
+  from
+    opacity 0
+    transform scale3d(.3, .3, .3)
+  50%
+    opacity 1
+
+.ng-enter
+  animation-duration 0.3s
+  animation-name fadeIn
+
+.ng-leave
+  animation-duration 0.3s
+  animation-name fadeIn
+  animation-direction reverse
+
+#homecontent
+  #halfone
+    text-align center
+    background #000
+    //height 100vh
+    .welcome
+      font-size 50px
+      font-weight bold
+    .argarak
+      font-size 30px
+    .nexus
+      font-size 30px
+  #halftwo
+    background body-color
+    height 100vh
+
+#progress
+  position fixed
+  top 0
+  left 0
+  right 0
+
+#date
+  font-size 15px
+  margin-left 3em
+  text-align left
+  display inline
+
+.inlinehr
+  display inline-block
+  width 3vw
+  margin 5px
+
+.home-content
+  height 100vh
+  #homecontent
+    transition background-color 2s ease
+
+#intro
+  margin auto
+
+.change
+  animation-duration 0.3s
+  animation-name fadeIn

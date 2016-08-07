@@ -1,23 +1,25 @@
 /*
  * Copyright (c) 2016 Jakub Kukiełka
  *
- * This program is free software: you can redistribute it and/or modify
+ * This file is part of argarak.github.io.
+ *
+ * argarak.github.io is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
+ * argarak.github.io is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * along with argarak.github.io. If not, see <http://www.gnu.org/licenses/>.
+ *
  */
 
 var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
-                                   "truncate", "ngSanitize", "ui.router",
-                                   "hj.gsapifyRouter"])
+                                   "truncate", "ngSanitize", "ui.router"])
                  .config(function($mdThemingProvider) {
                      $mdThemingProvider.theme('default')
                                        .primaryPalette("red")
@@ -27,29 +29,8 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                                        .primaryPalette("red")
                                        .accentPalette("pink");
                  })
-                 .config(["$stateProvider", "$urlRouterProvider", "gsapifyRouterProvider", function($stateProvider, $urlRouterProvider, gsapifyRouterProvider) {
-                     gsapifyRouterProvider.defaults = {
-                         enter: 'fade',
-                         leave: 'fade',
-                     };
-
-                     gsapifyRouterProvider.transition('slideLeft', {
-                         duration: 10,
-                         ease: 'Quint.easeInOut',
-                         css: {
-                             y: '-100%',
-                         }
-                     });
-
-                     gsapifyRouterProvider.transition('slideRight', {
-                         duration: 10,
-                         ease: 'Quint.easeInOut',
-                         delay: 0.5,
-                         css: {
-                             y: '100%',
-                         }
-                     });
-
+                 .config(["$stateProvider", "$urlRouterProvider", function($stateProvider,
+                                                                           $urlRouterProvider) {
                      $urlRouterProvider.otherwise("/home");
 
                      $stateProvider
@@ -93,21 +74,94 @@ app.controller("mainController", function($scope, $mdSidenav, $mdDialog) {
     }
 });
 
-app.controller("indexGreeting", function($scope) {
-    $scope.getGreeting = function() {
-        var d = new Date();
-        var hrs = d.getHours();
+app.directive('animchange', function($animate, $timeout) {
+    return function(scope, elem, attr) {
+        scope.$watch(attr.animchange, function(nv, ov) {
+            if(nv != ov) {
+                var c = nv > ov ? 'change-up' : 'change';
+                $animate.addClass(elem, c).then(function() {
+                    $timeout(function() {
+                        $animate.removeClass(elem, c);
+                    });
+                });
+            }
+        });
+    };
+});
 
-        if(hrs >= 6 && hrs < 12) {
-            return "Good Morning";
-        } else if(hrs >= 12 && hrs < 18) {
-            return "Good Afternoon";
-        } else if(hrs >= 18 && hrs < 21) {
-            return "Good Evening";
-        } else {
-            return "Good Night";
-        }
+app.filter("introFilter", function() {
+    return function(x) {
+        return x.substring(0, x.indexOf("</p>"));
     }
+});
+
+app.filter('trusted', ['$sce', function($sce) {
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    }
+}]);
+
+app.controller("homeController", function($scope, $interval, $log, $http) {
+    var self = this;
+    self.articleIndex = 0;
+
+    self.randColor = function() {
+        function randInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var colors = [
+            "#D32F2F",
+            "#C2185B",
+            "#7B1FA2",
+            "#512DA8",
+            "#303F9F",
+            "#1976D2",
+            "#0288D1",
+            "#0097A7",
+            "#00796B",
+            "#388E3C",
+            "#689F38",
+            "#AFB42B",
+            "#FBC02D",
+            "#FFA000",
+            "#F57C00",
+            "#E64A19"
+       ];
+        return colors[randInt(0, colors.length - 1)];
+    }
+
+    $http.get("/articles.js").then(function(out) {
+        self.out = out;
+        $scope.title = out.data._wrapped[0].metadata.title;
+        $scope.date = out.data._wrapped[0].metadata.date;
+        $scope.intro = out.data._wrapped[0]._htmlraw;
+        $scope.color = self.randColor();
+    }, function(out) {
+        console.log("Failed to GET /article.js");
+    });
+
+    self.update = function(index) {
+        $scope.title = self.out.data._wrapped[index].metadata.title;
+        $scope.date = self.out.data._wrapped[index].metadata.date;
+        $scope.intro = self.out.data._wrapped[index]._htmlraw;
+        $scope.color = self.randColor();
+    }
+
+    $scope.determinateValue = 0;
+    $interval(function() {
+        $scope.determinateValue += 1;
+        if($scope.determinateValue > 100) {
+            $scope.determinateValue = 0;
+            if(self.articleIndex === self.out.data._wrapped.length - 1)
+                self.articleIndex = 0;
+            else
+                self.articleIndex++;
+            self.update(self.articleIndex);
+        }
+    }, 100);
 });
 
 app.controller("getMonth", function($scope) {
@@ -120,7 +174,8 @@ app.controller("getMonth", function($scope) {
     }
 });
 
-app.controller("blogController", function($scope, $timeout, $q, $log, $rootScope, $window) {
+app.controller("blogController", function($scope, $timeout, $q, $log,
+                                          $rootScope, $window, $state) {
     var self = this;
     this.isDisabled = false;
     this.querySearch = querySearch;
@@ -173,7 +228,10 @@ app.controller("blogController", function($scope, $timeout, $q, $log, $rootScope
     function selectedItemChange(item, urls) {
         var itemName = item.display
         var names = Object.getOwnPropertyNames($scope.hideObject);
-        $window.location.href = urls[names.indexOf(itemName)];
+        $state.go("blog", {
+            name: urls[names.indexOf(itemName)]
+                .substring(10, urls[names.indexOf(itemName)].length - 1)
+        });
     }
 
     function createFilterFor(query) {

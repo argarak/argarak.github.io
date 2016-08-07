@@ -1,16 +1,15 @@
 {
-    "ignore": ["templates/*.#"],
     "locals": {
         "url": "http://localhost:8080",
         "name": "Argarak's Nexus",
         "navbar": [
-            ["nexus.svg",     "home",      "Home",      0],
-            ["about.svg",     "about",     "About",     1],
-            ["blog.svg",      "blog",      "Blog",      2],
-            ["programs.svg",  "programs",  "Programs",  3],
-            ["archive.svg",   "archive",   "Archive",   4],
-            ["microblog.svg", "microblog", "Microblog", 5],
-            ["rss.svg",       "/feed.xml", "RSS",       6]
+            ["nexus.svg",     "home",      "Home",         0],
+            ["about.svg",     "about",     "About",        1],
+            ["blog.svg",      "blog",      "Blog",         2],
+            ["programs.svg",  "programs",  "Repositories", 3],
+            ["archive.svg",   "archive",   "Archive",      4],
+            ["microblog.svg", "microblog", "Microblog",    5],
+            ["rss.svg",       "/feed.xml", "RSS",          6]
         ],
         "css": [
             "/css/angular-material.min.css",
@@ -30,24 +29,22 @@
             "/js/angularMain.js",
             "/js/feednami.min.js",
             "/js/truncate.js",
-            "/js/angular-ui-router.js",
-            "/js/TweenMax.min.js",
-            "/js/angular-gsapify-router.js"
+            "/js/angular-ui-router.js"
         ],
         "licenseTitle": "Licensing Information",
         "licenseText": "All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.",
         "dataTitle": "Article Data",
-        "noscript": "This site really sucks without Javascript enabled... you will miss proper styling, an animated background and Angular support for the rest of the pages, which gives them their full functionality... so please enable it.",
+        "noscript": "<h1>This site is basically useless without Javascript</h1><br><h2>...you will miss proper styling, an animated background and Angular support for the rest of the pages, which gives them their full functionality</h2><br><h5>...so please enable it.</h5><br><br><div class=\"noscript-footer\">If you can't enable Javascript, you are still able to read my content on <a href=\"https://github.com/argarak/argarak.github.io/\">Github</a>.<br>Send me an email if you really need non-Javascript support. (echo \"NN5GK4RNPJQUAY3SPFYHI33MMFRC43TFOQFA====\" | base32 -d)</div>",
         "noteDelete": "<a href='https://pumpyourself.com/argarak'>argarak</a> deleted a note",
         "imageDelete": "<a href='https://pumpyourself.com/argarak'>argarak</a> deleted an image"
     },
     "plugins": [
         "./plugins/paginator.coffee",
+        "./plugins/indexpage.coffee",
         "./node_modules/wintersmith-stylus/",
         "./node_modules/wintersmith-pandoc/"
     ],
     "require": {
-        "moment": "moment",
         "_": "underscore",
         "typogr": "typogr"
     },
@@ -62,6 +59,12 @@
         "articles": "articles",
         "template": "blog.jade",
         "first": "/blog/index.html",
+        "perPage": 900
+    },
+    "indexpage": {
+        "articles": "articles",
+        "template": "home.jade",
+        "first": "/home/index.html",
         "perPage": 900
     }
 }
