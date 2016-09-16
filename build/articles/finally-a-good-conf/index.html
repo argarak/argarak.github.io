@@ -1,6 +1,6 @@
 
-<md-toolbar class="md-tall toolbar-padding"><span flex="flex"></span>
-  <h1 id="title" class="md-toolbar-tools">I've finally took the time to create a half-decent Emacs config.<span class="md-flex"></span><span flex="flex"></span>
+<md-toolbar class="md-tall toolbar-padding">
+  <div class="md-toolbar-tools"><span class="md-flex"></span><span flex="flex"></span>
     <md-button ng-click="showAlert($event, &quot;Licensing Information&quot;, &quot;All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.&quot;, &quot;I Agree&quot;);" aria-label="Licensing" class="md-icon-button">
       <md-tooltip md-direction="bottom" class="opaque-tooltip">Licensing Info.</md-tooltip>
       <md-icon md-svg-src="/icons/file.svg"></md-icon>
@@ -8,8 +8,15 @@
     <md-button aria-label="Date" class="md-icon-button">
       <md-tooltip md-direction="bottom" class="opaque-tooltip"></md-tooltip>
       <md-icon md-svg-src="/icons/time.svg"></md-icon>
-    </md-button></h1>
+    </md-button>
+  </div>
 </md-toolbar>
-<div id="post" class="flow-text"><p>As you may know, I use Emacs for my text-editing needs. I think it’s the best editor ever made <begin [editor war](https://en.wikipedia.org/wiki/Editor_war) here>. I’m kidding of course. Vi(m) is probably a great editor too - I might take the time to learn it and use Emacs with evil-mode - I really don’t care what editor you use - Emacs, Vi(m), nano, ed, or even the one person who edits all of their text by appending it with <code>echo</code> or <code>cat</code>. <em>Insert <span class="caps">XKCD</span> meme&nbsp;here…</em></p>
-<hr>
+<div flex="flex" class="article">
+  <md-card id="post" class="postcard">
+    <md-card-content>
+      <h1 id="title" class="backgr">Creating a decent Emacs config.</h1>
+      <div class="flow-text"><p>I’ve finally spent some time producing an Emacs configuration which suits me. First of all, I completely scrapped my previous configuration, where I made my own <code>.emacs</code>. However, that ended up being a huge mess. Because of this, I decided to make the move to <a href="https://spacemacs.org/">Spacemacs</a>.</p>
+</div>
+    </md-card-content>
+  </md-card>
 </div>

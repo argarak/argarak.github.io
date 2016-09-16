@@ -1,6 +1,5 @@
 md-toolbar.md-tall.toolbar-padding
-  span(flex)
-  h1#title.md-toolbar-tools= page.title
+  .md-toolbar-tools
     span.md-flex
     span(flex)
     - alertLicense   = "\"" + locals.licenseTitle + "\", \"" + locals.licenseText + "\", \"I Agree\""
@@ -11,4 +10,10 @@ md-toolbar.md-tall.toolbar-padding
     md-button.md-icon-button(aria-label="Date")
       md-tooltip.opaque-tooltip(md-direction="bottom")= page.metadata.date
       md-icon(md-svg-src="/icons/time.svg")
-#post.flow-text!= typogr(page.html).typogrify()
+.article(flex)
+  md-card#post.postcard
+    md-card-content
+      h1.backgr#title= page.title
+      .flow-text!= typogr(page.html).typogrify()
+    
+    

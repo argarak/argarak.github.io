@@ -42,7 +42,9 @@
         "./plugins/paginator.coffee",
         "./plugins/indexpage.coffee",
         "./node_modules/wintersmith-stylus/",
-        "./node_modules/wintersmith-pandoc/"
+        "./node_modules/wintersmith-pandoc/",
+        "./plugins/articlejson.js",
+        "./node_modules/wintersmith-tag/"
     ],
     "require": {
         "_": "underscore",

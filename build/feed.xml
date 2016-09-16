@@ -14,7 +14,7 @@
       <pubDate>Fri, 29 Apr 2016 00:00:00 +0100</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/nexus-evolution/</guid>
       <author></author>
-      <description>&lt;p&gt;Argarak’s Nexus has has drastically evolved in a short period of time (approximately one year). Let’s take a look back at what Argarak’s Nexus was.&lt;/p&gt;
+      <description>&lt;p&gt;Argarak’s Nexus has drastically evolved in a short period (approximately one year). Let’s take a look back at what Argarak’s Nexus was.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;NOTE: This was written before version 3 of this website! Some information may be invalid to the current version.&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;the-name&quot;&gt;The name&lt;/h2&gt;
@@ -28,20 +28,20 @@
 &lt;p class=&quot;caption&quot;&gt;Argarak’s Nexus logo used in version 1 and 2.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Now this is not the first iteration of this logo, the first had a teal background and was slightly thinner (you will see it later on though) but it had the same shape. I chose a hexagon because I like hexagons and the star in the middle with the triangle is meant to represent an “A” for Argarak.&lt;/p&gt;
-&lt;p&gt;When I made version 1, I later did not use this logo, instead I piped it through a image to ASCII converter and used this logo:&lt;/p&gt;
+&lt;p&gt;When I made version 1, I later did not use this logo, instead I piped it through an image to ASCII converter and used this logo:&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
 &lt;img src=&quot;http://localhost:8080/articles/nexus-evolution/logo.png&quot; alt=&quot;Argarak’s Nexus logo (version 1) parsed through the aview/asciiview program.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;Argarak’s Nexus logo (version 1) parsed through the aview/asciiview program.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;This logo was meant to fit in with the background of the website which was also made out of text. This was the most used logo.&lt;/p&gt;
-&lt;p&gt;After a while, when I started to get fed up of version 1, I wanted a different logo. I was sketching in my notebook fairly often, coming up with new ideas. This one came to my after I drew a isometric grid. I drew some pyramids and but a box around it. The new Nexus logo was made.&lt;/p&gt;
+&lt;p&gt;After a while, when I started to get fed up of version 1, I wanted a different logo. I was sketching in my notebook fairly often, coming up with new ideas. This one came to my after I drew an isometric grid. I drew some pyramids and but a box around it. The new Nexus logo was made.&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
 &lt;img src=&quot;http://localhost:8080/articles/nexus-evolution/nexus.png&quot; alt=&quot;Version 2 of the logo used on this page.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;Version 2 of the logo used on this page.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;This is the logo you see now on the side of you screen (or hidden away on mobile).&lt;/p&gt;
 &lt;h2 id=&quot;version-0&quot;&gt;Version 0&lt;/h2&gt;
-&lt;p&gt;I always wanted a website of my own. Not really for any particular purpose, other than to put all of my future projects on it. However, there were always difficulties. I did not know HTML or CSS too well, and I did not know any practical javascript. Buying a domain name and hosting wasn’t too appealing since I did not want to waste money on some website no-one is going to visit. However, I can always make a prototype on my computer!&lt;/p&gt;
+&lt;p&gt;I always wanted a website of my own. Not really for any particular purpose, other than to put all of my future projects on it. However, there were always difficulties. I did not know HTML or CSS too well, and I did not know any practical JavaScript. Buying a domain name and hosting wasn’t too appealing since I did not want to waste money on some website no-one is going to visit. However, I can always make a prototype on my computer!&lt;/p&gt;
 &lt;p&gt;However, before any real development, I decided to make an image of what I wanted the website to look. I used Inkscape to create the image and it somewhat looks similar - but a lot worse - to what it looks today. So let’s take a look at it!&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
 &lt;img src=&quot;http://localhost:8080/articles/nexus-evolution/argarak_idea.png&quot; alt=&quot;A graphic for my website idea made in Inkscape using the Numix icons on the sidebar.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
@@ -49,28 +49,28 @@
 &lt;/div&gt;
 &lt;p&gt;Now that’s awful design! Post warning, many of these images on this post are going to be quite bad in design. Sorry if it makes you cringe. Anyway, As you can see, the sidebar style that version 2 has is present in this image. I’ve always wanted to make a website with a sidebar for some reason. Frankly, I do not remember fully what those icons meant. I only remember that the top one is the old Nexus logo, the person icon is probably an about page, the gears are most likely some kind of programs repository and the “play” icon is probably about videos or something.&lt;/p&gt;
 &lt;p&gt;As you will see later, pre-release version 2 had the same top bar. It’s interesting how I’ve kept a similar design over the year.&lt;/p&gt;
-&lt;p&gt;Finally development began. Back then, in 2015, I used the Netbeans IDE for my programming needs. It wasn’t very good and had many problems. Also, at the time, I used to love this website called &lt;a href=&quot;http://www.colourlovers.com/&quot;&gt;COLOURlovers&lt;/a&gt;, which had collections of various patterns which I used commonly for my websites. Now, they are too colourful and garish for me to use these days, but back then I always liked to use the background-image element on just about all my tags.&lt;/p&gt;
+&lt;p&gt;Finally, development began. Back then, in 2015, I used the Netbeans IDE for my programming needs. It wasn’t very good and had many problems. Also, at the time, I used to love this website called &lt;a href=&quot;http://www.colourlovers.com/&quot;&gt;COLOURlovers&lt;/a&gt;, which had collections of various patterns which I used commonly for my websites. Now, they are too colourful and garish for me to use these days, but back then I always liked to use the background-image element on just about all my tags.&lt;/p&gt;
 &lt;p&gt;So here’s how it went!&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
 &lt;img src=&quot;http://localhost:8080/articles/nexus-evolution/v0.png&quot; alt=&quot;Version 0 of the site.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;Version 0 of the site.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Sadly, I could not find a source of this website, I could have used it as a basis for another, which I will show soon. Anyway, there are many design flaws with the design. The most obvious one would be the inconsistency of the patterns. The website is light coloured, which is not my style anymore, the text on the backgrounds is difficult to read and it’s too detailed and has no set palette.&lt;/p&gt;
+&lt;p&gt;Sadly, I could not find a source of this website, I could have used it as a basis for another, which I will show soon. Anyway, there are many design flaws with the design. The most obvious one would be the inconsistency of the patterns. The website is light coloured, which is not my style any more, the text on the backgrounds is difficult to read and it’s too detailed and has no set palette.&lt;/p&gt;
 &lt;p&gt;The links on the top blend in to the background too much, therefore are difficult to see and the font sizes are too large and inconsistent. It’s not a great website, to say the least.&lt;/p&gt;
-&lt;p&gt;As you can read at the bottom of the image, I was wanting to learn practical javascript however, I did not know JQuery so that’s probably why (and yes there are built in ID searching and style setting functions but JQuery is so much easier).&lt;/p&gt;
+&lt;p&gt;As you can read at the bottom of the image, I wanted to learn practical JavaScript however, I did not know jQuery so that’s probably why (and yes there are built in ID searching and style setting functions but jQuery is so much easier).&lt;/p&gt;
 &lt;p&gt;I believe that this next image is the website that I based this one on. Here’s how it looks:&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
 &lt;img src=&quot;http://localhost:8080/articles/nexus-evolution/v0b.png&quot; alt=&quot;A site based on the previous version 0.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;A site based on the previous version 0.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;At least with this one the links are easy to read. However, they are too large. The whole site is pretty much empty and abandoned.&lt;/p&gt;
-&lt;p&gt;The logo at the top is the same logo we saw earlier, but this time with curly brackets, for no good reason whatsoever. And I licensed it by the GPL because a ~40 odd line HTML file and a CSS file of approximately the same size should be licensed by a strong copyleft license, because why not!&lt;/p&gt;
+&lt;p&gt;The logo at the top is the same logo we saw earlier, but this time with curly brackets, for no good reason whatsoever. And I licensed it by the GPL because a ~40 odd line HTML file and a CSS file of approximately the same size should be licensed by a strong copyleft licence, because why not!&lt;/p&gt;
 &lt;p&gt;By the way, these are from 2015! I’m amazed the amount of progress I made with my website, it really amazing to see how terrible websites can eventually become good ones.&lt;/p&gt;
-&lt;p&gt;Actually, at the time, I did not refer to these sites as Argarak’s Nexus, the source for the most recent one shown was called “some_website”.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;Actually, at the time, I did not refer to these sites as Argarak’s Nexus, the source for the most recent one shown was called “some_website”.&lt;/del&gt; (Totally false since you see the words “Argarak’s Nexus” on the top of the site!)&lt;/p&gt;
 &lt;p&gt;Of course, I made many little abandoned blogs (i.e &lt;a href=&quot;https://argarak.wordpress.com&quot; class=&quot;uri&quot;&gt;https://argarak.wordpress.com&lt;/a&gt;) but I will not cover them because they are pretty boring and not very progressive of the Nexus we have today.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I have been interested in secure and private providers of email, and so I went over to &lt;a href=&quot;https://prism-break.org/en/&quot;&gt;prism-break&lt;/a&gt; and went over to the Email Accounts section of the site and I found the group Autistici/Inventiati who provided many kinds of services, but my main goal was to finally break away from Google Mail and my spam-filled email account to a safer, private and trustworthy provider. So I signed up, sent them a request and they accepted it! Which was great.&lt;/p&gt;
-&lt;p&gt;I don’t use email often, especially for domestic communications, but without it, it would be difficult to contact developers, make accounts and use or subscribe to mailing lists.&lt;/p&gt;
+&lt;p&gt;I don’t use email often, especially for &lt;del&gt;domestic&lt;/del&gt; day-to-day communications, but without it, it would be difficult to contact developers, make accounts and use or subscribe to mailing lists.&lt;/p&gt;
 &lt;p&gt;Anyway, I heard that A/I were offering a blogging service, which was intriguing, so I set one up. The service was called “Noblogs” and I chose the URL “nexus.noblogs.org”. Version 1 has began.&lt;/p&gt;
 &lt;h2 id=&quot;version-1&quot;&gt;Version 1&lt;/h2&gt;
 &lt;p&gt;I never really liked Wordpress myself. It’s interface is clunky, customisation is weak (client side) - in the sense that the only thing you can change is the CSS of the website - and server side, it’s really confusing for me. The themes are made in PHP for some reason.&lt;/p&gt;
@@ -118,9 +118,18 @@
       <pubDate>Sat, 28 Jul 2001 00:00:00 +0100</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/aros-review/</guid>
       <author></author>
-      <description>&lt;p&gt;AROS (AROS Research Operating System, ooh yet another &lt;a href=&quot;https://en.wikipedia.org/wiki/Recursive_acronym&quot;&gt;recursive acronym&lt;/a&gt;) is an Operating System aiming to be API compatible with Amiga 3.x systems. It is free software, however it does have &lt;a href=&quot;http://www.evillabs.net/AROS/Audit-2012-03-14/AROS-trunk.txt&quot;&gt;licensing issues.&lt;/a&gt;. For the review, I have chosen the Icaros Desktop (version v2.1.2) distribution as it is the most developed and stable (to my knowledge).&lt;/p&gt;
+      <description>&lt;p&gt;AROS (AROS Research Operating System, yet another &lt;a href=&quot;https://en.wikipedia.org/wiki/Recursive_acronym&quot;&gt;recursive acronym&lt;/a&gt;) is an Operating System aiming to be API compatible with Amiga 3.x systems. It is free software, however it does have &lt;a href=&quot;http://www.evillabs.net/AROS/Audit-2012-03-14/AROS-trunk.txt&quot;&gt;licensing issues.&lt;/a&gt;. For the review, I have chosen the Icaros Desktop (version v2.1.2) distribution as it’s pre-configured for the PC platform.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I personally have a minor interest for the Amiga systems due to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Demoscene&quot;&gt;Demoscene&lt;/a&gt; and &lt;a href=&quot;https://modarchive.org/&quot;&gt;mod tracking&lt;/a&gt; but I’ve never owned one or have any interest in the games available.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Creating a decent Emacs config.</title>
+      <link>http://localhost:8080/articles/finally-a-good-conf/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/finally-a-good-conf/</guid>
+      <author></author>
+      <description>&lt;p&gt;I’ve finally spent some time producing an Emacs configuration which suits me. First of all, I completely scrapped my previous configuration, where I made my own &lt;code&gt;.emacs&lt;/code&gt;. However, that ended up being a huge mess. Because of this, I decided to make the move to &lt;a href=&quot;https://spacemacs.org/&quot;&gt;Spacemacs&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -131,14 +140,14 @@
       <author></author>
       <description>&lt;p&gt;The first epic series which will span across many parts and include many operating systems. I hope that this will be my first actually running series, as I have never managed to make one stable yet.&lt;/p&gt;
 &lt;p&gt;The first review should come in a week or so, but do not be surprised if I don’t (I’m not an active blogger).&lt;/p&gt;
-&lt;p&gt;(EDIT: The series should start about August or September as I will be busy during June to August due to projects I have to complete. I will hopefully have time to document them on this blog)&lt;/p&gt;
+&lt;p&gt;(&lt;del&gt;EDIT: The series should start about August or September as I will be engaged during June to August due to projects I have to complete. I will hopefully have time to document them on this blog&lt;/del&gt; I have some doubts about finishing the project at all, but I’ll keep you informed of any updates…)&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I hope to only look at free software operating systems (or at least partially) however I will look at abandon-ware and some old closed source systems if I run out of ideas.&lt;/p&gt;
 &lt;p&gt;I am pretty confident in this series as I do have knowledge of some systems which are obscure (even if you don’t think their uncommon, I aim to have the operating system clear less than 0.5% of the operating system market share - but no-one will actually publish the data since how will they get it when it’s about the usage of OSes no-one uses on a day-to-day basis?).&lt;/p&gt;
 &lt;p&gt;A few rules for this series:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;No mobile OSes&lt;/li&gt;
-&lt;li&gt;No GNU/Linux distributions (however, if they are interesting enough, I will make a independent review)&lt;/li&gt;
+&lt;li&gt;No GNU/Linux distributions (however, if they are interesting enough, I will make an independent review)&lt;/li&gt;
 &lt;li&gt;Third-party software for the OS will not be mentioned unless it is interesting, necessary for the review, or something I want to test out.&lt;/li&gt;
 &lt;li&gt;I test the operating system for current usability, I don’t give exemptions to incomplete code or not enough drivers for either QEMU or the three computers I will test the systems on:&lt;/li&gt;
 &lt;li&gt;My computer (workstation), “elephant”: (it’s bad, I know)
@@ -148,8 +157,8 @@
 &lt;li&gt;OpenGL Renderer : Gallium 0.4 on AMD RS780 (DRM 2.43.0, LLVM 3.8.0)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;An IBM Thinkpad R40e built in 2003&lt;/li&gt;
-&lt;li&gt;Some Acer Aspire laptop that is not mine, I’ll only fallback to it if all else fails.&lt;/li&gt;
-&lt;li&gt;I will not write a review if nothing I try works, I will give it a honourable mention at the end of another review.&lt;/li&gt;
+&lt;li&gt;Some Acer Aspire laptop that is not mine, I’ll only fall-back to it if all else fails.&lt;/li&gt;
+&lt;li&gt;I will not write a review if nothing I try works, I will give it an honourable mention at the end of another review.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Anyway, I will use this layout for each of my reviews (might change throughout time however I will add it here if there’s a change).&lt;/p&gt;
 &lt;ul&gt;
@@ -171,16 +180,6 @@
 &lt;/ul&gt;
 &lt;p&gt;Now when I say operating system some of you may shout at me “OPERATING SYSTEMS ARE NOT GRAPHICAL USER INTERFACES!!!!” and you are correct. In practise, you never interact with the operating systems, programs and libraries do, and you interact with the programs. However, I’ll look how usable the programs are, which use the operating system. I will not look into technical details about the system or look at any underlying code (unless I already have previous knowledge).&lt;/p&gt;
 &lt;p&gt;I hope you enjoy this new series.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>I've finally took the time to create a half-decent Emacs config.</title>
-      <link>http://localhost:8080/articles/finally-a-good-conf/</link>
-      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/finally-a-good-conf/</guid>
-      <author></author>
-      <description>&lt;p&gt;As you may know, I use Emacs for my text-editing needs. I think it’s the best editor ever made &lt;begin [editor war](https://en.wikipedia.org/wiki/Editor_war) here&gt;. I’m kidding of course. Vi(m) is probably a great editor too - I might take the time to learn it and use Emacs with evil-mode - I really don’t care what editor you use - Emacs, Vi(m), nano, ed, or even the one person who edits all of their text by appending it with &lt;code&gt;echo&lt;/code&gt; or &lt;code&gt;cat&lt;/code&gt;. &lt;em&gt;Insert XKCD meme here…&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
 </description>
     </item>
   </channel>

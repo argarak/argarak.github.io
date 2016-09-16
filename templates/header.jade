@@ -1,15 +1,10 @@
 doctype html
 html(ng-app="nexus")
   head
-    script.
-      String.prototype.capitalize = function() {
-        return this.charAt(0).toUpperCase() + this.slice(1);
-      }
-  
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-    title(ng-bind="$stateParams.name.capitalize() + \" - Argarak\'s Nexus\"")
-      = locals.name
+    title(ng-bind="$stateParams.title | titleFilter")
+      = locals.title
     meta(name="description" content="")
     meta(name="viewport" content="width=device-width")
     link(rel="shortcut icon" href="/favicon.ico?")
@@ -23,7 +18,7 @@ html(ng-app="nexus")
       script(src=src)
 
   mixin navbarEntry(href, src, tooltip, index)
-    li.navbarLi
+    li.navbarLi(class="navbarl" + index)
       if index == 6
         a(href=href)
           img(src=src)
@@ -31,8 +26,20 @@ html(ng-app="nexus")
       else  
         a(ui-sref="navbar({ name: \"" + href + "\" })")
           img(src=src)
-        md-tooltip(md-direction="right" class="tooltip" + index)= tooltip  
-
+        md-tooltip(md-direction="right" class="tooltip" + index)= tooltip
+  
+  mixin toolbarEntry(href, src, tooltip, index)
+      if index == 6
+        a(href=href)
+          md-button.md-icon-button(aria-label=tooltip)
+            md-icon(md-svg-icon=src)
+          //md-tooltip(md-direction="top" class="tooltip" + index)= tooltip  
+      else  
+        a(ui-sref="navbar({ name: \"" + href + "\" })")
+          md-button.md-icon-button(aria-label=tooltip)
+            md-icon(md-svg-icon=src)
+          //md-tooltip(md-direction="top" class="tooltip" + index)= tooltip
+  
   body
     a(href="/librejs/license.html" style="display: none;" data-jslicense="1")
     .app(layout="column")
@@ -44,7 +51,9 @@ html(ng-app="nexus")
           md-content(layout-padding="" layout="column" layout-align="center")
             each item in locals.navbar
               +navbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])
-        md-button.sidenav-fab.md-fab.md-fab-bottom-right(hide-gt-sm aria-label="FAB" ng-click="openLeftMenu()")
-          md-icon(md-svg-src="/icons/menu.svg")
         md-content#main-content(flex)
-          ui-view
+          ui-view      
+        md-toolbar.xs-toolbar(hide-gt-sm)
+          .md-toolbar-tools
+            each item in locals.navbar
+              +toolbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])

@@ -1,15 +1,10 @@
-- var articleTitles = [];
-- for(var i = 0; i < articles.length; i++) {
--     articleTitles.push("\"" + articles[i].title + "\"");
-- }
-
 - var articleUrls = [];
 - for(var i = 0; i < articles.length; i++) {
 -     articleUrls.push("\"" + articles[i].url + "\"");
 - }
 
-.blog(ng-controller="blogController as ctrl" ng-init="createHideObject([" + articleTitles + "])")
-  md-toolbar.md-whiteframe-5dp(layout="row" flex layout-align="center")
+.blog(ng-controller="blogController as ctrl")
+  md-toolbar#blogtoolbar.md-whiteframe-5dp(layout="row" flex layout-align="center")
     .md-toolbar-tools
       span(flex)
       md-autocomplete(
@@ -19,7 +14,7 @@
           md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
           md-search-text="ctrl.searchText"
           md-selected-item-change="ctrl.selectedItemChange(item, [" + articleUrls + "])"
-          md-items="item in ctrl.querySearch(ctrl.searchText, [" + articleTitles + "])"
+          md-items="item in ctrl.querySearch(ctrl.searchText)"
           md-item-text="item.display"
           md-min-length="0"
           placeholder="Search blog posts...")
@@ -27,6 +22,12 @@
           span.autocomplete-text(md-highlight-text="ctrl.searchText" md-highlight-flags="^i") {{item.display}}
         md-not-found
           | No blog posts matching "{{ctrl.searchText}}" were found.
+      span(flex="5")
+      md-select(placeholder="Tags" ng-model="tagname" hide-xs ng-click="ctrl.searchText = \"\";")
+        - var tags = env.helpers.getAllTags()
+        md-option All
+        each tag in tags
+          md-option= tag
   #post.flow-text
     each article in articles
       .flex
@@ -35,7 +36,7 @@
             md-card-title-text
               h2
                 .inline
-                  a(ui-sref="blog({ name: \"" + article.url.substring(10, article.url.length - 1) + "\" })")= article.title
+                  a(ui-sref="blog({ name: \"" + article.url.substring(10, article.url.length - 1) + "\", title: \"" + article.title + "\" })")= article.title
                 hr.pink-hr          
           md-card-content
             section.content

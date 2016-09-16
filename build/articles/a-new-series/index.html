@@ -1,6 +1,6 @@
 
-<md-toolbar class="md-tall toolbar-padding"><span flex="flex"></span>
-  <h1 id="title" class="md-toolbar-tools">A new series! Reviews of obscure operating systems.<span class="md-flex"></span><span flex="flex"></span>
+<md-toolbar class="md-tall toolbar-padding">
+  <div class="md-toolbar-tools"><span class="md-flex"></span><span flex="flex"></span>
     <md-button ng-click="showAlert($event, &quot;Licensing Information&quot;, &quot;All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.&quot;, &quot;I Agree&quot;);" aria-label="Licensing" class="md-icon-button">
       <md-tooltip md-direction="bottom" class="opaque-tooltip">Licensing Info.</md-tooltip>
       <md-icon md-svg-src="/icons/file.svg"></md-icon>
@@ -8,18 +8,23 @@
     <md-button aria-label="Date" class="md-icon-button">
       <md-tooltip md-direction="bottom" class="opaque-tooltip"></md-tooltip>
       <md-icon md-svg-src="/icons/time.svg"></md-icon>
-    </md-button></h1>
+    </md-button>
+  </div>
 </md-toolbar>
-<div id="post" class="flow-text"><p>The first epic series which will span across many parts and include many operating systems. I hope that this will be my first actually running series, as I have never managed to make one stable&nbsp;yet.</p>
+<div flex="flex" class="article">
+  <md-card id="post" class="postcard">
+    <md-card-content>
+      <h1 id="title" class="backgr">A new series! Reviews of obscure operating systems.</h1>
+      <div class="flow-text"><p>The first epic series which will span across many parts and include many operating systems. I hope that this will be my first actually running series, as I have never managed to make one stable&nbsp;yet.</p>
 <p>The first review should come in a week or so, but do not be surprised if I don’t (I’m not an active&nbsp;blogger).</p>
-<p>(<span class="caps">EDIT</span>: The series should start about August or September as I will be busy during June to August due to projects I have to complete. I will hopefully have time to document them on this&nbsp;blog)</p>
+<p>(<del><span class="caps">EDIT</span>: The series should start about August or September as I will be engaged during June to August due to projects I have to complete. I will hopefully have time to document them on this blog</del> I have some doubts about finishing the project at all, but I’ll keep you informed of any&nbsp;updates…)</p>
 <hr>
 <p>I hope to only look at free software operating systems (or at least partially) however I will look at abandon-ware and some old closed source systems if I run out of&nbsp;ideas.</p>
 <p>I am pretty confident in this series as I do have knowledge of some systems which are obscure (even if you don’t think their uncommon, I aim to have the operating system clear less than 0.5% of the operating system market share - but no-one will actually publish the data since how will they get it when it’s about the usage of OSes no-one uses on a day-to-day&nbsp;basis?).</p>
 <p>A few rules for this&nbsp;series:</p>
 <ul>
 <li>No mobile&nbsp;OSes</li>
-<li>No <span class="caps">GNU</span>/Linux distributions (however, if they are interesting enough, I will make a independent&nbsp;review)</li>
+<li>No <span class="caps">GNU</span>/Linux distributions (however, if they are interesting enough, I will make an independent&nbsp;review)</li>
 <li>Third-party software for the <span class="caps">OS</span> will not be mentioned unless it is interesting, necessary for the review, or something I want to test&nbsp;out.</li>
 <li>I test the operating system for current usability, I don’t give exemptions to incomplete code or not enough drivers for either <span class="caps">QEMU</span> or the three computers I will test the systems&nbsp;on:</li>
 <li>My computer (workstation), “elephant”: (it’s bad, I know)
@@ -29,8 +34,8 @@
 <li>OpenGL Renderer : Gallium 0.4 on <span class="caps">AMD</span> RS780 (DRM 2.43.0, LLVM&nbsp;3.8.0)</li>
 </ul></li>
 <li>An <span class="caps">IBM</span> Thinkpad R40e built in&nbsp;2003</li>
-<li>Some Acer Aspire laptop that is not mine, I’ll only fallback to it if all else&nbsp;fails.</li>
-<li>I will not write a review if nothing I try works, I will give it a honourable mention at the end of another&nbsp;review.</li>
+<li>Some Acer Aspire laptop that is not mine, I’ll only fall-back to it if all else&nbsp;fails.</li>
+<li>I will not write a review if nothing I try works, I will give it an honourable mention at the end of another&nbsp;review.</li>
 </ul>
 <p>Anyway, I will use this layout for each of my reviews (might change throughout time however I will add it here if there’s a&nbsp;change).</p>
 <ul>
@@ -52,4 +57,7 @@
 </ul>
 <p>Now when I say operating system some of you may shout at me “<span class="caps">OPERATING</span> SYSTEMS ARE NOT GRAPHICAL USER INTERFACES!!!!” and you are correct. In practise, you never interact with the operating systems, programs and libraries do, and you interact with the programs. However, I’ll look how usable the programs are, which use the operating system. I will not look into technical details about the system or look at any underlying code (unless I already have previous&nbsp;knowledge).</p>
 <p>I hope you enjoy this new&nbsp;series.</p>
+</div>
+    </md-card-content>
+  </md-card>
 </div>

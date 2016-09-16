@@ -40,14 +40,18 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                                  return "/" + $stateParams.name + "/index.html";
                              },
                              controller: function($rootScope, $scope, $stateParams) {
+                                 $stateParams.title = $stateParams.name;
                                  $rootScope.$stateParams = $stateParams;
                                  $scope.name = $stateParams.name;
                              }
                          })
                          .state("blog", {
-                             url: "/articles/:name",
+                             url: "/articles/:name?title",
                              templateUrl: function($stateParams) {
                                  return "/articles/" + $stateParams.name + "/index.html";
+                             },
+                             controller: function($rootScope, $scope, $stateParams) {
+                                 $rootScope.$stateParams = $stateParams;
                              }
                          });
                  }])
@@ -55,10 +59,14 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                      hljs.initHighlightingOnLoad();
                  });
 
-app.controller("mainController", function($scope, $mdSidenav, $mdDialog) {
+app.controller("mainController", function($scope, $mdSidenav, $mdDialog, $state, $rootScope) {
     $scope.openLeftMenu = function() {
         $mdSidenav("left").toggle();
     }
+
+    $scope.$watch($rootScope.$stateParams, function (newValue, oldValue, scope) {
+        console.log(newValue);
+    }, true);
 
     $scope.showAlert = function(ev, title, text, ok) {
         $mdDialog.show(
@@ -74,27 +82,110 @@ app.controller("mainController", function($scope, $mdSidenav, $mdDialog) {
     }
 });
 
+app.directive('animchange', function($animate, $timeout) {
+    return function(scope, elem, attr) {
+        scope.$watch(attr.animchange, function(nv, ov) {
+            if(nv != ov) {
+                var c = nv > ov ? 'change-up' : 'change';
+                $animate.addClass(elem, c).then(function() {
+                    $timeout(function() {
+                        $animate.removeClass(elem, c);
+                    });
+                });
+            }
+        });
+    };
+});
+
+app.filter("introFilter", function() {
+    return function(x) {
+        if(x !== undefined)
+            return x.substring(0, x.indexOf("</p>"));
+    }
+});
+
+app.filter("titleFilter", function($state) {
+    String.prototype.capitalize = function() {
+        return this.charAt(0).toUpperCase() + this.slice(1);
+    }
+
+    return function(x) {
+        if($state.href($state.current.name, $state.params, {absolute: true}) !== null)
+            return $state.href($state.current.name, $state.params, {absolute: true})
+                         .split("/")[4]
+                         .capitalize() + " - Argarak's Nexus";
+    }
+});
+
+app.filter('trusted', ['$sce', function($sce) {
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    }
+}]);
+
 app.controller("homeController", function($scope, $interval, $log, $http) {
     var self = this;
     self.articleIndex = 0;
 
-    $http.get("/article.js").then(function(out) {
+    self.randColor = function() {
+        function randInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var colors = [
+            "#D32F2F",
+            "#C2185B",
+            "#7B1FA2",
+            "#512DA8",
+            "#303F9F",
+            "#1976D2",
+            "#0288D1",
+            "#0097A7",
+            "#00796B",
+            "#388E3C",
+            "#689F38",
+            "#AFB42B",
+            "#FBC02D",
+            "#FFA000",
+            "#F57C00",
+            "#E64A19"
+       ];
+        return colors[randInt(0, colors.length - 1)];
+    }
+
+    $http.get("/articles.js").then(function(out) {
+        self.out = out;
         $scope.title = out.data._wrapped[0].metadata.title;
         $scope.date = out.data._wrapped[0].metadata.date;
-        $scope.intro = out.data._wrapped[0].markdown;
+        $scope.intro = out.data._wrapped[0]._htmlraw;
+        $scope.link = out.data._wrapped[0].filepath.relative.split("/")[1];
+        console.log($scope.link);
+        $scope.color = self.randColor();
     }, function(out) {
         console.log("Failed to GET /article.js");
     });
+
+    self.update = function(index) {
+        $scope.title = self.out.data._wrapped[index].metadata.title;
+        $scope.date = self.out.data._wrapped[index].metadata.date;
+        $scope.intro = self.out.data._wrapped[index]._htmlraw;
+        $scope.color = self.randColor();
+    }
 
     $scope.determinateValue = 0;
     $interval(function() {
         $scope.determinateValue += 1;
         if($scope.determinateValue > 100) {
             $scope.determinateValue = 0;
-            self.articleIndex++;
-            //self.update(self.articleIndex);
+            if(self.articleIndex === self.out.data._wrapped.length - 1)
+                self.articleIndex = 0;
+            else
+                self.articleIndex++;
+            self.update(self.articleIndex);
         }
-    }, 100);
+    }, 70);
 });
 
 app.controller("getMonth", function($scope) {
@@ -108,7 +199,8 @@ app.controller("getMonth", function($scope) {
 });
 
 app.controller("blogController", function($scope, $timeout, $q, $log,
-                                          $rootScope, $window, $state) {
+                                          $rootScope, $window, $state,
+                                          $http) {
     var self = this;
     this.isDisabled = false;
     this.querySearch = querySearch;
@@ -116,12 +208,16 @@ app.controller("blogController", function($scope, $timeout, $q, $log,
     this.selectedItemChange = selectedItemChange;
     this.noCache = true;
 
-    $scope.hideObject = new Object();
+    $scope.articles = {};
 
-    $scope.createHideObject = function(articleTitles) {
-        for(var i = 0; i < articleTitles.length; i++)
-            $scope.hideObject[articleTitles[i]] = false;
-    }
+    $http.get("/articles.js").then(function(out) {
+        $scope.articles = out.data;
+        $scope.hideObject = new Object();
+        for(var i = 0; i < out.data._wrapped.length; i++)
+            $scope.hideObject[out.data._wrapped[i].metadata.title] = false;
+    }, function(out) {
+        console.log("Failed to GET /article.js");
+    });
 
     var updateObject = function(name, query) {
         if(name.toLowerCase().indexOf(query.toLowerCase()) > -1) {
@@ -131,12 +227,12 @@ app.controller("blogController", function($scope, $timeout, $q, $log,
         }
     };
 
-    function querySearch(query, articleTitles) {
+    function querySearch(query) {
         var articleObj = new Array();
-        for(var i = 0; i < articleTitles.length; i++) {
+        for(var i = 0; i < $scope.articles._wrapped.length; i++) {
             var tmpobj = new Object();
-            tmpobj.value = articleTitles[i].toLowerCase();
-            tmpobj.display = articleTitles[i];
+            tmpobj.value = $scope.articles._wrapped[i].metadata.title.toLowerCase();
+            tmpobj.display = $scope.articles._wrapped[i].metadata.title;
             articleObj.push(tmpobj);
         }
 
@@ -152,6 +248,7 @@ app.controller("blogController", function($scope, $timeout, $q, $log,
     }
 
     function searchTextChange(text) {
+        $scope.tagname = undefined;
         for(var i = 0; i < Object.getOwnPropertyNames($scope.hideObject).length; i++) {
             var names = Object.getOwnPropertyNames($scope.hideObject);
             $scope.hideObject[names[i]] = updateObject(names[i], text);
@@ -173,6 +270,26 @@ app.controller("blogController", function($scope, $timeout, $q, $log,
             return (state.value.indexOf(lowercaseQuery) === 0);
         }
     }
+
+    $scope.$watch("tagname", function(newValue, oldValue) {
+        if(newValue !== undefined) {
+            if(newValue === "All") {
+                // All articles are shown
+                for(var i in $scope.hideObject) {
+                    $scope.hideObject[i] = false;
+                }
+            } else {
+                // Hide articles according to tag
+                for(var i in $scope.articles._wrapped) {
+                    if($scope.articles._wrapped[i].metadata.tags !== newValue) {
+                        $scope.hideObject[$scope.articles._wrapped[i].metadata.title] = true;
+                    } else {
+                        $scope.hideObject[$scope.articles._wrapped[i].metadata.title] = false;
+                    }
+                }
+            }
+        }
+    });
 });
 
 app.controller("programsController", function($scope, $http) {

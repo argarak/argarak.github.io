@@ -6,16 +6,16 @@ link(rel="stylesheet" href="/css/index.css")
 md-content.home-content(flex layout="column" ng-controller="homeController as hc")
   #homecontent(flex layout="row" layout-sm="column" layout-xs="column" ng-style="{'background-color': color}")
     #halfone(flex="40" flex-sm="100" flex-xs="100" layout="column" layout-align="center")
-      #title(flex="90" animchange="title" layout="column" layout-align="center")
-        #date(layout="row" layout-sm="column" layout-xs="column")
+      a#title(ui-sref="blog({ name: link, title: title })" flex="90" animchange="title" layout="column" layout-align="center")
+        #date(layout="row" layout-sm="column" hide-xs)
           hr.inlinehr(flex)
           | {{date}} • Argarak
           hr.inlinehr(flex)
         | {{title}}
-      #color(flex="100" ng-style="{'background-color': color}")
+      #color(flex="100" ng-style="{'background-color': color}" hide-sm hide-xs)
     #halftwo(flex="60" flex-xs="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center")
       #intro.flow-text(animchange="intro" flex="90" layout="column" layout-align="center" ng-bind-html="intro | introFilter | trusted")
   #progress
     md-progress-linear(md-mode="determinate" value="{{determinateValue}}")
-#version
+#version(hide-xs)
   | v3 - Angled Ink-Pug

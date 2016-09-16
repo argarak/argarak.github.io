@@ -3,9 +3,10 @@ title: The Evolution of Argarak's Nexus
 author: Argarak
 date: 29 April 2016
 template: article.jade
+tags: Nexus
 ---
 
-Argarak's Nexus has has drastically evolved in a short period of time (approximately one year). Let's take a look back at what Argarak's Nexus was.
+Argarak's Nexus has drastically evolved in a short period (approximately one year). Let's take a look back at what Argarak's Nexus was.
 
 <hr>
 
@@ -15,7 +16,7 @@ Argarak's Nexus has has drastically evolved in a short period of time (approxima
 
 I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)
 
-Nexus was just a word which I picked out from a thesaurus. After searching the word "network", I found the word "nexus", which was appealing to me - even though my website is not a network. (except only in the sense that it is a network of all the rubbish I make, not a literal network).
+Nexus was just a word which I picked out from a thesaurus. After searching the word “network”, I found the word “nexus”, which was appealing to me - even though my website is not a network. (except only in the sense that it is a network of all the rubbish I make, not a literal network).
 
 ## The logo
 
@@ -25,15 +26,15 @@ Anyway, the first logo I came up with looked like this.
 
 ![Argarak's Nexus logo used in version 1 and 2.](cropped-nexus-grayscale.png){md-lightbox=""}
 
-Now this is not the first iteration of this logo, the first had a teal background and was slightly thinner (you will see it later on though) but it had the same shape. I chose a hexagon because I like hexagons and the star in the middle with the triangle is meant to represent an "A" for Argarak.
+Now this is not the first iteration of this logo, the first had a teal background and was slightly thinner (you will see it later on though) but it had the same shape. I chose a hexagon because I like hexagons and the star in the middle with the triangle is meant to represent an “A” for Argarak.
 
-When I made version 1, I later did not use this logo, instead I piped it through a image to ASCII converter and used this logo:
+When I made version 1, I later did not use this logo, instead I piped it through an image to ASCII converter and used this logo:
 
 ![Argarak's Nexus logo (version 1) parsed through the aview/asciiview program.](logo.png){md-lightbox=""}
 
 This logo was meant to fit in with the background of the website which was also made out of text. This was the most used logo.
 
-After a while, when I started to get fed up of version 1, I wanted a different logo. I was sketching in my notebook fairly often, coming up with new ideas. This one came to my after I drew a isometric grid. I drew some pyramids and but a box around it. The new Nexus logo was made.
+After a while, when I started to get fed up of version 1, I wanted a different logo. I was sketching in my notebook fairly often, coming up with new ideas. This one came to my after I drew an isometric grid. I drew some pyramids and but a box around it. The new Nexus logo was made.
 
 ![Version 2 of the logo used on this page.](nexus.png){md-lightbox=""}
 
@@ -41,27 +42,27 @@ This is the logo you see now on the side of you screen (or hidden away on mobile
 
 ## Version 0
 
-I always wanted a website of my own. Not really for any particular purpose, other than to put all of my future projects on it. However, there were always difficulties. I did not know HTML or CSS too well, and I did not know any practical javascript. Buying a domain name and hosting wasn't too appealing since I did not want to waste money on some website no-one is going to visit. However, I can always make a prototype on my computer!
+I always wanted a website of my own. Not really for any particular purpose, other than to put all of my future projects on it. However, there were always difficulties. I did not know HTML or CSS too well, and I did not know any practical JavaScript. Buying a domain name and hosting wasn't too appealing since I did not want to waste money on some website no-one is going to visit. However, I can always make a prototype on my computer!
 
 However, before any real development, I decided to make an image of what I wanted the website to look. I used Inkscape to create the image and it somewhat looks similar - but a lot worse - to what it looks today. So let's take a look at it!
 
 ![A graphic for my website idea made in Inkscape using the Numix icons on the sidebar.](argarak_idea.png){md-lightbox=""}
 
-Now that's awful design! Post warning, many of these images on this post are going to be quite bad in design. Sorry if it makes you cringe. Anyway, As you can see, the sidebar style that version 2 has is present in this image. I've always wanted to make a website with a sidebar for some reason. Frankly, I do not remember fully what those icons meant. I only remember that the top one is the old Nexus logo, the person icon is probably an about page, the gears are most likely some kind of programs repository and the "play" icon is probably about videos or something.
+Now that's awful design! Post warning, many of these images on this post are going to be quite bad in design. Sorry if it makes you cringe. Anyway, As you can see, the sidebar style that version 2 has is present in this image. I've always wanted to make a website with a sidebar for some reason. Frankly, I do not remember fully what those icons meant. I only remember that the top one is the old Nexus logo, the person icon is probably an about page, the gears are most likely some kind of programs repository and the “play” icon is probably about videos or something.
 
 As you will see later, pre-release version 2 had the same top bar. It's interesting how I've kept a similar design over the year.
 
-Finally development began. Back then, in 2015, I used the Netbeans IDE for my programming needs. It wasn't very good and had many problems. Also, at the time, I used to love this website called [COLOURlovers](http://www.colourlovers.com/), which had collections of various patterns which I used commonly for my websites. Now, they are too colourful and garish for me to use these days, but back then I always liked to use the background-image element on just about all my tags.
+Finally, development began. Back then, in 2015, I used the Netbeans IDE for my programming needs. It wasn't very good and had many problems. Also, at the time, I used to love this website called [COLOURlovers](http://www.colourlovers.com/), which had collections of various patterns which I used commonly for my websites. Now, they are too colourful and garish for me to use these days, but back then I always liked to use the background-image element on just about all my tags.
 
 So here's how it went!
 
 ![Version 0 of the site.](v0.png){md-lightbox=""}
 
-Sadly, I could not find a source of this website, I could have used it as a basis for another, which I will show soon. Anyway, there are many design flaws with the design. The most obvious one would be the inconsistency of the patterns. The website is light coloured, which is not my style anymore, the text on the backgrounds is difficult to read and it's too detailed and has no set palette.
+Sadly, I could not find a source of this website, I could have used it as a basis for another, which I will show soon. Anyway, there are many design flaws with the design. The most obvious one would be the inconsistency of the patterns. The website is light coloured, which is not my style any more, the text on the backgrounds is difficult to read and it's too detailed and has no set palette.
 
 The links on the top blend in to the background too much, therefore are difficult to see and the font sizes are too large and inconsistent. It's not a great website, to say the least.
 
-As you can read at the bottom of the image, I was wanting to learn practical javascript however, I did not know JQuery so that's probably why (and yes there are built in ID searching and style setting functions but JQuery is so much easier).
+As you can read at the bottom of the image, I wanted to learn practical JavaScript however, I did not know jQuery so that's probably why (and yes there are built in ID searching and style setting functions but jQuery is so much easier).
 
 I believe that this next image is the website that I based this one on. Here's how it looks:
 
@@ -69,11 +70,11 @@ I believe that this next image is the website that I based this one on. Here's h
 
 At least with this one the links are easy to read. However, they are too large. The whole site is pretty much empty and abandoned.
 
-The logo at the top is the same logo we saw earlier, but this time with curly brackets, for no good reason whatsoever. And I licensed it by the GPL because a ~40 odd line HTML file and a CSS file of approximately the same size should be licensed by a strong copyleft license, because why not! 
+The logo at the top is the same logo we saw earlier, but this time with curly brackets, for no good reason whatsoever. And I licensed it by the GPL because a ~40 odd line HTML file and a CSS file of approximately the same size should be licensed by a strong copyleft licence, because why not! 
 
 By the way, these are from 2015! I'm amazed the amount of progress I made with my website, it really amazing to see how terrible websites can eventually become good ones. 
 
-Actually, at the time, I did not refer to these sites as Argarak's Nexus, the source for the most recent one shown was called "some_website".
+~~Actually, at the time, I did not refer to these sites as Argarak's Nexus, the source for the most recent one shown was called "some_website".~~ (Totally false since you see the words “Argarak’s Nexus” on the top of the site!)
  
 Of course, I made many little abandoned blogs (i.e [https://argarak.wordpress.com](https://argarak.wordpress.com)) but I will not cover them because they are pretty boring and not very progressive of the Nexus we have today.
 

@@ -30,7 +30,7 @@ function index(env, callback) {
                     return callback(new Error('locals.url must be defined.'));
                 }
 
-                callback(null, new Buffer(getArticles(contents)));
+                callback(null, new Buffer(circularJSON.stringify(getArticles(contents))));
             };
         }
     }

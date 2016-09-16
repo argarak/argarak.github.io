@@ -1,21 +1,21 @@
 
 <meta name="Description" content="A development blog written by an unexperienced developer. Mostly about web development and microcontroller based projects."/>
 <link rel="stylesheet" href="/css/index.css"/>
-<md-content flex="flex" layout="column" ng-controller="homeController as hc">
-  <div id="homecontent" flex="flex" layout="row" layout-xs="column" ng-init="hc.loadArticles([undefined])">
-    <div id="halfone" flex="40" layout="column" layout-align="center">
-      <div id="title" flex="90" layout="column" layout-align="center">
-        <div id="date" layout="row">{{date}} • Argarak
+<md-content flex="flex" layout="column" ng-controller="homeController as hc" class="home-content">
+  <div id="homecontent" flex="flex" layout="row" layout-sm="column" layout-xs="column" ng-style="{'background-color': color}">
+    <div id="halfone" flex="40" flex-sm="100" flex-xs="100" layout="column" layout-align="center"><a id="title" ui-sref="blog({ name: link, title: title })" flex="90" animchange="title" layout="column" layout-align="center">
+        <div id="date" layout="row" layout-sm="column" hide-xs="hide-xs">
+          <hr flex="flex" class="inlinehr"/>{{date}} • Argarak
           <hr flex="flex" class="inlinehr"/>
-        </div>{{title}}
-      </div>
+        </div>{{title}}</a>
+      <div id="color" flex="100" ng-style="{'background-color': color}" hide-sm="hide-sm" hide-xs="hide-xs"></div>
     </div>
-    <div id="halftwo" flex="60" layout="row" layout-align="center">
-      <div id="intro" flex="90" layout="column" layout-align="center" class="flow-text">{{intro}}</div>
+    <div id="halftwo" flex="60" flex-xs="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center">
+      <div id="intro" animchange="intro" flex="90" layout="column" layout-align="center" ng-bind-html="intro | introFilter | trusted" class="flow-text"></div>
     </div>
   </div>
   <div id="progress">
     <md-progress-linear md-mode="determinate" value="{{determinateValue}}"></md-progress-linear>
   </div>
 </md-content>
-<div id="version">v3 - Angled Ink-Pug</div>
+<div id="version" hide-xs="hide-xs">v3 - Angled Ink-Pug</div>
