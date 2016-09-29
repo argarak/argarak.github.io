@@ -2,7 +2,7 @@
 title: Operating System Review - AROS
 author: Argarak
 date: Thu 28 July
-template: article.jade
+template: none
 tags: Operating System Reviews
 ---
 

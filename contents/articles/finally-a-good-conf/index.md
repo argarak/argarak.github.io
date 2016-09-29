@@ -1,7 +1,7 @@
 ---
 title: Creating a decent Emacs config.
 author: Argarak
-template: article.jade
+template: none
 tags: Emacs
 ---
 

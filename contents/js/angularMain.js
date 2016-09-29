@@ -173,7 +173,7 @@ app.controller("homeController", function($scope, $interval, $log, $http) {
         $scope.intro = self.out.data._wrapped[index]._htmlraw;
         $scope.color = self.randColor();
     }
-    
+
     $scope.determinateValue = 0;
     $interval(function() {
         $scope.determinateValue += 1;
