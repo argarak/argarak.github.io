@@ -1,0 +1,72 @@
+
+<div ng-controller="blogController as ctrl" class="blog">
+  <md-toolbar id="blogtoolbar" layout="row" flex="flex" layout-align="center" class="md-whiteframe-5dp">
+    <div class="md-toolbar-tools"><span flex="flex"></span>
+      <md-autocomplete ng-disabled="ctrl.isDisabled" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text-change="ctrl.searchTextChange(ctrl.searchText)" md-search-text="ctrl.searchText" md-selected-item-change="ctrl.selectedItemChange(item, [&quot;/articles/release-3-whats-new/&quot;,&quot;/articles/what-ive-been-up-to/&quot;,&quot;/articles/nexus-evolution/&quot;])" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.display" md-min-length="0" placeholder="Search blog posts...">
+        <md-item-template><span md-highlight-text="ctrl.searchText" md-highlight-flags="^i" class="autocomplete-text">{{item.display}}</span></md-item-template>
+        <md-not-found>No blog posts matching "{{ctrl.searchText}}" were found.</md-not-found>
+      </md-autocomplete><span flex="5"></span>
+      <md-select placeholder="Tags" ng-model="tagname" hide-xs="hide-xs" ng-click="ctrl.searchText = &quot;&quot;;">
+        <md-option>All</md-option>
+        <md-option>Operating System Reviews</md-option>
+        <md-option>Emacs</md-option>
+        <md-option>Nexus</md-option>
+      </md-select>
+    </div>
+  </md-toolbar>
+  <div id="post" class="flow-text">
+    <div class="flex">
+      <md-card ng-hide="hideObject[&quot;What’s new in Version 3&quot;]" class="no-shadow transparent">
+        <md-card-title>
+          <md-card-title-text>
+            <h2>
+              <div class="inline"><a ui-sref="blog({ name: &quot;release-3-whats-new&quot;, title: &quot;What’s new in Version 3&quot; })">What’s new in Version 3</a></div>
+              <hr class="pink-hr"/>
+            </h2>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <section class="content"><p>As you might have noticed, version 3 of the Argarak’s Nexus blog has been released! Some fairly standard user-interface changes have occurred, which you may have already noticed. This&nbsp;includes…</p>
+
+          </section>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="flex">
+      <md-card ng-hide="hideObject[&quot;What I’ve been doing...&quot;]" class="no-shadow transparent">
+        <md-card-title>
+          <md-card-title-text>
+            <h2>
+              <div class="inline"><a ui-sref="blog({ name: &quot;what-ive-been-up-to&quot;, title: &quot;What I’ve been doing...&quot; })">What I’ve been doing...</a></div>
+              <hr class="pink-hr"/>
+            </h2>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <section class="content">
+
+          </section>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="flex">
+      <md-card ng-hide="hideObject[&quot;The Evolution of Argarak's Nexus&quot;]" class="no-shadow transparent">
+        <md-card-title>
+          <md-card-title-text>
+            <h2>
+              <div class="inline"><a ui-sref="blog({ name: &quot;nexus-evolution&quot;, title: &quot;The Evolution of Argarak's Nexus&quot; })">The Evolution of Argarak's Nexus</a></div>
+              <hr class="pink-hr"/>
+            </h2>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <section class="content"><p>Argarak’s Nexus has drastically evolved in a short period (approximately one year). Let’s take a look back at what Argarak’s Nexus&nbsp;was.</p>
+<hr>
+<p><strong><span class="caps">NOTE</span>: This was written before version 3 of this website! Some information may be invalid to the current&nbsp;version.</strong></p>
+
+          </section>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>

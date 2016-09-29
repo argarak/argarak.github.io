@@ -1,0 +1,57 @@
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 200px 346.4px 200px;
+  border-color: transparent transparent #fff transparent;
+  position: fixed;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  transform: translate(-50%, -50%);
+  animation: triangleVoid;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+body,
+html {
+  overflow: hidden;
+  background: #777;
+  margin: 0;
+}
+#canvas {
+  background: #777;
+  pasition: fixed;
+  transform: scale(2);
+}
+@-moz-keyframes triangleVoid {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes triangleVoid {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@-o-keyframes triangleVoid {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes triangleVoid {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

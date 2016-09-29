@@ -1,0 +1,55 @@
+
+<div ng-controller="blogController as ctrl" class="blog">
+  <md-toolbar id="blogtoolbar" layout="row" flex="flex" layout-align="center" class="md-whiteframe-5dp">
+    <div class="md-toolbar-tools"><span flex="flex"></span>
+      <md-autocomplete ng-disabled="ctrl.isDisabled" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text-change="ctrl.searchTextChange(ctrl.searchText)" md-search-text="ctrl.searchText" md-selected-item-change="ctrl.selectedItemChange(item, [&quot;/articles/aros-review/&quot;,&quot;/articles/a-new-series/&quot;])" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.display" md-min-length="0" placeholder="Search blog posts...">
+        <md-item-template><span md-highlight-text="ctrl.searchText" md-highlight-flags="^i" class="autocomplete-text">{{item.display}}</span></md-item-template>
+        <md-not-found>No blog posts matching "{{ctrl.searchText}}" were found.</md-not-found>
+      </md-autocomplete><span flex="5"></span>
+      <md-select placeholder="Tags" ng-model="tagname" hide-xs="hide-xs" ng-click="ctrl.searchText = &quot;&quot;;">
+        <md-option>All</md-option>
+        <md-option>Operating System Reviews</md-option>
+        <md-option>Emacs</md-option>
+        <md-option>Nexus</md-option>
+      </md-select>
+    </div>
+  </md-toolbar>
+  <div id="post" class="flow-text">
+    <div class="flex">
+      <md-card ng-hide="hideObject[&quot;Operating System Review - AROS&quot;]" class="no-shadow transparent">
+        <md-card-title>
+          <md-card-title-text>
+            <h2>
+              <div class="inline"><a ui-sref="blog({ name: &quot;aros-review&quot;, title: &quot;Operating System Review - AROS&quot; })">Operating System Review - AROS</a></div>
+              <hr class="pink-hr"/>
+            </h2>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <section class="content"><p><span class="caps">AROS</span> (AROS Research Operating System, yet another <a href="https://en.wikipedia.org/wiki/Recursive_acronym">recursive acronym</a>) is an Operating System aiming to be <span class="caps">API</span> compatible with Amiga 3.x systems. It is free software, however it does have <a href="http://www.evillabs.net/AROS/Audit-2012-03-14/AROS-trunk.txt">licensing issues.</a>. For the review, I have chosen the Icaros Desktop (version v2.1.2) distribution as it’s pre-configured for the <span class="caps">PC</span>&nbsp;platform.</p>
+
+          </section>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="flex">
+      <md-card ng-hide="hideObject[&quot;A new series! Reviews of obscure operating systems.&quot;]" class="no-shadow transparent">
+        <md-card-title>
+          <md-card-title-text>
+            <h2>
+              <div class="inline"><a ui-sref="blog({ name: &quot;a-new-series&quot;, title: &quot;A new series! Reviews of obscure operating systems.&quot; })">A new series! Reviews of obscure operating systems.</a></div>
+              <hr class="pink-hr"/>
+            </h2>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <section class="content"><p>The first epic series which will span across many parts and include many operating systems. I hope that this will be my first actually running series, as I have never managed to make one stable&nbsp;yet.</p>
+<p>The first review should come in a week or so, but do not be surprised if I don’t (I’m not an active&nbsp;blogger).</p>
+<p>(<del><span class="caps">EDIT</span>: The series should start about August or September as I will be engaged during June to August due to projects I have to complete. I will hopefully have time to document them on this blog</del> I have some doubts about finishing the project at all, but I’ll keep you informed of any&nbsp;updates…)</p>
+
+          </section>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>
