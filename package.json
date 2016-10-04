@@ -5,7 +5,11 @@
     "jsonfile": "^2.3.1",
     "moment": "2.3.x",
     "typogr": "0.5.x",
-    "underscore": "1.4.x"
+    "underscore": "1.4.x",
+    "wintersmith": "^2.3.3",
+    "wintersmith-pandoc": "^0.2.3",
+    "wintersmith-stylus": "^0.5.1",
+    "wintersmith-tag": "^1.0.2"
   },
   "private": "true"
 }
