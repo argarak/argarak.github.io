@@ -1,6 +1,6 @@
 {
     "locals": {
-        "url": "http://localhost:8080",
+        "url": "http://argarak.github.io/",
         "name": "Argarak's Nexus",
         "navbar": [
             ["nexus.svg",     "home",      "Home",         0],
@@ -39,7 +39,6 @@
         "imageDelete": "<a href='https://pumpyourself.com/argarak'>argarak</a> deleted an image"
     },
     "plugins": [
-        "./plugins/paginator.coffee",
         "./plugins/indexpage.coffee",
         "./node_modules/wintersmith-stylus/",
         "./node_modules/wintersmith-pandoc/",
@@ -57,11 +56,8 @@
         "smartLists": true,
         "smartypants": true
     },
-    "paginator": {
-        "articles": "articles",
-        "template": "blog.jade",
-        "first": "/blog/index.html",
-        "perPage": 900
+    "tag": {
+        "template": "blog.jade"
     },
     "indexpage": {
         "articles": "articles",
