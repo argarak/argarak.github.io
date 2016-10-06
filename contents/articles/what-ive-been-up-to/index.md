@@ -8,6 +8,8 @@ tags: Other
 
 In this article, I will list the projects I have done in the past, my workflow and how I learned to program in the first place.
 
+<span class="more"></span>
+
 *FYI - Some information is avaliable on the [about](/#/about) page. However, this article will elaborate on some of the points made on this page, and include some more information.*
 
 *This site works best on Firefox and Gecko-based browsers, if there is any issue with the browser you are using, please submit an [issue](https://github.com/argarak/argarak.github.io/issues) containing the browser, version, operating system information, a screenshot, a description of the problem and the link to the specific page.*

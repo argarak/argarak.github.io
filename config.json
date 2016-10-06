@@ -27,10 +27,11 @@
             "/js/highlight/highlight.pack.js",
             "/js/mdLightbox.js",
             "/js/angularMain.js",
-            "/js/feednami.min.js",
             "/js/truncate.js",
-            "/js/angular-ui-router.js"
+            "/js/angular-ui-router.js",
+            "/js/xml2json.js"
         ],
+        "introCutoffs": ["<span class=\"more", "<h2", "<hr", "<p"],
         "licenseTitle": "Licensing Information",
         "licenseText": "All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.",
         "dataTitle": "Article Data",

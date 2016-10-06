@@ -12,6 +12,14 @@ Argarak's Nexus has drastically evolved in a short period (approximately one yea
 
 **NOTE: This was written before version 3 of this website! Some information may be invalid to the current version.**
 
+```javascript
+
+for(var i = 0; i < 5; i++) {
+    console.log("remember to remove this");
+}
+
+```
+
 ## The name
 
 I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)

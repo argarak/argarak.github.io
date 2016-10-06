@@ -18,6 +18,13 @@
  *
  */
 
+var updateHighlighting = function() {
+    var codeElements = document.getElementsByTagName('code');
+    console.log(codeElements);
+    for(var i = 0; i < codeElements.length; i++)
+        hljs.highlightBlock(codeElements[i]);
+}
+
 var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                                    "truncate", "ngSanitize", "ui.router"])
                  .config(function($mdThemingProvider) {
@@ -43,6 +50,7 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                                  $stateParams.title = $stateParams.name;
                                  $rootScope.$stateParams = $stateParams;
                                  $scope.name = $stateParams.name;
+                                 updateHighlighting();
                              }
                          })
                          .state("blog", {
@@ -52,12 +60,10 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                              },
                              controller: function($rootScope, $scope, $stateParams) {
                                  $rootScope.$stateParams = $stateParams;
+                                 updateHighlighting();
                              }
                          });
-                 }])
-                 .run(function() {
-                     hljs.initHighlightingOnLoad();
-                 });
+                 }]);
 
 app.controller("mainController", function($scope, $mdSidenav, $mdDialog, $state, $rootScope) {
     $scope.openLeftMenu = function() {
@@ -319,22 +325,21 @@ app.controller("programsController", function($scope, $http) {
     }
 });
 
-app.controller("microblogController", function($scope, $sce) {
+app.controller("microblogController", function($scope, $sce, $http) {
     $scope.image = "https://avatars0.githubusercontent.com/u/13645600?v=3&s=460";
     $scope.articlesLoaded = false;
     var self = this;
 
     $scope.fetch = function() {
-        var url = "https://pump2rss.com/feed/argarak@pumpyourself.com.atom";
-        feednami.load(url, function(result) {
-            if(result.error) {
-                console.log(result.error);
-            } else {
-                $scope.entries = result.feed.entries;
-                $scope.articlesLoaded = true;
-                $scope.$apply();
-            }
-        });
+        var rssUrl = "https://pump2rss.com/feed/argarak@pumpyourself.com.atom";
+        $http({method: "GET", url: rssUrl, headers: {"Access-Control-Allow-Origin": "*"}}).
+        then(function(response) {
+            $scope.data = response.data;
+            var x2js = new X2JS();
+            console.log(x2js.xml_str2json(out));       
+        }, function(response) {
+            console.log("Error, failed to get Atom feed.", response)
+        });   
     }
 
     $scope.formatDate = function(date) {
