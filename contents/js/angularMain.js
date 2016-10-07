@@ -20,7 +20,6 @@
 
 var updateHighlighting = function() {
     var codeElements = document.getElementsByTagName('code');
-    console.log(codeElements);
     for(var i = 0; i < codeElements.length; i++)
         hljs.highlightBlock(codeElements[i]);
 }
@@ -66,14 +65,6 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                  }]);
 
 app.controller("mainController", function($scope, $mdSidenav, $mdDialog, $state, $rootScope) {
-    $scope.openLeftMenu = function() {
-        $mdSidenav("left").toggle();
-    }
-
-    $scope.$watch($rootScope.$stateParams, function (newValue, oldValue, scope) {
-        console.log(newValue);
-    }, true);
-
     $scope.showAlert = function(ev, title, text, ok) {
         $mdDialog.show(
             $mdDialog.alert()
@@ -114,12 +105,10 @@ app.filter("titleFilter", function($state) {
     String.prototype.capitalize = function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
     }
-
+    
     return function(x) {
-        if($state.href($state.current.name, $state.params, {absolute: true}) !== null)
-            return $state.href($state.current.name, $state.params, {absolute: true})
-                         .split("/")[4]
-                         .capitalize() + " - Argarak's Nexus";
+        if(x !== undefined)
+            return x.capitalize() + " - Argarak's Nexus";
     }
 });
 
@@ -192,16 +181,6 @@ app.controller("homeController", function($scope, $interval, $log, $http) {
             self.update(self.articleIndex);
         }
     }, 70);
-});
-
-app.controller("getMonth", function($scope) {
-    $scope.getMonth = function(index) {
-        var months = ["January", "February", "March",
-                      "April", "May", "June", "July",
-                      "August", "September", "October",
-                      "November", "December"];
-        return months[index];
-    }
 });
 
 app.controller("blogController", function($scope, $timeout, $q, $log,
