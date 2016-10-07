@@ -310,14 +310,12 @@ app.controller("microblogController", function($scope, $sce, $http) {
     var self = this;
 
     $scope.fetch = function() {
-        var rssUrl = "https://pump2rss.com/feed/argarak@pumpyourself.com.atom";
-        $http({method: "GET", url: rssUrl, headers: {"Access-Control-Allow-Origin": "*"}}).
+        var jsonUrl = "https://pumpyourself.com/api/user/argarak/feed/";
+        $http({method: "JSONP", url: jsonUrl}).
         then(function(response) {
-            $scope.data = response.data;
-            var x2js = new X2JS();
-            console.log(x2js.xml_str2json(out));       
+            console.log(response);
         }, function(response) {
-            console.log("Error, failed to get Atom feed.", response)
+            console.log("Error, failed to get JSON feed.", response)
         });   
     }
 

@@ -19,7 +19,7 @@ In this article, I will list the projects I have done in the past, my workflow a
 First of all, to find the list of all of my repositories, find them at [my repositories page](/#/programs) or my [Github page](https://github.com/argarak?tab=repositories).
 I also must elaborate that the word "fork" means to clone someone else's code. Therefore, I have not written all of the code, only modified it a little for my purposes.
 
-Also, since I use a version control system, git, you are able to access all of the changes of every single commit (where you push some changes to a repository). You may find them by clicking on one of the repositories on either of the pages, and then clicking on on "`%i` commits", where `%i` is a number. 
+Also, since I use a version control system, git, you are able to access all of the changes of every single commit (where you push some changes to a repository). You may find them by clicking on one of the repositories on either of the pages, and then clicking on on "`%i`{class="inline"} commits", where `%i`{class="inline"} is a number. 
 
 ![An image of the commits menu on top of all the repository files.](commits.png){md-lightbox=""}
 
@@ -62,3 +62,11 @@ Here are a collection of various software I use everyday to achieve a convenient
 ## Emacs (Spacemacs)
 
 ![A screenshot of the running editor, viewing the angularMain.js file.](emacs.png){md-lightbox=""}
+
+## Awesome Window Manager
+
+![My custom configuration for the awesome window manager with two terminals, one showing the cava visualiser, the other displaying some system info. It also includes the rofi display menu in the middle. ](wm.png){md-lightbox=""}
+
+# How I learned to program
+
+I first became interested in programming during my experiments with the graphical language [Scratch](https://scratch.mit.edu/). With it, I created small experiments, games interactive cards etc (see all of my scratch content [here](https://scratch.mit.edu/users/SnakeVenomous/)). 
