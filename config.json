@@ -28,8 +28,7 @@
             "/js/mdLightbox.js",
             "/js/angularMain.js",
             "/js/truncate.js",
-            "/js/angular-ui-router.js",
-            "/js/xml2json.js"
+            "/js/angular-ui-router.js"
         ],
         "introCutoffs": ["<span class=\"more", "<h2", "<hr", "<p"],
         "licenseTitle": "Licensing Information",

@@ -62,6 +62,12 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                                  updateHighlighting();
                              }
                          });
+                 }])
+                 .config(['$sceDelegateProvider', function($sceDelegateProvider) {
+                     $sceDelegateProvider.resourceUrlWhitelist([
+                         'self',
+                         'https://diasp.eu/**'
+                     ]);
                  }]);
 
 app.controller("mainController", function($scope, $mdSidenav, $mdDialog, $state, $rootScope) {
@@ -309,14 +315,15 @@ app.controller("microblogController", function($scope, $sce, $http) {
     $scope.articlesLoaded = false;
     var self = this;
 
+    // TODO use https://diasp.eu/people/671915105ab50132d4ed5404a6b20780/stream.json
     $scope.fetch = function() {
-        var jsonUrl = "https://pumpyourself.com/api/user/argarak/feed/";
-        $http({method: "JSONP", url: jsonUrl}).
+        var jsonUrl = "https://diasp.eu/people/671915105ab50132d4ed5404a6b20780/stream.json?format=json";
+        $http({method: "GET", url: jsonUrl, headers: {'Content-Type':'application/x-www-form-urlencoded'}}).
         then(function(response) {
             console.log(response);
         }, function(response) {
             console.log("Error, failed to get JSON feed.", response)
-        });   
+        });
     }
 
     $scope.formatDate = function(date) {
