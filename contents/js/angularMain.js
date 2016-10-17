@@ -66,7 +66,8 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                  .config(['$sceDelegateProvider', function($sceDelegateProvider) {
                      $sceDelegateProvider.resourceUrlWhitelist([
                          'self',
-                         'https://diasp.eu/**'
+                         'https://diasp.eu/**',
+                         'http://videobin.org/**'
                      ]);
                  }]);
 
@@ -330,3 +331,39 @@ app.controller("microblogController", function($scope, $sce, $http) {
         return date.replace(/[^\d.:-]/g, ' ');
     }
 });
+
+// Based of mdLightbox.js
+app.directive("mdVideobox", ['$mdDialog', function($mdDialog) {
+	  return {
+		    link: function($scope, elem, attrs) {
+			      elem.addClass('image-click');
+
+		        elem.on('click', function() {
+		    	      var video = attrs.src;
+		    	      var title = attrs.alt;
+		    	      showLightboxModal(video, title);
+			      });
+
+			      // Lightbox Modal
+		        function showLightboxModal(video, title) {
+		            var confirm = $mdDialog.confirm({
+		                templateUrl: '/js/videobox.html',
+		                clickOutsideToClose: true,
+		                controller: videoboxController
+		            });
+
+		            $mdDialog.show(confirm);
+
+		            function videoboxController($scope, $mdDialog) {
+		        	      $scope.video = video;
+		        	      $scope.title = title;
+
+		                $scope.cancel = function() {
+		                    $mdDialog.cancel();
+		                };
+
+		            }
+		        }
+		    }
+	  }
+}]);

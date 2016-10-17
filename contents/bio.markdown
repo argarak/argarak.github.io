@@ -36,6 +36,8 @@ I use the Dvorak keyboard but I am awful at typing - ironic to say for a program
 
 ------
 
+## Contact
+
 For e-mail protection, decode this base32 string to see my e-mail address. `NN5GK4RNPJQUAY3SPFYHI33MMFRC43TFOQFA====`{class="inline"}.
 (In GNU/Linux open up a terminal and use the `echo`{class="inline"} command to output the string to stdout and then pipe `|`{class="inline"} it into the command `base32 -d`{class="inline"}. Or use a tool like [Base32 Decode Online](http://emn178.github.io/online-tools/base32_decode.html).)
 
