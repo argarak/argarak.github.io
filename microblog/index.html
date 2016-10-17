@@ -1,0 +1,14 @@
+
+<div id="post" flex="flex" ng-controller="microblogController" ng-init="fetch()" class="flex-items">
+  <md-progress-circular ng-hide="articlesLoaded" md-mode="indeterminate" class="progress-fixed"></md-progress-circular>
+  <md-list flex="flex">
+    <md-list-item ng-repeat="item in entries" ng-if="item.description != null &amp;&amp; item.description != &quot;&lt;a href='https://pumpyourself.com/argarak'&gt;argarak&lt;/a&gt; deleted a note&quot; &amp;&amp; item.description != &quot;&lt;a href='https://pumpyourself.com/argarak'&gt;argarak&lt;/a&gt; deleted an image&quot;" class="md-3-line"> <img ng-src="{{image}}" aria-label="{{item.author}}" class="md-avatar"/>
+      <div layout="column" class="md-list-item-next">
+        <h3>{{item.author}}</h3>
+        <h4>{{formatDate(item.date)}}</h4>
+        <p ng-bind-html="item.description"></p><a ng-href="{{item.link}}" class="permalink"> 
+          <md-icon md-svg-src="/icons/link.svg" class="pink-link"></md-icon> Permalink</a>
+      </div>
+    </md-list-item>
+  </md-list>
+</div>

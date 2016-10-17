@@ -1,0 +1,92 @@
+
+<div ng-controller="blogController as ctrl" class="blog">
+  <md-toolbar id="blogtoolbar" layout="row" flex="flex" layout-align="center" class="md-whiteframe-5dp">
+    <div class="md-toolbar-tools"><span flex="flex"></span>
+      <md-autocomplete ng-disabled="ctrl.isDisabled" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text-change="ctrl.searchTextChange(ctrl.searchText)" md-search-text="ctrl.searchText" md-selected-item-change="ctrl.selectedItemChange(item, [&quot;/articles/what-ive-been-up-to/&quot;])" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.display" md-min-length="0" placeholder="Search blog posts...">
+        <md-item-template><span md-highlight-text="ctrl.searchText" md-highlight-flags="^i" class="autocomplete-text">{{item.display}}</span></md-item-template>
+        <md-not-found>No blog posts matching "{{ctrl.searchText}}" were found.</md-not-found>
+      </md-autocomplete><span flex="5"></span>
+      <md-select placeholder="Tags" ng-model="tagname" hide-xs="hide-xs" ng-click="ctrl.searchText = &quot;&quot;;">
+        <md-option>All</md-option>
+        <md-option>Operating System Reviews</md-option>
+        <md-option>Emacs</md-option>
+        <md-option>Nexus</md-option>
+        <md-option>Other</md-option>
+      </md-select>
+    </div>
+  </md-toolbar>
+  <div id="post" class="flow-text">
+    <div class="flex">
+      <md-card ng-hide="hideObject[&quot;What I’ve been doing...&quot;]" class="no-shadow transparent">
+        <md-card-title>
+          <md-card-title-text>
+            <h2>
+              <div class="inline"><a ui-sref="blog({ name: &quot;what-ive-been-up-to&quot;, title: &quot;What I’ve been doing...&quot; })">What I’ve been doing...</a></div>
+              <hr class="pink-hr"/>
+            </h2>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <section class="content"><p>In this article, I will list the projects I have done in the past, my workflow and how I learned to program in the first&nbsp;place.</p>
+<p><em><span class="caps">FYI</span> - Some information is avaliable on the <a href="/#/about">about</a> page. However, this article will elaborate on some of the points made on this page, and include some more&nbsp;information.</em></p>
+<p><em>This site works best on Firefox and Gecko-based browsers, if there is any issue with the browser you are using, please submit an <a href="https://github.com/argarak/argarak.github.io/issues">issue</a> containing the browser, version, operating system information, a screenshot, a description of the problem and the link to the specific&nbsp;page.</em></p>
+<h1 id="projects">Projects</h1>
+<p>First of all, to find the list of all of my repositories, find them at <a href="/#/programs">my repositories page</a> or my <a href="https://github.com/argarak?tab=repositories">Github page</a>. I also must elaborate that the word “fork” means to clone someone else’s code. Therefore, I have not written all of the code, only modified it a little for my&nbsp;purposes.</p>
+<p>Also, since I use a version control system, git, you are able to access all of the changes of every single commit (where you push some changes to a repository). You may find them by clicking on one of the repositories on either of the pages, and then clicking on on “<code>%i</code> commits”, where <code>%i</code> is a&nbsp;number.</p>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/commits.png" alt="An image of the commits menu on top of all the repository files." md-lightbox="&quot;&quot;" />
+<p class="caption">An image of the commits menu on top of all the repository&nbsp;files.</p>
+</div>
+<p>Here’s a list of all of my projects on&nbsp;Github:</p>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/nexus.png" alt="The argarak.github.io website on mobile" md-lightbox="&quot;&quot;" />
+<p class="caption">The argarak.github.io website on&nbsp;mobile</p>
+</div>
+<ul>
+<li><a href="https://github.com/argarak/argarak.github.io">argarak.github.io</a> is this very page. It is hosted on Github pages, free client-side only hosting (therefore, no <span class="caps">PHP</span> or NodeJS scripts running on the server, only HTML, CSS and client-side Javascript). Some of the website’s features include:
+<ul>
+<li>Static-site generation with the use of <a href="http://wintersmith.io/">Wintersmith</a>. This includes <a href="https://pugjs.org/api/getting-started.html">Jade (now known as Pug)</a> <span class="caps">HTML</span> templating (the language compiles into HTML - <a href="https://github.com/argarak/argarak.github.io/tree/dev/templates">see this page’s sources here</a>.) Also including the <a href="http://stylus-lang.com/">Stylus</a> <span class="caps">CSS</span> preprocessor (compiles into CSS - <a href="https://github.com/argarak/argarak.github.io/blob/dev/contents/css/main.styl">see this page’s sources here</a>.), custom plugins, automatic blog post templating, Jade referenced <a href="https://github.com/argarak/argarak.github.io/blob/dev/templates/header.jade">header</a> and <a href="https://github.com/argarak/argarak.github.io/blob/dev/templates/footer.jade">footer</a> pages, automatically generated <a href="http://www.whatisrss.com/"><span class="caps">RSS</span></a> <a href="/feed.xml">feed</a>, article <a href="http://json.org/"><span class="caps">JSON</span></a> file - for use in my Angular back-end, which brings me&nbsp;onto…</li>
+<li>Angular integration. This allows my website to be more interactive (<a href="https://github.com/argarak/argarak.github.io/blob/dev/contents/js/angularMain.js">Source</a>). For instance:
+<ul>
+<li>The redirection of pages without the need to refresh (with the use of <a href="https://github.com/angular-ui/ui-router">ui-router</a>)</li>
+<li>Search capability on the <a href="/#/blog">blog</a> page, also including the ability to filter by tag (which also requires the loading of the <span class="caps">JSON</span> file which stores all the article&nbsp;data);</li>
+<li>Pre-loaders on the <a href="/#/programs">repositories</a> and <a href="/#/microblog">microblogging</a>&nbsp;pages;</li>
+<li>Fetching of microblog data from my <a href="http://pump.io">pump.io</a> provider, currently very inefficient since the data is parsed on a remote server, <a href="https://sekando.com/docs/feednami">feednami</a>, also this is why it is so slow to&nbsp;load;</li>
+<li>And finally, the list of repositories on my <a href="/#/programs">repositories</a> page, fetches data from the Github&nbsp;APIs.</li>
+<li><em>Also note that I’m using version 1.x of the Angular&nbsp;framework</em></li>
+</ul></li>
+<li>Use of the <a href="https://material.angularjs.org/latest/">Angular Material</a> framework. This allows for flexible layouts, many types of elements, theming and colours which all follow the recent <a href="https://material.google.com/">Google Material guidelines</a>. Please note that my website does not fully follow the guidelines and does not intend to do&nbsp;so.</li>
+<li>If you would like to know some history behind my website, see my article <a href="/#/articles/nexus-evolution?title=The%20Evolution%20of%20Argarak&#39;s%20Nexus">“The Evolution of Argarak’s Nexus”</a>. Do note that some of the information on this page is&nbsp;deprecated.</li>
+<li><span class="caps">FYI</span> - This website is still not finished, there are many problems, especially with the support of various browsers. If any problems occur, please make a new issue at <a href="https://github.com/argarak/argarak.github.io/issues">the issues page</a>.</li>
+</ul></li>
+</ul>
+<hr>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/delta.png" alt="Screenshot of the running game." md-lightbox="&quot;&quot;" />
+<p class="caption">Screenshot of the running&nbsp;game.</p>
+</div>
+<ul>
+<li><a href="http://argarak.github.io/delta-cubed/">Delta-Cubed (Δ³)</a>, <a href="https://github.com/argarak/delta-cubed">Source</a> (Warning: includes sound!) is a little game experiment I did a long time ago, it’s not complete and probably never will be. Some of the features of the “game” include:
+<ul>
+<li>Loading map data from <span class="caps">CSV</span> files and mapping them to different colours to create a full map (<a href="https://github.com/argarak/delta-cubed/blob/master/libraries/loadMap.js">source</a>), this is made with the use of the <a href="http://jsiso.com/">jsiso</a>&nbsp;library;</li>
+<li>Sound with the use of the <a href="https://howlerjs.com/">howler.js</a> library, only used for the <a href="https://github.com/argarak/delta-cubed/tree/master/music">background music</a>;</li>
+<li>And map changing, when the triangle moves to a specific area of the map, another map is&nbsp;loaded.</li>
+</ul></li>
+</ul>
+<p>I did have some ambitions for the game, for example an isometric battle system, other characters and mouse pathfinding, however with the use of the deprecated library jsiso, I became frustrated and left it. If I ever write it again, I’ll use a different&nbsp;engine.</p>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/podcurse.png" alt="Screenshot of the unfinished Podcurse application in a virtual terminal." md-lightbox="&quot;&quot;" />
+<p class="caption">Screenshot of the unfinished Podcurse application in a virtual&nbsp;terminal.</p>
+</div>
+<ul>
+<li><a href="https://github.com/argarak/podcurse">Podcurse</a></li>
+</ul>
+<h1 id="my-workflow">My&nbsp;Workflow</h1>
+<p>Here are a collection of various software I use everyday to achieve a convenient environment for software&nbsp;development:</p>
+
+          </section>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>

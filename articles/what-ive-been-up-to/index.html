@@ -1,0 +1,154 @@
+
+<md-toolbar class="md-tall toolbar-padding">
+  <div class="md-toolbar-tools"><span class="md-flex"></span><span flex="flex"></span>
+    <md-button ng-click="showAlert($event, &quot;Licensing Information&quot;, &quot;All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.&quot;, &quot;I Agree&quot;);" aria-label="Licensing" class="md-icon-button">
+      <md-tooltip md-direction="bottom" class="opaque-tooltip">Licensing Info.</md-tooltip>
+      <md-icon md-svg-src="/icons/file.svg"></md-icon>
+    </md-button>
+    <md-button aria-label="Date" class="md-icon-button">
+      <md-tooltip md-direction="bottom" class="opaque-tooltip">14 September 2016</md-tooltip>
+      <md-icon md-svg-src="/icons/time.svg"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+<div flex="flex" class="article">
+  <md-card id="post" class="postcard">
+    <md-card-content>
+      <h1 id="title" class="backgr">What I’ve been doing...</h1>
+      <div class="flow-text"><p>In this article, I will list the projects I have done in the past, my workflow and how I learned to program in the first&nbsp;place.</p>
+<p><span class="more"></span></p>
+<p><em><span class="caps">FYI</span> - Some information about this may be found on the <a href="/#/about">about</a> page, however this article will expand on some of the points made on that page, and provide extra&nbsp;information.</em></p>
+<p><em>This site works best on Firefox and Gecko-based browsers, if there is any issue with the browser you are using, please submit an <a href="https://github.com/argarak/argarak.github.io/issues">issue</a> containing the browser, version, operating system information, a screenshot, a description of the problem and the link to the specific&nbsp;page.</em></p>
+<h1 id="projects">Projects</h1>
+<p>First of all, to find the list of all of my repositories, find them at <a href="/#/programs">my repositories page</a> or my <a href="https://github.com/argarak?tab=repositories">Github page</a>. I also must elaborate that the word “fork” means to clone someone else’s code. Therefore, I have not written all of the code, only modified it a little for my&nbsp;purposes.</p>
+<p>Also, since I use a version control system, git, you are able to access all the changes of every single commit (where you push some changes to a repository). You may find them by clicking on one of the repositories on either of the pages, and then clicking on on “<code class="inline">%i</code> commits”, where <code class="inline">%i</code> is a&nbsp;number.</p>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/commits.png" alt="An image of the commits menu on top of all the repository files." md-lightbox="&quot;&quot;" />
+<p class="caption">An image of the commits menu on top of all the repository&nbsp;files.</p>
+</div>
+<p>Here’s a list of all of my projects on&nbsp;Github:</p>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/nexus.png" alt="The argarak.github.io website on mobile" md-lightbox="&quot;&quot;" />
+<p class="caption">The argarak.github.io website on&nbsp;mobile</p>
+</div>
+<ul>
+<li><a href="https://github.com/argarak/argarak.github.io">argarak.github.io</a> is this very page. It is hosted on Github pages, free client-side only hosting (therefore, no <span class="caps">PHP</span> or NodeJS scripts running on the server, only HTML, CSS and client-side Javascript). Some of the website’s features include:
+<ul>
+<li>Static-site generation with the use of <a href="http://wintersmith.io/">Wintersmith</a>. This includes <a href="https://pugjs.org/api/getting-started.html">Jade (now known as Pug)</a> <span class="caps">HTML</span> templating (the language compiles into HTML - <a href="https://github.com/argarak/argarak.github.io/tree/dev/templates">see this page’s sources here</a>.) Also including the <a href="http://stylus-lang.com/">Stylus</a> <span class="caps">CSS</span> preprocessor (compiles into CSS - <a href="https://github.com/argarak/argarak.github.io/blob/dev/contents/css/main.styl">see this page’s sources here</a>.), custom plugins, automatic blog post templating, Jade referenced <a href="https://github.com/argarak/argarak.github.io/blob/dev/templates/header.jade">header</a> and <a href="https://github.com/argarak/argarak.github.io/blob/dev/templates/footer.jade">footer</a> pages, automatically generated <a href="http://www.whatisrss.com/"><span class="caps">RSS</span></a> <a href="/feed.xml">feed</a>, article <a href="http://json.org/"><span class="caps">JSON</span></a> file - for use in my Angular back-end, which brings me&nbsp;onto…</li>
+<li>Angular integration. This allows my website to be more interactive (<a href="https://github.com/argarak/argarak.github.io/blob/dev/contents/js/angularMain.js">Source</a>). For instance:
+<ul>
+<li>The redirection of pages without the need to refresh (with the use of <a href="https://github.com/angular-ui/ui-router">ui-router</a>)</li>
+<li>Search capability on the <a href="/#/blog">blog</a> page, also including the ability to filter by tag (which also requires the loading of the <span class="caps">JSON</span> file which stores all the article&nbsp;data);</li>
+<li>Pre-loaders on the <a href="/#/programs">repositories</a> and <a href="/#/microblog">microblogging</a>&nbsp;pages;</li>
+<li>Fetching of microblog data from my <a href="http://pump.io">pump.io</a> provider, currently very inefficient since the data is parsed on a remote server, <a href="https://sekando.com/docs/feednami">feednami</a>, also this is why it is so slow to&nbsp;load;</li>
+<li>And finally, the list of repositories on my <a href="/#/programs">repositories</a> page, fetches data from the Github&nbsp;APIs.</li>
+<li><em>Also note that I’m using version 1.x of the Angular&nbsp;framework</em></li>
+</ul></li>
+<li>Use of the <a href="https://material.angularjs.org/latest/">Angular Material</a> framework. This allows for flexible layouts, many types of elements, theming and colours which all follow the recent <a href="https://material.google.com/">Google Material guidelines</a>. Please note that my website does not fully follow the guidelines and does not intend to do&nbsp;so.</li>
+<li>If you would like to know some history behind my website, see my article <a href="/#/articles/nexus-evolution?title=The%20Evolution%20of%20Argarak&#39;s%20Nexus">“The Evolution of Argarak’s Nexus”</a>. Do note that some information on this page is&nbsp;deprecated.</li>
+<li><span class="caps">FYI</span> - This website is still not finished, there are many problems, especially with the support of various browsers. If any problems occur, please make a new issue at <a href="https://github.com/argarak/argarak.github.io/issues">the issues page</a>.</li>
+</ul></li>
+</ul>
+<hr>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/delta.png" alt="Screenshot of the running game." md-lightbox="&quot;&quot;" />
+<p class="caption">Screenshot of the running&nbsp;game.</p>
+</div>
+<ul>
+<li><a href="http://argarak.github.io/delta-cubed/">Delta-Cubed (Δ³)</a>, <a href="https://github.com/argarak/delta-cubed">Source</a> (Warning: includes sound!) is a little game experiment I did a long time ago, it’s not complete and probably never will be. Some features of the “game” include:
+<ul>
+<li>Loading map data from <span class="caps">CSV</span> files and mapping them to different colours to create a full map (<a href="https://github.com/argarak/delta-cubed/blob/master/libraries/loadMap.js">source</a>), this is made with the use of the <a href="http://jsiso.com/">jsiso</a>&nbsp;library;</li>
+<li>Sound with the use of the <a href="https://howlerjs.com/">howler.js</a> library, only used for the <a href="https://github.com/argarak/delta-cubed/tree/master/music">background music</a>;</li>
+<li>And map changing, when the triangle moves to a specific area of the map, another map is&nbsp;loaded.</li>
+</ul></li>
+</ul>
+<p>I did have some ambitions for the game, for example an isometric battle system, other characters and mouse path finding, however with the use of the deprecated library jsiso, I became frustrated and left it. If I ever write it again, I’ll use a different&nbsp;engine.</p>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/podcurse.png" alt="Screenshot of the unfinished Podcurse application in a virtual terminal." md-lightbox="&quot;&quot;" />
+<p class="caption">Screenshot of the unfinished Podcurse application in a virtual&nbsp;terminal.</p>
+</div>
+<ul>
+<li><a href="https://github.com/argarak/podcurse">Podcurse</a> is a completely unfinished application, aiming to be a <span class="caps">MPD</span> client for listening to podcasts. There’s not much I can say about it, as I will never work on it again, eventually I’ll remove it from my&nbsp;repositories.</li>
+</ul>
+<p><em>Could not provide an image since this is neither a graphical or console&nbsp;application</em></p>
+<ul>
+<li><a href="https://github.com/argarak/miscr">miscr</a> is my attempt at writing a <a href="https://en.wikipedia.org/wiki/Stepper_motor">stepper motor</a> control system for <a href="https://en.wikipedia.org/wiki/Numerical_control">computer numerical control (<span class="caps">CNC</span>)</a> machines. It aims to provide G-Code parsing, G-Code transfer from Bluetooth, an <span class="caps">SD</span> Card or a Serial connection, provide a HCI with the use of an LCD screen and asynchronous motor control. It is currently under&nbsp;development.</li>
+</ul>
+<h1 id="my-workflow">My&nbsp;Workflow</h1>
+<p>Here are a collection of various software I use everyday to achieve a convenient environment for software&nbsp;development:</p>
+<h2 id="emacs-spacemacs">Emacs&nbsp;(Spacemacs)</h2>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/emacs.png" alt="A screenshot of the running editor, viewing the angularMain.js file." md-lightbox="&quot;&quot;" />
+<p class="caption">A screenshot of the running editor, viewing the angularMain.js&nbsp;file.</p>
+</div>
+<p>I have used many editors it the past, from IDEs such as Netbeans and Cloud9 to editors like Notepad++. However, there is something about the modular editors like Emacs and Vim that make it truly yours. These editors have a built in configuration system and a package manager to add more flexibility and customisation to your&nbsp;editor.</p>
+<p>I used to use plain Emacs (therefore no pre-set configuration) with a config. file (<code class="inline">~/.emacs</code>) that I maintained myself, therefore was quite messy. But I have made the switch to <a href="http://spacemacs.org/">Spacemacs</a> which has a high-level system of package management named layers. These are simply package lists you can subscribe to in your <code class="inline">~/.spacemacs</code> file. These may include packages for web development, spell checking, LaTeX or specific programming languages. This also makes config. maintenance easy, since it’s all in one file, and is portable, which means that one can copy your config. file and it would automatically download all the packages&nbsp;necessary.</p>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/emacscomparison.png" alt="A comparison between my configuration and the default, plain Emacs, editing my ~/.spacemacs file" md-lightbox="&quot;&quot;" />
+<p class="caption">A comparison between my configuration and the default, plain Emacs, editing my ~/.spacemacs&nbsp;file</p>
+</div>
+<h2 id="awesome-window-manager">Awesome Window&nbsp;Manager</h2>
+<div class="figure">
+<img src="/articles/what-ive-been-up-to/wm.png" alt="My custom configuration for the awesome window manager with two terminals, one showing the cava visualiser, the other displaying some system info. It also includes the rofi display menu in the middle." md-lightbox="&quot;&quot;" />
+<p class="caption">My custom configuration for the awesome window manager with two terminals, one showing the cava visualiser, the other displaying some system info. It also includes the rofi display menu in the&nbsp;middle.</p>
+</div>
+<p>Unlike Windows, <span class="caps">GNU</span>/Linux offers hundreds of graphical and console interfaces you can use to interact with your computer. There are the popular <em>desktop environments</em>, most notably <a href="https://unity.ubuntu.com/">Unity</a>, the default Ubuntu interface, <a href="https://www.gnome.org/"><span class="caps">GNOME</span> or GNU Object Model Environment</a>, a very popular and sleek <span class="caps">DE</span>, made to be easy to use, <a href="https://www.kde.org/"><span class="caps">KDE</span> or K Desktop Environment</a>, a very customisable <span class="caps">DE</span>, similar to Windows’ Explorer, however is a little heavyweight and <a href="https://xfce.org/">Xfce</a>, a user-friendly lightweight <span class="caps">DE</span>. However, I eventually grew a distaste for them since I wanted an interface I could interact just with the keyboard, an interface I could change to suit my&nbsp;needs.</p>
+<p>Window managers were what I settled for. More specifically, tiling window&nbsp;managers.</p>
+<div class="figure">
+<video src="http://videobin.org/+efu/i7z.ogg" md-videobox=""/>
+</div>
+<p>They can be controlled only by the keyboard, are lightweight and very customisable. I settled for <a href="https://awesome.naquadah.org/">Awesome-<span class="caps">WM</span></a> as my manager of choice as it was very easy to configure (uses Lua as it’s configuration language) and already includes a status&nbsp;bar.</p>
+<h1 id="how-i-learned-to-program">How I learned to&nbsp;program</h1>
+<p>I first became interested in programming during my experiments with the graphical language <a href="https://scratch.mit.edu/">Scratch</a>. With it, I created small experiments, games interactive cards etc (see all of my scratch content <a href="https://scratch.mit.edu/users/SnakeVenomous/">here</a>). I later progressed over to python (also using the <a href="https://netbeans.org/">Netbeans <span class="caps">IDE</span></a>) where I created small programs to complete trivial tasks, for example reversing text. I also attempted creating some simple games with the <a href="http://pygame.org/news.html">pygame</a> library, however I usually did not get very far past the graphical interface implementation, I later just got frustrated and decided to move on to something&nbsp;different.</p>
+<p>However, the main thing that really reinforced my programming skill was the course I took from <a href="https://www.edx.org/">edX</a>, <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50x</a>. This was a self-paced course that included different tasks to solve with different programming languages, named Problem Sets. The list of Problems Sets in the course I took are as follows (Note that I took CS50x 2015 and the 2016 version differs&nbsp;slightly):</p>
+<ul>
+<li>Problem Set 1:
+<ul>
+<li>Hello world program written in&nbsp;C;</li>
+<li>Program named “Mario” which would output a right angled triangle of height <code class="inline">n</code> after entering the number <code class="inline">n</code>;</li>
+<li>Greedy algorithm which outputs the amount of coins needed to fulfil the amount&nbsp;given.</li>
+</ul></li>
+<li>Problem Set 2:
+<ul>
+<li>Program which output the initials of a given string (i.e. “John Smith” would output&nbsp;“<span class="caps">JS</span>”);</li>
+<li>Encryption program named “Caesar” which encrypts strings with the use of the <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>;</li>
+<li>And another encryption program named “Vigenere” which encrypts strings with the <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère cipher</a>.</li>
+</ul></li>
+<li>Problem Set 3:
+<ul>
+<li>Find program which asks the user to input a sequence of numbers (haystack), sorts the numbers (bubble sort), and finds the number given&nbsp;(needle);</li>
+<li>Breakout clone using the <a href="http://stanford.edu/~stepp/cppdoc/"><span class="caps">SPL</span> Graphics Library</a>, includes lives, scores depending on brick height, “God” mode (where the paddle moves according to the ball’s X axis) and&nbsp;more.</li>
+</ul></li>
+<li>Problem Set 4:
+<ul>
+<li>Had to answer a series of&nbsp;questions;</li>
+<li>Whodunit, a program which reveals “the culprit”, by removing all the red pixels hiding the&nbsp;image;</li>
+<li>Program that copies <span class="caps">BMP</span>&nbsp;files;</li>
+<li>Resize, a program which resizes <span class="caps">BMP</span> files, where it was fun to see many corrupted image files in early&nbsp;stages;</li>
+<li>Recover, a program which recovers <span class="caps">JPEG</span> files from a camera’s RAW&nbsp;file.</li>
+</ul></li>
+<li>Problem Set 5:
+<ul>
+<li>Spell checker implementation, loads a dictionary file and checks a file of any words that are not in the dictionary, I think. I tried to read the code but can’t begin to understand what I’ve actually written! The total time is exactly 0.5942&nbsp;seconds.</li>
+</ul></li>
+<li>Problem Set 6:
+<ul>
+<li>Server implementation with support for <span class="caps">PHP</span>, static files such as images, and HTML files. Note, not all the server was written by me, only select portions that were missed out. Again, I can’t understand most of&nbsp;it.</li>
+</ul></li>
+<li>Problem Set 7:
+<ul>
+<li><span class="caps">PHP</span> application named C$50 Finance, allows for the register and login of users, current stock prices from the Yahoo APIs, and the buying and selling of (fake) shares. All of this is kept in a SQL&nbsp;database.</li>
+</ul></li>
+<li>Problem Set 8:
+<ul>
+<li>Back-end web application which integrates Google Maps with Google News. Markers are placed on the map, which the user may click on and see the news for that&nbsp;area.</li>
+</ul></li>
+</ul>
+<p>Unfortunately, I cannot post the source code publicly, since that is against the <span class="caps">CS50</span> rules. However, if you do want to see the source, please <a href="/#/about#contact">email me</a>.</p>
+<p>I later progressed to move on to Github and making projects which I have documented&nbsp;previously.</p>
+<p><em>That’s all I’m going to document, there probably was more, however they were probably&nbsp;insignificant…</em></p>
+<p><em>Also, there is no comment system yet since this site does not currently have a dedicated server, therefore I can’t run back-end scripts. If you want to send feedback, you may email&nbsp;me.</em></p>
+</div>
+    </md-card-content>
+  </md-card>
+</div>

@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feed - Argarak's Nexus</title>
+    <atom:link href="http://argarak.github.io//feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://argarak.github.io/</link>
+    <description></description>
+    <pubDate>Wed, 14 Sep 2016 00:00:00 +0100</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>What’s new in Version 3</title>
+      <link>http://argarak.github.io//articles/release-3-whats-new/</link>
+      <pubDate>Wed, 14 Sep 2016 00:00:00 +0100</pubDate>
+      <guid isPermaLink="true">http://argarak.github.io//articles/release-3-whats-new/</guid>
+      <author></author>
+      <description>&lt;p&gt;As you might have noticed, version 3 of the Argarak’s Nexus blog has been released! Some fairly standard user-interface changes have occurred, which you may have already noticed. This includes…&lt;/p&gt;
+&lt;h2 id=&quot;general&quot;&gt;General&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A new landing page with automatically scrolling blog articles, including transitions. (The colours on the panel don’t really mean anything - they’re randomly selected and generally only used for aesthetic);&lt;/li&gt;
+&lt;li&gt;Slightly darker background - #111111 to #0e0e0e;&lt;/li&gt;
+&lt;li&gt;No annoying cookies and licensing pop-up - now the licensing information is stored on the top of each article and is displayed with the use of a modal;*&lt;/li&gt;
+&lt;li&gt;Super responsive - should work on any device with a half-decent browser;&lt;/li&gt;
+&lt;li&gt;On medium sized devices, the pop-up sidebar has been removed, instead being replaced by a bottom navigation toolbar. I’ve changed this since I’ve read that it’s not &lt;a href=&quot;http://thenextweb.com/dd/2014/04/08/ux-designers-side-drawer-navigation-costing-half-user-engagement/&quot;&gt;user engaging.&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Pink and red colour-scheme;&lt;/li&gt;
+&lt;li&gt;Thicker Nexus Logo;&lt;/li&gt;
+&lt;li&gt;JavaScript disabled message;&lt;/li&gt;
+&lt;li&gt;Pink text highlight.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;about-archive-pages&quot;&gt;About, Archive pages&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bold, red title headers in the Archive and About pages;&lt;/li&gt;
+&lt;li&gt;Robust &lt;code&gt;base32&lt;/code&gt; email munging protection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;blog-page&quot;&gt;Blog page&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A search bar! Took a while, but will eventually be an effective filter method when I make more blog posts (which will take a while obviously);&lt;/li&gt;
+&lt;li&gt;Tag filter support, categorises all blog posts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;programs-page&quot;&gt;Programs page&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Material pre-loader;&lt;/li&gt;
+&lt;li&gt;Material-style list of all my current repositories which respond to the click and redirect you to the appropriate repository page on GitHub.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;micro-blogging-page&quot;&gt;Micro-blogging page&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Now I can post quick and short updates and stuffs with the use of a remote &lt;a href=&quot;https://pumpyourself.com/&quot;&gt;pump.io&lt;/a&gt; server (publishing the posts with a program called &lt;a href=&quot;https://github.com/xray7224/p&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;Pre-loader again, this time it’s more important as my bodged method of collecting all the posts may take a while;&lt;/li&gt;
+&lt;li&gt;Displays author, date, description and permalink.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Not much at all was changed about the Archive (other than the title) or RSS page.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;*If you were wondering the cookies were to actually preserve the pop-up while you were browsing other pages - however, this was not an permanent cookie and it would be erased after you would close the browser. That was the only thing the cookies were used for. I don’t really know why I was showing this pop-up to be honest, as the cookie law does not affect me, and I could have just mentioned the license info. somewhere else on the site.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;whats-up-with-those-version-names&quot;&gt;What’s up with those version names?!&lt;/h1&gt;
+&lt;p&gt;Those are just codenames I come up with on the spot really. They usually have quite a shallow meaning. For instance;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Version 3 - Angled Ink-Pug refers to Angled = Angular, Ink = Stylus CSS pre-processor and Pug refers to the HTML pre-processor (and no I’ve not changed the &lt;code&gt;.jade&lt;/code&gt; files to &lt;code&gt;.pug&lt;/code&gt; yet)&lt;/li&gt;
+&lt;li&gt;Version 2.11 Paper Feather (one that was not published) - Feather because I cut 50 megabytes from stored video files in the history and Paper because I wanted the version to comply more with material design (&lt;del&gt;I’ll&lt;/del&gt; &lt;a ui-sref=&quot;blog({ name: '', title: ''})&quot;&gt;I won’t get onto that…&lt;/a&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sometimes version names have no meaning at all, such as version 2 - Horse Radish.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>What I’ve been doing...</title>
+      <link>http://argarak.github.io//articles/what-ive-been-up-to/</link>
+      <pubDate>Wed, 14 Sep 2016 00:00:00 +0100</pubDate>
+      <guid isPermaLink="true">http://argarak.github.io//articles/what-ive-been-up-to/</guid>
+      <author></author>
+      <description>&lt;p&gt;In this article, I will list the projects I have done in the past, my workflow and how I learned to program in the first place.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;FYI - Some information about this may be found on the &lt;a href=&quot;http://argarak.github.io/#/about&quot;&gt;about&lt;/a&gt; page, however this article will expand on some of the points made on that page, and provide extra information.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This site works best on Firefox and Gecko-based browsers, if there is any issue with the browser you are using, please submit an &lt;a href=&quot;https://github.com/argarak/argarak.github.io/issues&quot;&gt;issue&lt;/a&gt; containing the browser, version, operating system information, a screenshot, a description of the problem and the link to the specific page.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;projects&quot;&gt;Projects&lt;/h1&gt;
+&lt;p&gt;First of all, to find the list of all of my repositories, find them at &lt;a href=&quot;http://argarak.github.io/#/programs&quot;&gt;my repositories page&lt;/a&gt; or my &lt;a href=&quot;https://github.com/argarak?tab=repositories&quot;&gt;Github page&lt;/a&gt;. I also must elaborate that the word “fork” means to clone someone else’s code. Therefore, I have not written all of the code, only modified it a little for my purposes.&lt;/p&gt;
+&lt;p&gt;Also, since I use a version control system, git, you are able to access all the changes of every single commit (where you push some changes to a repository). You may find them by clicking on one of the repositories on either of the pages, and then clicking on on “&lt;code class=&quot;inline&quot;&gt;%i&lt;/code&gt; commits”, where &lt;code class=&quot;inline&quot;&gt;%i&lt;/code&gt; is a number.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/what-ive-been-up-to/commits.png&quot; alt=&quot;An image of the commits menu on top of all the repository files.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;An image of the commits menu on top of all the repository files.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Here’s a list of all of my projects on Github:&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/what-ive-been-up-to/nexus.png&quot; alt=&quot;The argarak.github.io website on mobile&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;The argarak.github.io website on mobile&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/argarak/argarak.github.io&quot;&gt;argarak.github.io&lt;/a&gt; is this very page. It is hosted on Github pages, free client-side only hosting (therefore, no PHP or NodeJS scripts running on the server, only HTML, CSS and client-side Javascript). Some of the website’s features include:
+&lt;ul&gt;
+&lt;li&gt;Static-site generation with the use of &lt;a href=&quot;http://wintersmith.io/&quot;&gt;Wintersmith&lt;/a&gt;. This includes &lt;a href=&quot;https://pugjs.org/api/getting-started.html&quot;&gt;Jade (now known as Pug)&lt;/a&gt; HTML templating (the language compiles into HTML - &lt;a href=&quot;https://github.com/argarak/argarak.github.io/tree/dev/templates&quot;&gt;see this page’s sources here&lt;/a&gt;.) Also including the &lt;a href=&quot;http://stylus-lang.com/&quot;&gt;Stylus&lt;/a&gt; CSS preprocessor (compiles into CSS - &lt;a href=&quot;https://github.com/argarak/argarak.github.io/blob/dev/contents/css/main.styl&quot;&gt;see this page’s sources here&lt;/a&gt;.), custom plugins, automatic blog post templating, Jade referenced &lt;a href=&quot;https://github.com/argarak/argarak.github.io/blob/dev/templates/header.jade&quot;&gt;header&lt;/a&gt; and &lt;a href=&quot;https://github.com/argarak/argarak.github.io/blob/dev/templates/footer.jade&quot;&gt;footer&lt;/a&gt; pages, automatically generated &lt;a href=&quot;http://www.whatisrss.com/&quot;&gt;RSS&lt;/a&gt; &lt;a href=&quot;http://argarak.github.io/feed.xml&quot;&gt;feed&lt;/a&gt;, article &lt;a href=&quot;http://json.org/&quot;&gt;JSON&lt;/a&gt; file - for use in my Angular back-end, which brings me onto…&lt;/li&gt;
+&lt;li&gt;Angular integration. This allows my website to be more interactive (&lt;a href=&quot;https://github.com/argarak/argarak.github.io/blob/dev/contents/js/angularMain.js&quot;&gt;Source&lt;/a&gt;). For instance:
+&lt;ul&gt;
+&lt;li&gt;The redirection of pages without the need to refresh (with the use of &lt;a href=&quot;https://github.com/angular-ui/ui-router&quot;&gt;ui-router&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Search capability on the &lt;a href=&quot;http://argarak.github.io/#/blog&quot;&gt;blog&lt;/a&gt; page, also including the ability to filter by tag (which also requires the loading of the JSON file which stores all the article data);&lt;/li&gt;
+&lt;li&gt;Pre-loaders on the &lt;a href=&quot;http://argarak.github.io/#/programs&quot;&gt;repositories&lt;/a&gt; and &lt;a href=&quot;http://argarak.github.io/#/microblog&quot;&gt;microblogging&lt;/a&gt; pages;&lt;/li&gt;
+&lt;li&gt;Fetching of microblog data from my &lt;a href=&quot;http://pump.io&quot;&gt;pump.io&lt;/a&gt; provider, currently very inefficient since the data is parsed on a remote server, &lt;a href=&quot;https://sekando.com/docs/feednami&quot;&gt;feednami&lt;/a&gt;, also this is why it is so slow to load;&lt;/li&gt;
+&lt;li&gt;And finally, the list of repositories on my &lt;a href=&quot;http://argarak.github.io/#/programs&quot;&gt;repositories&lt;/a&gt; page, fetches data from the Github APIs.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Also note that I’m using version 1.x of the Angular framework&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use of the &lt;a href=&quot;https://material.angularjs.org/latest/&quot;&gt;Angular Material&lt;/a&gt; framework. This allows for flexible layouts, many types of elements, theming and colours which all follow the recent &lt;a href=&quot;https://material.google.com/&quot;&gt;Google Material guidelines&lt;/a&gt;. Please note that my website does not fully follow the guidelines and does not intend to do so.&lt;/li&gt;
+&lt;li&gt;If you would like to know some history behind my website, see my article &lt;a href=&quot;http://argarak.github.io/#/articles/nexus-evolution?title=The%20Evolution%20of%20Argarak&amp;#39;s%20Nexus&quot;&gt;“The Evolution of Argarak’s Nexus”&lt;/a&gt;. Do note that some information on this page is deprecated.&lt;/li&gt;
+&lt;li&gt;FYI - This website is still not finished, there are many problems, especially with the support of various browsers. If any problems occur, please make a new issue at &lt;a href=&quot;https://github.com/argarak/argarak.github.io/issues&quot;&gt;the issues page&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/what-ive-been-up-to/delta.png&quot; alt=&quot;Screenshot of the running game.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Screenshot of the running game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/delta-cubed/&quot;&gt;Delta-Cubed (Δ³)&lt;/a&gt;, &lt;a href=&quot;https://github.com/argarak/delta-cubed&quot;&gt;Source&lt;/a&gt; (Warning: includes sound!) is a little game experiment I did a long time ago, it’s not complete and probably never will be. Some features of the “game” include:
+&lt;ul&gt;
+&lt;li&gt;Loading map data from CSV files and mapping them to different colours to create a full map (&lt;a href=&quot;https://github.com/argarak/delta-cubed/blob/master/libraries/loadMap.js&quot;&gt;source&lt;/a&gt;), this is made with the use of the &lt;a href=&quot;http://jsiso.com/&quot;&gt;jsiso&lt;/a&gt; library;&lt;/li&gt;
+&lt;li&gt;Sound with the use of the &lt;a href=&quot;https://howlerjs.com/&quot;&gt;howler.js&lt;/a&gt; library, only used for the &lt;a href=&quot;https://github.com/argarak/delta-cubed/tree/master/music&quot;&gt;background music&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;And map changing, when the triangle moves to a specific area of the map, another map is loaded.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I did have some ambitions for the game, for example an isometric battle system, other characters and mouse path finding, however with the use of the deprecated library jsiso, I became frustrated and left it. If I ever write it again, I’ll use a different engine.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/what-ive-been-up-to/podcurse.png&quot; alt=&quot;Screenshot of the unfinished Podcurse application in a virtual terminal.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Screenshot of the unfinished Podcurse application in a virtual terminal.&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/argarak/podcurse&quot;&gt;Podcurse&lt;/a&gt; is a completely unfinished application, aiming to be a MPD client for listening to podcasts. There’s not much I can say about it, as I will never work on it again, eventually I’ll remove it from my repositories.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Could not provide an image since this is neither a graphical or console application&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/argarak/miscr&quot;&gt;miscr&lt;/a&gt; is my attempt at writing a &lt;a href=&quot;https://en.wikipedia.org/wiki/Stepper_motor&quot;&gt;stepper motor&lt;/a&gt; control system for &lt;a href=&quot;https://en.wikipedia.org/wiki/Numerical_control&quot;&gt;computer numerical control (CNC)&lt;/a&gt; machines. It aims to provide G-Code parsing, G-Code transfer from Bluetooth, an SD Card or a Serial connection, provide a HCI with the use of an LCD screen and asynchronous motor control. It is currently under development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;my-workflow&quot;&gt;My Workflow&lt;/h1&gt;
+&lt;p&gt;Here are a collection of various software I use everyday to achieve a convenient environment for software development:&lt;/p&gt;
+&lt;h2 id=&quot;emacs-spacemacs&quot;&gt;Emacs (Spacemacs)&lt;/h2&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/what-ive-been-up-to/emacs.png&quot; alt=&quot;A screenshot of the running editor, viewing the angularMain.js file.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;A screenshot of the running editor, viewing the angularMain.js file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I have used many editors it the past, from IDEs such as Netbeans and Cloud9 to editors like Notepad++. However, there is something about the modular editors like Emacs and Vim that make it truly yours. These editors have a built in configuration system and a package manager to add more flexibility and customisation to your editor.&lt;/p&gt;
+&lt;p&gt;I used to use plain Emacs (therefore no pre-set configuration) with a config. file (&lt;code class=&quot;inline&quot;&gt;~/.emacs&lt;/code&gt;) that I maintained myself, therefore was quite messy. But I have made the switch to &lt;a href=&quot;http://spacemacs.org/&quot;&gt;Spacemacs&lt;/a&gt; which has a high-level system of package management named layers. These are simply package lists you can subscribe to in your &lt;code class=&quot;inline&quot;&gt;~/.spacemacs&lt;/code&gt; file. These may include packages for web development, spell checking, LaTeX or specific programming languages. This also makes config. maintenance easy, since it’s all in one file, and is portable, which means that one can copy your config. file and it would automatically download all the packages necessary.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/what-ive-been-up-to/emacscomparison.png&quot; alt=&quot;A comparison between my configuration and the default, plain Emacs, editing my ~/.spacemacs file&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;A comparison between my configuration and the default, plain Emacs, editing my ~/.spacemacs file&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;awesome-window-manager&quot;&gt;Awesome Window Manager&lt;/h2&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/what-ive-been-up-to/wm.png&quot; alt=&quot;My custom configuration for the awesome window manager with two terminals, one showing the cava visualiser, the other displaying some system info. It also includes the rofi display menu in the middle.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;My custom configuration for the awesome window manager with two terminals, one showing the cava visualiser, the other displaying some system info. It also includes the rofi display menu in the middle.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Unlike Windows, GNU/Linux offers hundreds of graphical and console interfaces you can use to interact with your computer. There are the popular &lt;em&gt;desktop environments&lt;/em&gt;, most notably &lt;a href=&quot;https://unity.ubuntu.com/&quot;&gt;Unity&lt;/a&gt;, the default Ubuntu interface, &lt;a href=&quot;https://www.gnome.org/&quot;&gt;GNOME or GNU Object Model Environment&lt;/a&gt;, a very popular and sleek DE, made to be easy to use, &lt;a href=&quot;https://www.kde.org/&quot;&gt;KDE or K Desktop Environment&lt;/a&gt;, a very customisable DE, similar to Windows’ Explorer, however is a little heavyweight and &lt;a href=&quot;https://xfce.org/&quot;&gt;Xfce&lt;/a&gt;, a user-friendly lightweight DE. However, I eventually grew a distaste for them since I wanted an interface I could interact just with the keyboard, an interface I could change to suit my needs.&lt;/p&gt;
+&lt;p&gt;Window managers were what I settled for. More specifically, tiling window managers.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;video src=&quot;http://videobin.org/+efu/i7z.ogg&quot; md-videobox=&quot;&quot;/&gt;
+&lt;/div&gt;
+&lt;p&gt;They can be controlled only by the keyboard, are lightweight and very customisable. I settled for &lt;a href=&quot;https://awesome.naquadah.org/&quot;&gt;Awesome-WM&lt;/a&gt; as my manager of choice as it was very easy to configure (uses Lua as it’s configuration language) and already includes a status bar.&lt;/p&gt;
+&lt;h1 id=&quot;how-i-learned-to-program&quot;&gt;How I learned to program&lt;/h1&gt;
+&lt;p&gt;I first became interested in programming during my experiments with the graphical language &lt;a href=&quot;https://scratch.mit.edu/&quot;&gt;Scratch&lt;/a&gt;. With it, I created small experiments, games interactive cards etc (see all of my scratch content &lt;a href=&quot;https://scratch.mit.edu/users/SnakeVenomous/&quot;&gt;here&lt;/a&gt;). I later progressed over to python (also using the &lt;a href=&quot;https://netbeans.org/&quot;&gt;Netbeans IDE&lt;/a&gt;) where I created small programs to complete trivial tasks, for example reversing text. I also attempted creating some simple games with the &lt;a href=&quot;http://pygame.org/news.html&quot;&gt;pygame&lt;/a&gt; library, however I usually did not get very far past the graphical interface implementation, I later just got frustrated and decided to move on to something different.&lt;/p&gt;
+&lt;p&gt;However, the main thing that really reinforced my programming skill was the course I took from &lt;a href=&quot;https://www.edx.org/&quot;&gt;edX&lt;/a&gt;, &lt;a href=&quot;https://www.edx.org/course/introduction-computer-science-harvardx-cs50x&quot;&gt;CS50x&lt;/a&gt;. This was a self-paced course that included different tasks to solve with different programming languages, named Problem Sets. The list of Problems Sets in the course I took are as follows (Note that I took CS50x 2015 and the 2016 version differs slightly):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Problem Set 1:
+&lt;ul&gt;
+&lt;li&gt;Hello world program written in C;&lt;/li&gt;
+&lt;li&gt;Program named “Mario” which would output a right angled triangle of height &lt;code class=&quot;inline&quot;&gt;n&lt;/code&gt; after entering the number &lt;code class=&quot;inline&quot;&gt;n&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Greedy algorithm which outputs the amount of coins needed to fulfil the amount given.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Problem Set 2:
+&lt;ul&gt;
+&lt;li&gt;Program which output the initials of a given string (i.e. “John Smith” would output “JS”);&lt;/li&gt;
+&lt;li&gt;Encryption program named “Caesar” which encrypts strings with the use of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Caesar_cipher&quot;&gt;Caesar cipher&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;And another encryption program named “Vigenere” which encrypts strings with the &lt;a href=&quot;https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher&quot;&gt;Vigenère cipher&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Problem Set 3:
+&lt;ul&gt;
+&lt;li&gt;Find program which asks the user to input a sequence of numbers (haystack), sorts the numbers (bubble sort), and finds the number given (needle);&lt;/li&gt;
+&lt;li&gt;Breakout clone using the &lt;a href=&quot;http://stanford.edu/~stepp/cppdoc/&quot;&gt;SPL Graphics Library&lt;/a&gt;, includes lives, scores depending on brick height, “God” mode (where the paddle moves according to the ball’s X axis) and more.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Problem Set 4:
+&lt;ul&gt;
+&lt;li&gt;Had to answer a series of questions;&lt;/li&gt;
+&lt;li&gt;Whodunit, a program which reveals “the culprit”, by removing all the red pixels hiding the image;&lt;/li&gt;
+&lt;li&gt;Program that copies BMP files;&lt;/li&gt;
+&lt;li&gt;Resize, a program which resizes BMP files, where it was fun to see many corrupted image files in early stages;&lt;/li&gt;
+&lt;li&gt;Recover, a program which recovers JPEG files from a camera’s RAW file.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Problem Set 5:
+&lt;ul&gt;
+&lt;li&gt;Spell checker implementation, loads a dictionary file and checks a file of any words that are not in the dictionary, I think. I tried to read the code but can’t begin to understand what I’ve actually written! The total time is exactly 0.5942 seconds.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Problem Set 6:
+&lt;ul&gt;
+&lt;li&gt;Server implementation with support for PHP, static files such as images, and HTML files. Note, not all the server was written by me, only select portions that were missed out. Again, I can’t understand most of it.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Problem Set 7:
+&lt;ul&gt;
+&lt;li&gt;PHP application named C$50 Finance, allows for the register and login of users, current stock prices from the Yahoo APIs, and the buying and selling of (fake) shares. All of this is kept in a SQL database.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Problem Set 8:
+&lt;ul&gt;
+&lt;li&gt;Back-end web application which integrates Google Maps with Google News. Markers are placed on the map, which the user may click on and see the news for that area.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Unfortunately, I cannot post the source code publicly, since that is against the CS50 rules. However, if you do want to see the source, please &lt;a href=&quot;http://argarak.github.io/#/about#contact&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I later progressed to move on to Github and making projects which I have documented previously.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;That’s all I’m going to document, there probably was more, however they were probably insignificant…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Also, there is no comment system yet since this site does not currently have a dedicated server, therefore I can’t run back-end scripts. If you want to send feedback, you may email me.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>The Evolution of Argarak's Nexus</title>
+      <link>http://argarak.github.io//articles/nexus-evolution/</link>
+      <pubDate>Fri, 29 Apr 2016 00:00:00 +0100</pubDate>
+      <guid isPermaLink="true">http://argarak.github.io//articles/nexus-evolution/</guid>
+      <author></author>
+      <description>&lt;p&gt;Argarak’s Nexus has drastically evolved in a short period (approximately one year). Let’s take a look back at what Argarak’s Nexus was.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;NOTE: This was written before version 3 of this website! Some information may be invalid to the current version.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;sourceCode&quot;&gt;&lt;pre class=&quot;sourceCode javascript&quot;&gt;&lt;code class=&quot;sourceCode javascript&quot;&gt;
+&lt;span class=&quot;cf&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;op&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;op&quot;&gt;++&lt;/span&gt;) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;va&quot;&gt;console&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;log&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;remember to remove this&amp;quot;&lt;/span&gt;)&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;the-name&quot;&gt;The name&lt;/h2&gt;
+&lt;p&gt;I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)&lt;/p&gt;
+&lt;p&gt;Nexus was just a word which I picked out from a thesaurus. After searching the word “network”, I found the word “nexus”, which was appealing to me - even though my website is not a network. (except only in the sense that it is a network of all the rubbish I make, not a literal network).&lt;/p&gt;
+&lt;h2 id=&quot;the-logo&quot;&gt;The logo&lt;/h2&gt;
+&lt;p&gt;To make a memorable website, you require some sort of logo people will remember the first time they see it. This means that your logo has to be somewhat unique to make it stand out. I guess this is more important to some organisation than some blog but I still wanted something I could be identified by.&lt;/p&gt;
+&lt;p&gt;Anyway, the first logo I came up with looked like this.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/cropped-nexus-grayscale.png&quot; alt=&quot;Argarak’s Nexus logo used in version 1 and 2.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Argarak’s Nexus logo used in version 1 and 2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Now this is not the first iteration of this logo, the first had a teal background and was slightly thinner (you will see it later on though) but it had the same shape. I chose a hexagon because I like hexagons and the star in the middle with the triangle is meant to represent an “A” for Argarak.&lt;/p&gt;
+&lt;p&gt;When I made version 1, I later did not use this logo, instead I piped it through an image to ASCII converter and used this logo:&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/logo.png&quot; alt=&quot;Argarak’s Nexus logo (version 1) parsed through the aview/asciiview program.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Argarak’s Nexus logo (version 1) parsed through the aview/asciiview program.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This logo was meant to fit in with the background of the website which was also made out of text. This was the most used logo.&lt;/p&gt;
+&lt;p&gt;After a while, when I started to get fed up of version 1, I wanted a different logo. I was sketching in my notebook fairly often, coming up with new ideas. This one came to my after I drew an isometric grid. I drew some pyramids and but a box around it. The new Nexus logo was made.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/nexus.png&quot; alt=&quot;Version 2 of the logo used on this page.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Version 2 of the logo used on this page.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This is the logo you see now on the side of you screen (or hidden away on mobile).&lt;/p&gt;
+&lt;h2 id=&quot;version-0&quot;&gt;Version 0&lt;/h2&gt;
+&lt;p&gt;I always wanted a website of my own. Not really for any particular purpose, other than to put all of my future projects on it. However, there were always difficulties. I did not know HTML or CSS too well, and I did not know any practical JavaScript. Buying a domain name and hosting wasn’t too appealing since I did not want to waste money on some website no-one is going to visit. However, I can always make a prototype on my computer!&lt;/p&gt;
+&lt;p&gt;However, before any real development, I decided to make an image of what I wanted the website to look. I used Inkscape to create the image and it somewhat looks similar - but a lot worse - to what it looks today. So let’s take a look at it!&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/argarak_idea.png&quot; alt=&quot;A graphic for my website idea made in Inkscape using the Numix icons on the sidebar.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;A graphic for my website idea made in Inkscape using the Numix icons on the sidebar.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Now that’s awful design! Post warning, many of these images on this post are going to be quite bad in design. Sorry if it makes you wince. Anyway, As you can see, the desktop sidebar style that version 2 has is present in this image. I’ve always wanted to make a website with a sidebar for some reason. Frankly, I do not remember fully what those icons meant. I only remember that the top one is the old Nexus logo, the person icon is probably an about page, the gears are most likely some kind of programs repository and the “play” icon is probably about videos or something.&lt;/p&gt;
+&lt;p&gt;As you will see later, pre-release version 2 had the same top bar. It’s interesting how I’ve kept a similar design over the year.&lt;/p&gt;
+&lt;p&gt;Finally, development began. Back then, in 2015, I used the Netbeans IDE for my programming needs. It wasn’t very good and had many problems. Also, at the time, I used to love this website called &lt;a href=&quot;http://www.colourlovers.com/&quot;&gt;COLOURlovers&lt;/a&gt;, which had collections of various patterns which I used commonly for my websites. Now, they are too colourful and garish for me to use these days, but back then I always liked to use the background-image element on just about all my tags.&lt;/p&gt;
+&lt;p&gt;So here’s how it went!&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/v0.png&quot; alt=&quot;Version 0 of the site.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Version 0 of the site.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Sadly, I could not find a source of this website, I could have used it as a basis for another, which I will show soon. Anyway, there are many design flaws with the design. The most obvious one would be the inconsistency of the patterns. The website is light coloured, which is not my style any more, the text on the backgrounds is difficult to read and it’s too detailed and has no set palette.&lt;/p&gt;
+&lt;p&gt;All of the links on the top of the page blend in to the background too much, therefore are difficult to see and the font sizes are too large and inconsistent. It’s not a great website, to say the least.&lt;/p&gt;
+&lt;p&gt;As you can read at the bottom of the image, I wanted to learn practical JavaScript however, I did not know jQuery so that’s probably why (and yes there are built in ID searching and style setting functions but jQuery is so much easier). &lt;em&gt;FYI: Version 3 uses Angular and no jQuery&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I believe that this next image is the website that I based this one on. Here’s how it looks:&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/v0b.png&quot; alt=&quot;A site based on the previous version 0.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;A site based on the previous version 0.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;At least with this one the links are easy to read. However, they are too large. The whole site is pretty much empty and abandoned.&lt;/p&gt;
+&lt;p&gt;The logo at the top is the same logo we saw earlier, but this time with curly brackets, for no good reason whatsoever. And I licensed it by the GPL because a ~40 odd line HTML file and a CSS file of approximately the same size should be licensed by a strong copyleft licence, because why not!&lt;/p&gt;
+&lt;p&gt;By the way, these are from 2015! I’m amazed the amount of progress I made with my website, it is truly astonishing to see how terrible websites can eventually become good ones.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;Actually, at the time, I did not refer to these sites as Argarak’s Nexus, the source for the most recent one shown was called “some_website”.&lt;/del&gt; (Totally false since you see the words “Argarak’s Nexus” on the top of the site!)&lt;/p&gt;
+&lt;p&gt;Of course, I made many little abandoned blogs (i.e &lt;a href=&quot;https://argarak.wordpress.com&quot; class=&quot;uri&quot;&gt;https://argarak.wordpress.com&lt;/a&gt;) but I will not cover them because they are pretty boring and not very progressive of the Nexus we have today.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I have been interested in secure and private providers of email, and so I went over to &lt;a href=&quot;https://prism-break.org/en/&quot;&gt;prism-break&lt;/a&gt; and went over to the Email Accounts section of the site and I found the group Autistici/Inventiati who provided many kinds of services, but my main goal was to finally break away from Google Mail and my spam-filled email account to a safer, private and trustworthy provider. So I signed up, sent them a request and they accepted it, which I was fairy glad about.&lt;/p&gt;
+&lt;p&gt;I don’t use email often, especially for day-to-day communications, but without it, it would be difficult to contact developers, make accounts and use or subscribe to mailing lists.&lt;/p&gt;
+&lt;p&gt;Anyway, I heard that A/I were offering a blogging service, which was intriguing, so I set one up. The service was called “Noblogs” and I chose the URL “nexus.noblogs.org”. Version 1 has begun.&lt;/p&gt;
+&lt;h2 id=&quot;version-1&quot;&gt;Version 1&lt;/h2&gt;
+&lt;p&gt;I never really liked Wordpress myself. It’s interface is clunky, customisation is weak (client side) - in the sense that the only thing you can change is the CSS of the website - and server side, it’s really confusing for me. The themes are made in PHP for some reason.&lt;/p&gt;
+&lt;p&gt;I also don’t like how you can only create posts with the use of some awful GUI.&lt;/p&gt;
+&lt;p&gt;However, it is very easy to use and it was the longest running Nexus and with the most posts.&lt;/p&gt;
+&lt;p&gt;Wordpress also has built in Search and RSS functionality, which makes it even easier to use. (Which is quite a big deal since I always have difficulty implementing search functionality to my sites as you may know)&lt;/p&gt;
+&lt;p&gt;Here’s how the design looked, with the twenty-eleven theme:&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/v1.png&quot; alt=&quot;Version 1 of the site generated by Wordpress.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Version 1 of the site generated by Wordpress.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I tried my best in using the themes that were available on the Noblogs service, since it did not have as many themes as Wordpress.com. So I went with a single column design which did not look too bad. The large logo in the centre was a little frustrating while browsing the website. Since every time you visited a page, you would have to scroll through that large logo. The background of the page is the output from the command &lt;code&gt;cat /dev/urandom&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Later on, I used a Python script to create the background. It simply output ASCII characters, however with no spaces. It meant that there was no longer a seam left from the background tiling. I also improved the navigation bar by changing the gradient to a flat colour (specifically #000), made the text larger and changed the font to Raleway. The logo also changed. I ran it through some kind of image to text library (most likely &lt;a href=&quot;https://en.wikipedia.org/wiki/AAlib&quot;&gt;aa&lt;/a&gt;) since I liked the idea of having mono-spaced ASCII characters as some sort of style.&lt;/p&gt;
+&lt;p&gt;Sadly, the website is no longer available at all. And I never thought of archiving it on the Wayback Machine. Oh well. Not like anyone read it at the time. However, if you wish, you may download a copy of the Wordpress exported file which contains all of my previous blog posts. Of course, I’m not going to publish them here since they were not very high quality, to say the least. You may download it &lt;a href=&quot;https://u.pomf.is/ykuafu.xml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I never blogged there often. It was running for some time (over 6 months) and only so many posts, I wasn’t very frequent and I don’t expect to change any time soon.&lt;/p&gt;
+&lt;h2 id=&quot;version-2&quot;&gt;Version 2&lt;/h2&gt;
+&lt;p&gt;I was getting fed up of Wordpress. No markdown support, had to do everything from a browser and most of the time, the website would not even work properly! I had to do something about this, to make my blogging experience better. And so I proceeded to search blogging platforms. Obviously, the first one that I found was Jekyll. To me Jekyll was puzzling. It was simple in the sense that I could just put markdown files in the posts directory. However, the templating engine was confusing and not what I was used to. I made many websites before with HTML (Jade), CSS (Stylus) and Javascript. So making a good looking website was not a problem. What was the problem was that I could not find a good engine that was suitable for someone who simply wanted a way to create templates using HTML and not Javascript and especially not PHP (not that I hate PHP, it’s just that I don’t know why you would do such a thing)!&lt;/p&gt;
+&lt;p&gt;However, before any engines, I decided to make a prototype structure for the look and feel of the website. There’s the first prototype.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/p0.png&quot; alt=&quot;Prototype 0 of version 2 of the site.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Prototype 0 of version 2 of the site.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The only interesting thing that this site offered was that if you hovered over that thing Nexus logo, the image would fade into the coloured version. I used the &lt;a href=&quot;http://purecss.io/&quot;&gt;Pure&lt;/a&gt; CSS library for my framework. I only chose it because it had side navigation support.&lt;/p&gt;
+&lt;p&gt;Another prototype was made, however I will not show it to you because it is even less finished than the prototype I showed you. It’s basically the same website however, it has the navigation menu at the bottom. However, I did scrap that idea and continued to stick with the side navigation design.&lt;/p&gt;
+&lt;p&gt;Anyway, back to engines…&lt;/p&gt;
+&lt;p&gt;I found Punch. A static site generator which used simple the Mustache template engine. You reference JSON variables with the use of &lt;code&gt;\{\{brackets\}\}&lt;/code&gt;, (I had to escape it due to Angular thinking it was a variable) that Punch provides. Now my website is actually based on the &lt;a href=&quot;https://github.com/laktek/punch-blog&quot;&gt;punch-blog&lt;/a&gt; template which includes helper scripts that read and parse Markdown files in the posts directory. It also includes scripts to manage the Archive and the Blog section of my site.&lt;/p&gt;
+&lt;p&gt;When I was building the website your on just now, I disliked the example site it came with and scrapped it completely. (It also came with tracking Twitter handles and other social media rubbish I don’t use) At the time, I heard of Google’s &lt;a href=&quot;https://www.google.com/design/spec/material-design/introduction.html&quot;&gt;material design&lt;/a&gt; guidelines and the &lt;a href=&quot;http://materializecss.com/&quot;&gt;Materialise CSS&lt;/a&gt; framework. (Note that my website does not fully meet the requirements as of the time of writing but I hope to achieve that soon) And so I put Materialise on it and stated development. I first made the website myself but I found implementing a proper side navigation menu challenging so I decided to fork the Materialise website and copy the menu from there. But even after that, it was still really hard. I never found a direct example of this on the internet so I had to try myself. I do not remember the exact procedure of making a side navigation menu solely with icons but it certainly took a while. The first website did not have icons on the centre of the screen, instead they were on the top. They were also black and white opposed to the many colours on the icons on the side, which do make the icons stand out.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img src=&quot;http://argarak.github.io/articles/nexus-evolution/oldSidebar.png&quot; alt=&quot;Navigation menu of the first published version of the site version 2.&quot; md-lightbox=&quot;&amp;quot;&amp;quot;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;Navigation menu of the first published version of the site version 2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;My old website also had a top search and title bar. The title of the page was on it but it also transformed into a large search menu. (The search did not work of course) I also used the font &lt;a href=&quot;https://github.com/theleagueof/raleway&quot;&gt;Raleway&lt;/a&gt; for the main text, now I use &lt;a href=&quot;https://www.google.com/fonts/specimen/Roboto&quot;&gt;Roboto&lt;/a&gt;. &lt;del&gt;However, I do still use Raleway on the landing page.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;Now I can’t really and will not document a lot on the technical development of this website as it would take too long and I don’t really remember it well. (I also don’t keep snapshots of my projects) However, you may see a list of my Github commits right &lt;a href=&quot;https://github.com/argarak/argarak.github.io/commits/dev&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Well that’s it for the history of Argarak’s Nexus. Many versions but I finally made one I’m happy with.&lt;/p&gt;
+&lt;div id=&quot;bottomspace&quot;&gt;
+
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;If you were wondering, this is space so that the material box works properly.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Markdown Syntax</title>
+      <link>http://argarak.github.io//articles/markdown-test/</link>
+      <pubDate>Fri, 29 Apr 2016 00:00:00 +0100</pubDate>
+      <guid isPermaLink="true">http://argarak.github.io//articles/markdown-test/</guid>
+      <author></author>
+      <description>&lt;h1 id=&quot;markdown-syntax&quot;&gt;Markdown: Syntax&lt;/h1&gt;
+&lt;ul id=&quot;ProjectSubmenu&quot;&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projects/markdown/&amp;quot; title=&amp;quot;Markdown Project Page&amp;quot;&amp;gt;Main&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projects/markdown/basics&amp;quot; title=&amp;quot;Markdown Basics&amp;quot;&amp;gt;Basics&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a class=&amp;quot;selected&amp;quot; title=&amp;quot;Markdown Syntax Documentation&amp;quot;&amp;gt;Syntax&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projects/markdown/license&amp;quot; title=&amp;quot;Pricing and License Information&amp;quot;&amp;gt;License&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projects/markdown/dingus&amp;quot; title=&amp;quot;Online Markdown Web Form&amp;quot;&amp;gt;Dingus&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#overview&quot;&gt;Overview&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#philosophy&quot;&gt;Philosophy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#html&quot;&gt;Inline HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#autoescape&quot;&gt;Automatic Escaping for Special Characters&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#block&quot;&gt;Block Elements&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#p&quot;&gt;Paragraphs and Line Breaks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#header&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#blockquote&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#list&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#precode&quot;&gt;Code Blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#hr&quot;&gt;Horizontal Rules&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#span&quot;&gt;Span Elements&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#link&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#em&quot;&gt;Emphasis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#img&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#misc&quot;&gt;Miscellaneous&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#backslash&quot;&gt;Backslash Escapes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#autolink&quot;&gt;Automatic Links&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This document is itself written using Markdown; you can &lt;a href=&quot;http://argarak.github.io/projects/markdown/syntax.text&quot;&gt;see the source for it by adding ‘.text’ to the URL&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;overview&quot;&gt;
+Overview
+&lt;/h2&gt;
+&lt;h3 id=&quot;philosophy&quot;&gt;
+Philosophy
+&lt;/h3&gt;
+&lt;p&gt;Markdown is intended to be as easy-to-read and easy-to-write as is feasible.&lt;/p&gt;
+&lt;p&gt;Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters – including &lt;a href=&quot;http://docutils.sourceforge.net/mirror/setext.html&quot;&gt;Setext&lt;/a&gt;, &lt;a href=&quot;http://www.aaronsw.com/2002/atx/&quot;&gt;atx&lt;/a&gt;, &lt;a href=&quot;http://textism.com/tools/textile/&quot;&gt;Textile&lt;/a&gt;, &lt;a href=&quot;http://docutils.sourceforge.net/rst.html&quot;&gt;reStructuredText&lt;/a&gt;, &lt;a href=&quot;http://www.triptico.com/software/grutatxt.html&quot;&gt;Grutatext&lt;/a&gt;, and &lt;a href=&quot;http://ettext.taint.org/doc/&quot;&gt;EtText&lt;/a&gt; – the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.&lt;/p&gt;
+&lt;p&gt;To this end, Markdown’s syntax is comprised entirely of punctuation characters, which punctuation characters have been carefully chosen so as to look like what they mean. E.g., asterisks around a word actually look like *emphasis*. Markdown lists look like, well, lists. Even blockquotes look like quoted passages of text, assuming you’ve ever used email.&lt;/p&gt;
+&lt;h3 id=&quot;html&quot;&gt;
+Inline HTML
+&lt;/h3&gt;
+&lt;p&gt;Markdown’s syntax is intended for one purpose: to be used as a format for &lt;em&gt;writing&lt;/em&gt; for the web.&lt;/p&gt;
+&lt;p&gt;Markdown is not a replacement for HTML, or even close to it. Its syntax is very small, corresponding only to a very small subset of HTML tags. The idea is &lt;em&gt;not&lt;/em&gt; to create a syntax that makes it easier to insert HTML tags. In my opinion, HTML tags are already easy to insert. The idea for Markdown is to make it easy to read, write, and edit prose. HTML is a &lt;em&gt;publishing&lt;/em&gt; format; Markdown is a &lt;em&gt;writing&lt;/em&gt; format. Thus, Markdown’s formatting syntax only addresses issues that can be conveyed in plain text.&lt;/p&gt;
+&lt;p&gt;For any markup that is not covered by Markdown’s syntax, you simply use HTML itself. There’s no need to preface it or delimit it to indicate that you’re switching from Markdown to HTML; you just use the tags.&lt;/p&gt;
+&lt;p&gt;The only restrictions are that block-level HTML elements – e.g. &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;, etc. – must be separated from surrounding content by blank lines, and the start and end tags of the block should not be indented with tabs or spaces. Markdown is smart enough not to add extra (unwanted) &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tags around HTML block-level tags.&lt;/p&gt;
+&lt;p&gt;For example, to add an HTML table to a Markdown article:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a regular paragraph.
+
+&amp;lt;table&amp;gt;
+    &amp;lt;tr&amp;gt;
+        &amp;lt;td&amp;gt;Foo&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+
+This is another regular paragraph.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can’t use Markdown-style &lt;code&gt;*emphasis*&lt;/code&gt; inside an HTML block.&lt;/p&gt;
+&lt;p&gt;Span-level HTML tags – e.g. &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;, or &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; – can be used anywhere in a Markdown paragraph, list item, or header. If you want, you can even use HTML tags instead of Markdown formatting; e.g. if you’d prefer to use HTML &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tags instead of Markdown’s link or image syntax, go right ahead.&lt;/p&gt;
+&lt;p&gt;Unlike block-level HTML tags, Markdown syntax &lt;em&gt;is&lt;/em&gt; processed within span-level tags.&lt;/p&gt;
+&lt;h3 id=&quot;autoescape&quot;&gt;
+Automatic Escaping for Special Characters
+&lt;/h3&gt;
+&lt;p&gt;In HTML, there are two characters that demand special treatment: &lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;amp;&lt;/code&gt;. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. &lt;code&gt;&amp;amp;lt;&lt;/code&gt;, and &lt;code&gt;&amp;amp;amp;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ampersands in particular are bedeviling for web writers. If you want to write about ‘AT&amp;amp;T’, you need to write ‘&lt;code&gt;AT&amp;amp;amp;T&lt;/code&gt;’. You even need to escape ampersands within URLs. Thus, if you want to link to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://images.google.com/images?num=30&amp;amp;q=larry+bird&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;you need to encode the URL as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://images.google.com/images?num=30&amp;amp;amp;q=larry+bird&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;in your anchor tag &lt;code&gt;href&lt;/code&gt; attribute. Needless to say, this is easy to forget, and is probably the single most common source of HTML validation errors in otherwise well-marked-up web sites.&lt;/p&gt;
+&lt;p&gt;Markdown allows you to use these characters naturally, taking care of all the necessary escaping for you. If you use an ampersand as part of an HTML entity, it remains unchanged; otherwise it will be translated into &lt;code&gt;&amp;amp;amp;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So, if you want to include a copyright symbol in your article, you can write:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp;copy;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and Markdown will leave it alone. But if you write:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AT&amp;amp;T&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Markdown will translate it to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AT&amp;amp;amp;T&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Similarly, because Markdown supports &lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#html&quot;&gt;inline HTML&lt;/a&gt;, if you use angle brackets as delimiters for HTML tags, Markdown will treat them as such. But if you write:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;4 &amp;lt; 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Markdown will translate it to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;4 &amp;amp;lt; 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, inside Markdown code spans and blocks, angle brackets and ampersands are &lt;em&gt;always&lt;/em&gt; encoded automatically. This makes it easy to use Markdown to write about HTML code. (As opposed to raw HTML, which is a terrible format for writing about HTML syntax, because every single &lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;amp;&lt;/code&gt; in your example code needs to be escaped.)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;block&quot;&gt;
+Block Elements
+&lt;/h2&gt;
+&lt;h3 id=&quot;p&quot;&gt;
+Paragraphs and Line Breaks
+&lt;/h3&gt;
+&lt;p&gt;A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line – a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs.&lt;/p&gt;
+&lt;p&gt;The implication of the “one or more consecutive lines of text” rule is that Markdown supports “hard-wrapped” text paragraphs. This differs significantly from most other text-to-HTML formatters (including Movable Type’s “Convert Line Breaks” option) which translate every line break character in a paragraph into a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;p&gt;When you &lt;em&gt;do&lt;/em&gt; want to insert a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; break tag using Markdown, you end a line with two or more spaces, then type return.&lt;/p&gt;
+&lt;p&gt;Yes, this takes a tad more effort to create a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;, but a simplistic “every line break is a &lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt;” rule wouldn’t work for Markdown. Markdown’s email-style &lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#blockquote&quot;&gt;blockquoting&lt;/a&gt; and multi-paragraph &lt;a href=&quot;http://argarak.github.io/articles/markdown-test/#list&quot;&gt;list items&lt;/a&gt; work best – and look better – when you format them with hard breaks.&lt;/p&gt;
+&lt;h3 id=&quot;header&quot;&gt;
+Headers
+&lt;/h3&gt;
+&lt;p&gt;Markdown supports two styles of headers, &lt;a href=&quot;http://docutils.sourceforge.net/mirror/setext.html&quot;&gt;Setext&lt;/a&gt; and &lt;a href=&quot;http://www.aaronsw.com/2002/atx/&quot;&gt;atx&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Setext-style headers are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers). For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is an H1
+=============
+
+This is an H2
+-------------&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Any number of underlining &lt;code&gt;=&lt;/code&gt;’s or &lt;code&gt;-&lt;/code&gt;’s will work.&lt;/p&gt;
+&lt;p&gt;Atx-style headers use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# This is an H1
+
+## This is an H2
+
+###### This is an H6&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Optionally, you may “close” atx-style headers. This is purely cosmetic – you can use this if you think it looks better. The closing hashes don’t even need to match the number of hashes used to open the header. (The number of opening hashes determines the header level.) :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# This is an H1 #
+
+## This is an H2 ##
+
+### This is an H3 ######&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;blockquote&quot;&gt;
+Blockquotes
+&lt;/h3&gt;
+&lt;p&gt;Markdown uses email-style &lt;code&gt;&amp;gt;&lt;/code&gt; characters for blockquoting. If you’re familiar with quoting passages of text in an email message, then you know how to create a blockquote in Markdown. It looks best if you hard wrap the text and put a &lt;code&gt;&amp;gt;&lt;/code&gt; before every line:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+&amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+&amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+&amp;gt; 
+&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+&amp;gt; id sem consectetuer libero luctus adipiscing.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Markdown allows you to be lazy and only put the &lt;code&gt;&amp;gt;&lt;/code&gt; before the first line of a hard-wrapped paragraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of &lt;code&gt;&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; This is the first level of quoting.
+&amp;gt;
+&amp;gt; &amp;gt; This is nested blockquote.
+&amp;gt;
+&amp;gt; Back to the first level.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Blockquotes can contain other Markdown elements, including headers, lists, and code blocks:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; ## This is a header.
+&amp;gt; 
+&amp;gt; 1.   This is the first list item.
+&amp;gt; 2.   This is the second list item.
+&amp;gt; 
+&amp;gt; Here&amp;#39;s some example code:
+&amp;gt; 
+&amp;gt;     return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Any decent text editor should make email-style quoting easy. For example, with BBEdit, you can make a selection and choose Increase Quote Level from the Text menu.&lt;/p&gt;
+&lt;h3 id=&quot;list&quot;&gt;
+Lists
+&lt;/h3&gt;
+&lt;p&gt;Markdown supports ordered (numbered) and unordered (bulleted) lists.&lt;/p&gt;
+&lt;p&gt;Unordered lists use asterisks, pluses, and hyphens – interchangably – as list markers:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   Red
+*   Green
+*   Blue&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;is equivalent to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+   Red
++   Green
++   Blue&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-   Red
+-   Green
+-   Blue&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ordered lists use numbers followed by periods:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.  Bird
+2.  McHale
+3.  Parish&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’s important to note that the actual numbers you use to mark the list have no effect on the HTML output Markdown produces. The HTML Markdown produces from the above list is:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;Bird&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;McHale&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Parish&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you instead wrote the list in Markdown like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.  Bird
+1.  McHale
+1.  Parish&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or even:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;3. Bird
+1. McHale
+8. Parish&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;you’d get the exact same HTML output. The point is, if you want to, you can use ordinal numbers in your ordered Markdown lists, so that the numbers in your source match the numbers in your published HTML. But if you want to be lazy, you don’t have to.&lt;/p&gt;
+&lt;p&gt;If you do use lazy list numbering, however, you should still start the list with the number 1. At some point in the future, Markdown may support starting ordered lists at an arbitrary number.&lt;/p&gt;
+&lt;p&gt;List markers typically start at the left margin, but may be indented by up to three spaces. List markers must be followed by one or more spaces or a tab.&lt;/p&gt;
+&lt;p&gt;To make lists look nice, you can wrap items with hanging indents:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But if you want to be lazy, you don’t have to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If list items are separated by blank lines, Markdown will wrap the items in &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tags in the HTML output. For example, this input:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   Bird
+*   Magic&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will turn into:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Bird&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Magic&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   Bird
+
+*   Magic&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will turn into:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Bird&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Magic&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It looks nice if you indent every line of the subsequent paragraphs, but here again, Markdown will allow you to be lazy:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   This is a list item with two paragraphs.
+
+    This is the second paragraph in the list item. You&amp;#39;re
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.
+
+*   Another item in the same list.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To put a blockquote within a list item, the blockquote’s &lt;code&gt;&amp;gt;&lt;/code&gt; delimiters need to be indented:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   A list item with a blockquote:
+
+    &amp;gt; This is a blockquote
+    &amp;gt; inside a list item.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To put a code block within a list item, the code block needs to be indented &lt;em&gt;twice&lt;/em&gt; – 8 spaces or two tabs:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*   A list item with a code block:
+
+        &amp;lt;code goes here&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’s worth noting that it’s possible to trigger an ordered list by accident, by writing something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1986. What a great season.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In other words, a &lt;em&gt;number-period-space&lt;/em&gt; sequence at the beginning of a line. To avoid this, you can backslash-escape the period:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1986\. What a great season.&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;precode&quot;&gt;
+Code Blocks
+&lt;/h3&gt;
+&lt;p&gt;Pre-formatted code blocks are used for writing about programming or markup source code. Rather than forming normal paragraphs, the lines of a code block are interpreted literally. Markdown wraps a code block in both &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;p&gt;To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is a normal paragraph:
+
+    This is a code block.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Markdown will generate:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;This is a normal paragraph:&amp;lt;/p&amp;gt;
+
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;This is a code block.
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One level of indentation – 4 spaces or 1 tab – is removed from each line of the code block. For example, this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Here is an example of AppleScript:
+
+    tell application &amp;quot;Foo&amp;quot;
+        beep
+    end tell&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will turn into:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Here is an example of AppleScript:&amp;lt;/p&amp;gt;
+
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;tell application &amp;quot;Foo&amp;quot;
+    beep
+end tell
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A code block continues until it reaches a line that is not indented (or the end of the article).&lt;/p&gt;
+&lt;p&gt;Within a code block, ampersands (&lt;code&gt;&amp;amp;&lt;/code&gt;) and angle brackets (&lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt;) are automatically converted into HTML entities. This makes it very easy to include example HTML source code using Markdown – just paste it and indent it, and Markdown will handle the hassle of encoding the ampersands and angle brackets. For example, this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt;
+        &amp;amp;copy; 2004 Foo Corporation
+    &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will turn into:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;div class=&amp;quot;footer&amp;quot;&amp;amp;gt;
+    &amp;amp;amp;copy; 2004 Foo Corporation
+&amp;amp;lt;/div&amp;amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Regular Markdown syntax is not processed within code blocks. E.g., asterisks are just literal asterisks within a code block. This means it’s also easy to use Markdown to write about Markdown’s own syntax.&lt;/p&gt;
+&lt;h3 id=&quot;hr&quot;&gt;
+Horizontal Rules
+&lt;/h3&gt;
+&lt;p&gt;You can produce a horizontal rule tag (&lt;code&gt;&amp;lt;hr /&amp;gt;&lt;/code&gt;) by placing three or more hyphens, asterisks, or underscores on a line by themselves. If you wish, you may use spaces between the hyphens or asterisks. Each of the following lines will produce a horizontal rule:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;span&quot;&gt;
+Span Elements
+&lt;/h2&gt;
+&lt;h3 id=&quot;link&quot;&gt;
+Links
+&lt;/h3&gt;
+&lt;p&gt;Markdown supports two style of links: &lt;em&gt;inline&lt;/em&gt; and &lt;em&gt;reference&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In both styles, the link text is delimited by [square brackets].&lt;/p&gt;
+&lt;p&gt;To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an &lt;em&gt;optional&lt;/em&gt; title for the link, surrounded in quotes. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is [an example](http://example.com/ &amp;quot;Title&amp;quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Will produce:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;This is &amp;lt;a href=&amp;quot;http://example.com/&amp;quot; title=&amp;quot;Title&amp;quot;&amp;gt;
+an example&amp;lt;/a&amp;gt; inline link.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://example.net/&amp;quot;&amp;gt;This link&amp;lt;/a&amp;gt; has no
+title attribute.&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you’re referring to a local resource on the same server, you can use relative paths:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;See my [About](/about/) page for details.   &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is [an example][id] reference-style link.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can optionally use a space to separate the sets of brackets:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is [an example] [id] reference-style link.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, anywhere in the document, you define your link label like this, on a line by itself:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[id]: http://example.com/  &amp;quot;Optional Title Here&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Square brackets containing the link identifier (optionally indented from the left margin using up to three spaces);&lt;/li&gt;
+&lt;li&gt;followed by a colon;&lt;/li&gt;
+&lt;li&gt;followed by one or more spaces (or tabs);&lt;/li&gt;
+&lt;li&gt;followed by the URL for the link;&lt;/li&gt;
+&lt;li&gt;optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following three link definitions are equivalent:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[foo]: http://example.com/  &amp;quot;Optional Title Here&amp;quot;
+[foo]: http://example.com/  &amp;#39;Optional Title Here&amp;#39;
+[foo]: http://example.com/  (Optional Title Here)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; There is a known bug in Markdown.pl 1.0.1 which prevents single quotes from being used to delimit link titles.&lt;/p&gt;
+&lt;p&gt;The link URL may, optionally, be surrounded by angle brackets:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[id]: &amp;lt;http://example.com/&amp;gt;  &amp;quot;Optional Title Here&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can put the title attribute on the next line and use extra spaces or tabs for padding, which tends to look better with longer URLs:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[id]: http://example.com/longish/path/to/resource/here
+    &amp;quot;Optional Title Here&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Link definitions are only used for creating links during Markdown processing, and are stripped from your document in the HTML output.&lt;/p&gt;
+&lt;p&gt;Link definition names may consist of letters, numbers, spaces, and punctuation – but they are &lt;em&gt;not&lt;/em&gt; case sensitive. E.g. these two links:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[link text][a]
+[link text][A]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;are equivalent.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;implicit link name&lt;/em&gt; shortcut allows you to omit the name of the link, in which case the link text itself is used as the name. Just use an empty set of square brackets – e.g., to link the word “Google” to the google.com web site, you could simply write:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Google][]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And then define the link:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Google]: http://google.com/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Because link names may contain spaces, this shortcut even works for multiple words in the link text:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Visit [Daring Fireball][] for more information.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And then define the link:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Daring Fireball]: http://daringfireball.net/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Link definitions can be placed anywhere in your Markdown document. I tend to put them immediately after each paragraph in which they’re used, but if you want, you can put them all at the end of your document, sort of like footnotes.&lt;/p&gt;
+&lt;p&gt;Here’s an example of reference links in action:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        &amp;quot;Google&amp;quot;
+  [2]: http://search.yahoo.com/  &amp;quot;Yahoo Search&amp;quot;
+  [3]: http://search.msn.com/    &amp;quot;MSN Search&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using the implicit link name shortcut, you could instead write:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I get 10 times more traffic from [Google][] than from
+[Yahoo][] or [MSN][].
+
+  [google]: http://google.com/        &amp;quot;Google&amp;quot;
+  [yahoo]:  http://search.yahoo.com/  &amp;quot;Yahoo Search&amp;quot;
+  [msn]:    http://search.msn.com/    &amp;quot;MSN Search&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Both of the above examples will produce the following HTML output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;I get 10 times more traffic from &amp;lt;a href=&amp;quot;http://google.com/&amp;quot;
+title=&amp;quot;Google&amp;quot;&amp;gt;Google&amp;lt;/a&amp;gt; than from
+&amp;lt;a href=&amp;quot;http://search.yahoo.com/&amp;quot; title=&amp;quot;Yahoo Search&amp;quot;&amp;gt;Yahoo&amp;lt;/a&amp;gt;
+or &amp;lt;a href=&amp;quot;http://search.msn.com/&amp;quot; title=&amp;quot;MSN Search&amp;quot;&amp;gt;MSN&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For comparison, here is the same paragraph written using Markdown’s inline link style:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;I get 10 times more traffic from [Google](http://google.com/ &amp;quot;Google&amp;quot;)
+than from [Yahoo](http://search.yahoo.com/ &amp;quot;Yahoo Search&amp;quot;) or
+[MSN](http://search.msn.com/ &amp;quot;MSN Search&amp;quot;).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The point of reference-style links is not that they’re easier to write. The point is that with reference-style links, your document source is vastly more readable. Compare the above examples: using reference-style links, the paragraph itself is only 81 characters long; with inline-style links, it’s 176 characters; and as raw HTML, it’s 234 characters. In the raw HTML, there’s more markup than there is text.&lt;/p&gt;
+&lt;p&gt;With Markdown’s reference-style links, a source document much more closely resembles the final output, as rendered in a browser. By allowing you to move the markup-related metadata out of the paragraph, you can add links without interrupting the narrative flow of your prose.&lt;/p&gt;
+&lt;h3 id=&quot;em&quot;&gt;
+Emphasis
+&lt;/h3&gt;
+&lt;p&gt;Markdown treats asterisks (&lt;code&gt;*&lt;/code&gt;) and underscores (&lt;code&gt;_&lt;/code&gt;) as indicators of emphasis. Text wrapped with one &lt;code&gt;*&lt;/code&gt; or &lt;code&gt;_&lt;/code&gt; will be wrapped with an HTML &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; tag; double &lt;code&gt;*&lt;/code&gt;’s or &lt;code&gt;_&lt;/code&gt;’s will be wrapped with an HTML &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; tag. E.g., this input:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will produce:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;em&amp;gt;single asterisks&amp;lt;/em&amp;gt;
+
+&amp;lt;em&amp;gt;single underscores&amp;lt;/em&amp;gt;
+
+&amp;lt;strong&amp;gt;double asterisks&amp;lt;/strong&amp;gt;
+
+&amp;lt;strong&amp;gt;double underscores&amp;lt;/strong&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can use whichever style you prefer; the lone restriction is that the same character must be used to open and close an emphasis span.&lt;/p&gt;
+&lt;p&gt;Emphasis can be used in the middle of a word:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;un*frigging*believable&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But if you surround an &lt;code&gt;*&lt;/code&gt; or &lt;code&gt;_&lt;/code&gt; with spaces, it’ll be treated as a literal asterisk or underscore.&lt;/p&gt;
+&lt;p&gt;To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\*this text is surrounded by literal asterisks\*&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;code&quot;&gt;
+Code
+&lt;/h3&gt;
+&lt;p&gt;To indicate a span of code, wrap it with backtick quotes (&lt;code&gt;`&lt;/code&gt;). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Use the `printf()` function.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will produce:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Use the &amp;lt;code&amp;gt;printf()&amp;lt;/code&amp;gt; function.&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To include a literal backtick character within a code span, you can use multiple backticks as the opening and closing delimiters:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;``There is a literal backtick (`) here.``&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;which will produce this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;There is a literal backtick (`) here.&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The backtick delimiters surrounding a code span may include spaces – one after the opening, one before the closing. This allows you to place literal backtick characters at the beginning or end of a code span:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;A single backtick in a code span: `` ` ``
+
+A backtick-delimited string in a code span: `` `foo` ``&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will produce:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;A single backtick in a code span: &amp;lt;code&amp;gt;`&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;A backtick-delimited string in a code span: &amp;lt;code&amp;gt;`foo`&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With a code span, ampersands and angle brackets are encoded as HTML entities automatically, which makes it easy to include example HTML tags. Markdown will turn this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Please don&amp;#39;t use any `&amp;lt;blink&amp;gt;` tags.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;into:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Please don&amp;#39;t use any &amp;lt;code&amp;gt;&amp;amp;lt;blink&amp;amp;gt;&amp;lt;/code&amp;gt; tags.&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can write this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`&amp;amp;#8212;` is the decimal-encoded equivalent of `&amp;amp;mdash;`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;to produce:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;&amp;amp;amp;#8212;&amp;lt;/code&amp;gt; is the decimal-encoded
+equivalent of &amp;lt;code&amp;gt;&amp;amp;amp;mdash;&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;img&quot;&gt;
+Images
+&lt;/h3&gt;
+&lt;p&gt;Admittedly, it’s fairly difficult to devise a “natural” syntax for placing images into a plain text document format.&lt;/p&gt;
+&lt;p&gt;Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: &lt;em&gt;inline&lt;/em&gt; and &lt;em&gt;reference&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Inline image syntax looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &amp;quot;Optional title&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An exclamation mark: &lt;code&gt;!&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;followed by a set of square brackets, containing the &lt;code&gt;alt&lt;/code&gt; attribute text for the image;&lt;/li&gt;
+&lt;li&gt;followed by a set of parentheses, containing the URL or path to the image, and an optional &lt;code&gt;title&lt;/code&gt; attribute enclosed in double or single quotes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reference-style image syntax looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![Alt text][id]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Where “id” is the name of a defined image reference. Image references are defined using syntax identical to link references:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[id]: url/to/image  &amp;quot;Optional title attribute&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As of this writing, Markdown has no syntax for specifying the dimensions of an image; if this is important to you, you can simply use regular HTML &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;misc&quot;&gt;
+Miscellaneous
+&lt;/h2&gt;
+&lt;h3 id=&quot;autolink&quot;&gt;
+Automatic Links
+&lt;/h3&gt;
+&lt;p&gt;Markdown supports a shortcut style for creating “automatic” links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to show the actual text of a URL or email address, and also have it be a clickable link, you can do this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;http://example.com/&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Markdown will turn this into:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;http://example.com/&amp;quot;&amp;gt;http://example.com/&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Automatic links for email addresses work similarly, except that Markdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots. For example, Markdown will turn this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;address@example.com&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;into something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;&amp;amp;#x6D;&amp;amp;#x61;i&amp;amp;#x6C;&amp;amp;#x74;&amp;amp;#x6F;:&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;
+&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;e&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;
+&amp;amp;#109;&amp;quot;&amp;gt;&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x64;&amp;amp;#x72;&amp;amp;#x65;&amp;amp;#115;&amp;amp;#115;&amp;amp;#64;&amp;amp;#101;&amp;amp;#120;&amp;amp;#x61;
+&amp;amp;#109;&amp;amp;#x70;&amp;amp;#x6C;e&amp;amp;#x2E;&amp;amp;#99;&amp;amp;#111;&amp;amp;#109;&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;which will render in a browser as a clickable link to “address@example.com”.&lt;/p&gt;
+&lt;p&gt;(This sort of entity-encoding trick will indeed fool many, if not most, address-harvesting bots, but it definitely won’t fool all of them. It’s better than nothing, but an address published in this way will probably eventually start receiving spam.)&lt;/p&gt;
+&lt;h3 id=&quot;backslash&quot;&gt;
+Backslash Escapes
+&lt;/h3&gt;
+&lt;p&gt;Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax. For example, if you wanted to surround a word with literal asterisks (instead of an HTML &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; tag), you can use backslashes before the asterisks, like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\*literal asterisks\*&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Markdown provides backslash escapes for the following characters:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;sourceCode&quot;&gt;&lt;pre class=&quot;sourceCode javascript&quot;&gt;&lt;code class=&quot;sourceCode javascript&quot;&gt;&lt;span class=&quot;kw&quot;&gt;var&lt;/span&gt; app &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;angular&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;module&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;nexus&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; [&lt;span class=&quot;st&quot;&gt;&amp;quot;ngMaterial&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;ngAnimate&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;mdLightbox&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;
+                                   &lt;span class=&quot;st&quot;&gt;&amp;quot;truncate&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;ngSanitize&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;ui.router&amp;quot;&lt;/span&gt;])
+                 .&lt;span class=&quot;at&quot;&gt;config&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;function&lt;/span&gt;($mdThemingProvider) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                     &lt;span class=&quot;va&quot;&gt;$mdThemingProvider&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;theme&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;)
+                                       .&lt;span class=&quot;at&quot;&gt;primaryPalette&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;)
+                                       .&lt;span class=&quot;at&quot;&gt;accentPalette&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;pink&amp;quot;&lt;/span&gt;)
+                                       .&lt;span class=&quot;at&quot;&gt;dark&lt;/span&gt;()&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                     &lt;span class=&quot;va&quot;&gt;$mdThemingProvider&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;theme&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;#39;light&amp;#39;&lt;/span&gt;)
+                                       .&lt;span class=&quot;at&quot;&gt;primaryPalette&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;)
+                                       .&lt;span class=&quot;at&quot;&gt;accentPalette&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;pink&amp;quot;&lt;/span&gt;)&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                 &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;)
+                 .&lt;span class=&quot;at&quot;&gt;config&lt;/span&gt;([&lt;span class=&quot;st&quot;&gt;&amp;quot;$stateProvider&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;$urlRouterProvider&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;function&lt;/span&gt;($stateProvider&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;
+                                                                           $urlRouterProvider) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                     &lt;span class=&quot;va&quot;&gt;$urlRouterProvider&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;otherwise&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;/home&amp;quot;&lt;/span&gt;)&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+
+                     $stateProvider
+                         .&lt;span class=&quot;at&quot;&gt;state&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;navbar&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                             &lt;span class=&quot;dt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;/:name&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;
+                             &lt;span class=&quot;dt&quot;&gt;templateUrl&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;function&lt;/span&gt;($stateParams) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                                 &lt;span class=&quot;cf&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;$stateParams&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;/index.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                             &lt;span class=&quot;op&quot;&gt;},&lt;/span&gt;
+                             &lt;span class=&quot;dt&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;function&lt;/span&gt;($rootScope&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; $scope&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; $stateParams) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                                 &lt;span class=&quot;va&quot;&gt;$stateParams&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;$stateParams&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                                 &lt;span class=&quot;va&quot;&gt;$rootScope&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;$stateParams&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; $stateParams&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                                 &lt;span class=&quot;va&quot;&gt;$scope&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;$stateParams&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                             &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;
+                         &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;)
+                         .&lt;span class=&quot;at&quot;&gt;state&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;blog&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                             &lt;span class=&quot;dt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;/articles/:name?title&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt;
+                             &lt;span class=&quot;dt&quot;&gt;templateUrl&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;function&lt;/span&gt;($stateParams) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                                 &lt;span class=&quot;cf&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;/articles/&amp;quot;&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;$stateParams&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;/index.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                             &lt;span class=&quot;op&quot;&gt;},&lt;/span&gt;
+                             &lt;span class=&quot;dt&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;op&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;function&lt;/span&gt;($rootScope&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; $scope&lt;span class=&quot;op&quot;&gt;,&lt;/span&gt; $stateParams) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                                 &lt;span class=&quot;va&quot;&gt;$rootScope&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;$stateParams&lt;/span&gt; &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; $stateParams&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                                 &lt;span class=&quot;kw&quot;&gt;var&lt;/span&gt; codeElements &lt;span class=&quot;op&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;va&quot;&gt;document&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;getElementsByTagName&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;#39;code&amp;#39;&lt;/span&gt;)&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                                 &lt;span class=&quot;cf&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;kw&quot;&gt;in&lt;/span&gt; codeElements) &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                                     &lt;span class=&quot;va&quot;&gt;hljs&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;highlightBlock&lt;/span&gt;(codeElements[i])&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                                 &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;
+                             &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;
+                         &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;)&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                 &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;])
+                 .&lt;span class=&quot;at&quot;&gt;run&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;function&lt;/span&gt;() &lt;span class=&quot;op&quot;&gt;{&lt;/span&gt;
+                     &lt;span class=&quot;va&quot;&gt;hljs&lt;/span&gt;.&lt;span class=&quot;at&quot;&gt;initHighlightingOnLoad&lt;/span&gt;()&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;
+                 &lt;span class=&quot;op&quot;&gt;}&lt;/span&gt;)&lt;span class=&quot;op&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
+    <item>
+      <title>A new series! Reviews of obscure operating systems.</title>
+      <link>http://argarak.github.io//articles/a-new-series/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">http://argarak.github.io//articles/a-new-series/</guid>
+      <author></author>
+      <description>&lt;p&gt;The first epic series which will span across many parts and include many operating systems. I hope that this will be my first actually running series, as I have never managed to make one stable yet.&lt;/p&gt;
+&lt;p&gt;The first review should come in a week or so, but do not be surprised if I don’t (I’m not an active blogger).&lt;/p&gt;
+&lt;p&gt;(&lt;del&gt;EDIT: The series should start about August or September as I will be engaged during June to August due to projects I have to complete. I will hopefully have time to document them on this blog&lt;/del&gt; I have some doubts about finishing the project at all, but I’ll keep you informed of any updates…)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I hope to only look at free software operating systems (or at least partially) however I will look at abandon-ware and some old closed source systems if I run out of ideas.&lt;/p&gt;
+&lt;p&gt;I am pretty confident in this series as I do have knowledge of some systems which are obscure (even if you don’t think their uncommon, I aim to have the operating system clear less than 0.5% of the operating system market share - but no-one will actually publish the data since how will they get it when it’s about the usage of OSes no-one uses on a day-to-day basis?).&lt;/p&gt;
+&lt;p&gt;A few rules for this series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No mobile OSes&lt;/li&gt;
+&lt;li&gt;No GNU/Linux distributions (however, if they are interesting enough, I will make an independent review)&lt;/li&gt;
+&lt;li&gt;Third-party software for the OS will not be mentioned unless it is interesting, necessary for the review, or something I want to test out.&lt;/li&gt;
+&lt;li&gt;I test the operating system for current usability, I don’t give exemptions to incomplete code or not enough drivers for either QEMU or the three computers I will test the systems on:&lt;/li&gt;
+&lt;li&gt;My computer (workstation), “elephant”: (it’s bad, I know)
+&lt;ul&gt;
+&lt;li&gt;Processor : 2x AMD Athlon(tm) II X2 240 Processor&lt;/li&gt;
+&lt;li&gt;Memory : 9986MB (4266MB used)&lt;/li&gt;
+&lt;li&gt;OpenGL Renderer : Gallium 0.4 on AMD RS780 (DRM 2.43.0, LLVM 3.8.0)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;An IBM Thinkpad R40e built in 2003&lt;/li&gt;
+&lt;li&gt;Some Acer Aspire laptop that is not mine, I’ll only fall-back to it if all else fails.&lt;/li&gt;
+&lt;li&gt;I will not write a review if nothing I try works, I will give it an honourable mention at the end of another review.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anyway, I will use this layout for each of my reviews (might change throughout time however I will add it here if there’s a change).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A quick (or long) summary of what the OS is and what it wants to achieve&lt;/li&gt;
+&lt;li&gt;My experience with the system on my physical machines&lt;/li&gt;
+&lt;li&gt;Design of the graphical user interface and how usable it is (if there is one)&lt;/li&gt;
+&lt;li&gt;Reviews of interesting programs included with the system&lt;/li&gt;
+&lt;li&gt;Looking back at what the operating system wants to achieve and if it has been achieved&lt;/li&gt;
+&lt;li&gt;A final thought and a mark out of this list (The operating system should be able to):&lt;/li&gt;
+&lt;li&gt;Display a 32-bit colour interface with a suitable resolution&lt;/li&gt;
+&lt;li&gt;Multiple monitor support&lt;/li&gt;
+&lt;li&gt;Alternate keyboard layouts support (Dvorak)&lt;/li&gt;
+&lt;li&gt;Playback of common video, music and image files&lt;/li&gt;
+&lt;li&gt;Word processing or some writing program&lt;/li&gt;
+&lt;li&gt;Compilation of code (most likely C however, other languages will do)&lt;/li&gt;
+&lt;li&gt;Browse the internet (third-party software may be required)&lt;/li&gt;
+&lt;li&gt;Some interesting or niche feature that makes the operating system stand out&lt;/li&gt;
+&lt;li&gt;A conclusion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now when I say operating system some of you may shout at me “OPERATING SYSTEMS ARE NOT GRAPHICAL USER INTERFACES!!!!” and you are correct. In practise, you never interact with the operating systems, programs and libraries do, and you interact with the programs. However, I’ll look how usable the programs are, which use the operating system. I will not look into technical details about the system or look at any underlying code (unless I already have previous knowledge).&lt;/p&gt;
+&lt;p&gt;I hope you enjoy this new series.&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>

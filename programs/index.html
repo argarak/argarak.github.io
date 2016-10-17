@@ -1,0 +1,14 @@
+
+<div flex="flex" ng-controller="programsController" ng-init="fetch()" class="flex-items">
+  <md-progress-circular ng-hide="programsLoaded" md-mode="indeterminate" class="progress-fixed"></md-progress-circular>
+  <md-list flex="flex">
+    <md-list-item ng-repeat="item in data" ng-click="null" ng-href="{{item.html_url}}" class="md-3-line"> 
+      <md-icon md-svg-src="{{repo}}" aria-label="{{item.who}}" class="md-avatar repo-icon"></md-icon>
+      <div layout="column" class="md-list-item-next">
+        <h3>{{item.name}}</h3>
+        <h4>Last commit at: {{formatDate(item.pushed_at)}}</h4>
+        <p>{{item.description | characters: 70}}</p>
+      </div><span flex="flex"></span><span hide-sm="hide-sm" hide-xs="hide-xs" class="small-lang">{{item.language}}</span>
+    </md-list-item>
+  </md-list>
+</div>
