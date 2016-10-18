@@ -13,7 +13,7 @@ md-toolbar.md-tall.toolbar-padding
       | Archive
     span(flex)
     - var years = _.chain(archives).keys().reverse().value();
-#post.flow-text(ng-controller="getMonth")
+#post.flow-text
   each year in years
     - var months = archives[year];
     - var monthsK = _.chain(months).keys().reverse().value();
