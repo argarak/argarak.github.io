@@ -12,6 +12,13 @@ body {
 }
 * {
   font-family: Roboto, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: 300;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
   outline: 0px none !important;
   line-height: 1.5;
 }
@@ -31,7 +38,7 @@ code {
   width: 80px !important;
   min-width: unset !important;
   max-width: unset !important;
-  z-index: 999;
+  z-index: 60;
 }
 #sidenav * {
   background: #070707;
@@ -218,7 +225,8 @@ md-autocomplete {
 .image-dialog video,
 .video-dialog video {
   max-width: 80vw;
-  width: auto;
+  height: 100%;
+  object-fit: contain;
 }
 .sidenav-fab {
   z-index: 999 !important;
