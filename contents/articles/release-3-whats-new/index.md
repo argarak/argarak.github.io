@@ -23,7 +23,7 @@ As you might have noticed, version 3 of the Argarak’s Nexus blog has been rele
 ## About, Archive pages
 
 * Bold, red title headers in the Archive and About pages;
-* Robust `base32` email munging protection
+* Robust `base32`{class="inline"} email munging protection
 
 ## Blog page
 
@@ -37,7 +37,7 @@ As you might have noticed, version 3 of the Argarak’s Nexus blog has been rele
 
 ## Micro-blogging page
 
-* Now I can post quick and short updates and stuffs with the use of a remote [pump.io](https://pumpyourself.com/) server (publishing the posts with a program called [`p`](https://github.com/xray7224/p)); 
+* Now I can post quick and short updates and stuffs with the use of a remote [pump.io](https://pumpyourself.com/) server (publishing the posts with a program called [`p`{class="inline"}](https://github.com/xray7224/p)); 
 * Pre-loader again, this time it’s more important as my bodged method of collecting all the posts may take a while;
 * Displays author, date, description and permalink.
 
@@ -49,7 +49,7 @@ Not much at all was changed about the Archive (other than the title) or RSS page
 
 Those are just codenames I come up with on the spot really. They usually have quite a shallow meaning. For instance;
 
-* Version 3 - Angled Ink-Pug refers to Angled = Angular, Ink = Stylus CSS pre-processor and Pug refers to the HTML pre-processor (and no I’ve not changed the `.jade` files to `.pug` yet)
+* Version 3 - Angled Ink-Pug refers to Angled = Angular, Ink = Stylus CSS pre-processor and Pug refers to the HTML pre-processor (and no I’ve not changed the `.jade`{class="inline"} files to `.pug`{class="inline"} yet)
 * Version 2.11 Paper Feather (one that was not published) - Feather because I cut 50 megabytes from stored video files in the history and Paper because I wanted the version to comply more with material design (~~I’ll~~ <a ui-sref="blog({ name: '', title: ''})">I won’t get onto that...</a>
  )
     

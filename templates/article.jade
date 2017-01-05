@@ -3,13 +3,14 @@ md-toolbar.md-tall.toolbar-padding
     span.md-flex
     span(flex)
     - alertLicense   = "\"" + locals.licenseTitle + "\", \"" + locals.licenseText + "\", \"I Agree\""
-    md-button.md-icon-button(ng-click="showAlert($event, " + alertLicense + ");" aria-label="Licensing")
-      md-tooltip.opaque-tooltip(md-direction="bottom")
-        | Licensing Info.
-      md-icon(md-svg-src="/icons/file.svg")
-    md-button.md-icon-button(aria-label="Date")
-      md-tooltip.opaque-tooltip(md-direction="bottom")= page.metadata.date
-      md-icon(md-svg-src="/icons/time.svg")
+    .toolbarContainer(flex layout="column" layout-align="center end")
+      md-button.md-icon-button(ng-click="showAlert($event, " + alertLicense + ");" aria-label="Licensing")
+        md-tooltip.opaque-tooltip(md-direction="left")
+          | Licensing Info.
+        md-icon(md-svg-src="/icons/file.svg")
+      md-button.md-icon-button(aria-label="Date")
+        md-tooltip.opaque-tooltip(md-direction="left")= page.metadata.date
+        md-icon(md-svg-src="/icons/time.svg")
 .article(flex)
   md-card#post.postcard
     md-card-content

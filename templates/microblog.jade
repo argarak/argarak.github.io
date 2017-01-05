@@ -1,5 +1,7 @@
 #post.flex-items(flex ng-controller="microblogController" ng-init="fetch()")
-  md-progress-circular.progress-fixed(ng-hide="articlesLoaded" md-mode="indeterminate")
+  //md-progress-circular.progress-fixed(ng-hide="articlesLoaded" md-mode="indeterminate")
+  p Unfortunately, microblogging is still under development.
+  p See <a href="/#">here</a> for more information
   md-list(flex)
     md-list-item.md-3-line(ng-repeat="item in entries"
                            ng-if="item.description != null && item.description != \"" + 

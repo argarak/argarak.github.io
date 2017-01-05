@@ -108,7 +108,7 @@ app.directive('animchange', function($animate, $timeout) {
     return function(scope, elem, attr) {
         scope.$watch(attr.animchange, function(nv, ov) {
             if(nv != ov) {
-                var c = nv > ov ? 'change-up' : 'change';
+                var c = nv === ov ? 'change-up' : 'change';
                 $animate.addClass(elem, c).then(function() {
                     $timeout(function() {
                         $animate.removeClass(elem, c);
@@ -130,7 +130,7 @@ app.filter("titleFilter", function($state) {
     String.prototype.capitalize = function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
     }
-    
+
     return function(x) {
         if(x !== undefined)
             return x.capitalize() + " - Argarak's Nexus";
@@ -181,7 +181,6 @@ app.controller("homeController", function($scope, $interval, $log, $http) {
         $scope.date = out.data._wrapped[0].metadata.date;
         $scope.intro = out.data._wrapped[0]._htmlraw;
         $scope.link = out.data._wrapped[0].filepath.relative.split("/")[1];
-        console.log($scope.link);
         $scope.color = self.randColor();
     }, function(out) {
         console.log("Failed to GET /article.js");
@@ -194,16 +193,37 @@ app.controller("homeController", function($scope, $interval, $log, $http) {
         $scope.color = self.randColor();
     }
 
+    self.updateNext = function() {
+        $scope.determinateValue = 0;
+        if(self.articleIndex === self.out.data._wrapped.length - 1)
+            self.articleIndex = 0;
+        else
+            self.articleIndex++;
+        self.update(self.articleIndex);
+    }
+
+    self.updatePrev = function() {
+        $scope.determinateValue = 0;
+        if(self.articleIndex === 0)
+            self.articleIndex = self.out.data._wrapped.length - 1;
+        else
+            self.articleIndex--;
+        self.update(self.articleIndex);
+    }
+
+    self.pauseval = 1;
+    self.paused = false;
+
+    self.pauseplay = function() {
+        self.pauseval = self.pauseval === 1 ? 0 : 1;
+        self.paused = !self.paused;
+    }
+
     $scope.determinateValue = 0;
     $interval(function() {
-        $scope.determinateValue += 1;
-        if($scope.determinateValue > 100) {
-            $scope.determinateValue = 0;
-            if(self.articleIndex === self.out.data._wrapped.length - 1)
-                self.articleIndex = 0;
-            else
-                self.articleIndex++;
-            self.update(self.articleIndex);
+         $scope.determinateValue += self.pauseval;
+         if($scope.determinateValue > 100) {
+             self.updateNext();
         }
     }, 70);
 });

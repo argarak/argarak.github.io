@@ -3,13 +3,14 @@
         "url": "http://argarak.github.io/",
         "name": "Argarak's Nexus",
         "navbar": [
-            ["nexus.svg",     "home",      "Home",         0],
-            ["about.svg",     "about",     "About",        1],
-            ["blog.svg",      "blog",      "Blog",         2],
-            ["programs.svg",  "programs",  "Repositories", 3],
-            ["archive.svg",   "archive",   "Archive",      4],
-            ["microblog.svg", "microblog", "Microblog",    5],
-            ["rss.svg",       "/feed.xml", "RSS",          6]
+            ["nexus.svg",       "home",      "Home",         0],
+            ["about.svg",       "about",     "About",        1],
+            ["blog.svg",        "blog",      "Blog",         2],
+            ["programs.svg",    "programs",  "Repositories", 3],
+            ["archive.svg",     "archive",   "Archive",      4],
+            ["microblog.svg",   "microblog", "Microblog",    5],
+            ["rss.svg",         "/feed.xml", "RSS",          6],
+            ["new_release.svg", "changelog", "Changelog",    7]
         ],
         "css": [
             "/css/angular-material.min.css",

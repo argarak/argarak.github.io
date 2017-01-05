@@ -1,7 +1,7 @@
 
 body-color      = #0e0e0e
 sidenav-color   = #070707
-navbarColors    = (#F44336 #E91E63 #9C27B0 #673AB7 #3F51B5 #2196F3 #009688)
+navbarColors    = (#F44336 #E91E63 #9C27B0 #673AB7 #3F51B5 #2196F3 #009688 #4CAF50)
 post-width      = 70vw
 accent          = #E91E63
 primary         = #F44336
@@ -60,7 +60,6 @@ code
       max-width 64px !important
 
 md-tooltip
-  margin-left 10px
   *
     border-radius 0 !important
     padding 10px !important
@@ -104,6 +103,7 @@ a
     @media screen and (max-width 470px)
       font-size 7vw
   #post
+    box-shadow none
     width post-width
     margin auto
     font-weight 300 !important
@@ -124,7 +124,7 @@ code *
   padding-bottom 50px
   z-index 0
 
-.figure:hover
+.figure img:hover
   cursor pointer
 
 .flow-text video
@@ -336,7 +336,7 @@ hr, h1
   color #fff
 
 .backgr
-  background #000
+  background #070707
   text-align center
 
 #about
@@ -373,3 +373,20 @@ hr, h1
 
 h1, h2, h3, h4, h5
   font-weight 400 !important
+
+.toolbarContainer
+  margin-top 150px
+
+.articleProgress
+  margin-right 20px
+
+#post md-card-content
+  padding 0
+  .flow-text p:first-child::first-letter
+    background #070707
+    padding 10px
+    font-family Monospace, Serif
+    margin-right 5px
+    font-size 80px
+    float left
+    color primary

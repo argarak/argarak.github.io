@@ -33,12 +33,12 @@ html(ng-app="nexus")
         a(href=href)
           md-button.md-icon-button(aria-label=tooltip)
             md-icon(md-svg-icon=src)
-          //md-tooltip(md-direction="top" class="tooltip" + index)= tooltip  
+          md-tooltip(md-direction="top" class="tooltip" + index)= tooltip  
       else  
         a(ui-sref="navbar({ name: \"" + href + "\" })")
           md-button.md-icon-button(aria-label=tooltip)
             md-icon(md-svg-icon=src)
-          //md-tooltip(md-direction="top" class="tooltip" + index)= tooltip
+          md-tooltip(md-direction="top" class="tooltip" + index)= tooltip
   
   body
     a(href="/librejs/license.html" style="display: none;" data-jslicense="1")

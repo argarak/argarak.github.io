@@ -1,5 +1,4 @@
-meta(name="Description" content="A development blog written by an unexperienced developer. " +
-"Mostly about web development and microcontroller based projects.")
+meta(name="Description" content="A development blog written by an unexperienced developer. Mostly about web development and microcontroller based projects.")
 
 link(rel="stylesheet" href="/css/index.css")
 
@@ -12,6 +11,22 @@ md-content.home-content(flex layout="column" ng-controller="homeController as hc
           | {{date}} • Argarak
           hr.inlinehr(flex)
         | {{title}}
+      #buttonControlContainer(flex="3" layout="row" layout-align="end center" ng-controller="homeController")
+        
+        .articleProgress(ng-bind="hc.articleIndex + 1 + \"/\" + hc.out.data._wrapped.length")
+        
+        md-button(ng-click="hc.updatePrev();")
+          md-icon(aria-label="Skip to Next" md-svg-src="/icons/skip_prev.svg")
+        
+        md-button(ng-click="hc.updateNext();")
+          md-icon(aria-label="Skip to Previous" md-svg-src="/icons/skip_next.svg")
+        
+        md-button(ng-hide="!hc.paused" ng-click="hc.pauseplay();")
+          md-icon(aria-label="Play" md-svg-src="/icons/play.svg")
+        
+        md-button(ng-hide="hc.paused" ng-click="hc.pauseplay();")
+          md-icon(aria-label="Pause" md-svg-src="/icons/pause.svg")
+      
       #color(flex="100" ng-style="{'background-color': color}" hide-sm hide-xs)
     #halftwo(flex="60" flex-xs="100" layout="row" layout-sm="column" layout-xs="column" layout-align="center")
       #intro.flow-text(animchange="intro" flex="90" layout="column" layout-align="center" ng-bind-html="intro | introFilter | trusted")
