@@ -47,13 +47,9 @@ html(ng-app="nexus")
         .noscript-message
           .text!= locals.noscript
       .container(layout="row" ng-controller="mainController" flex)
-        md-sidenav#sidenav.md-whiteframe-3dp(md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left")
-          md-content(layout-padding="" layout="column" layout-align="center")
-            each item in locals.navbar
-              +navbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])
         md-content#main-content(flex)
           ui-view      
-        md-toolbar.xs-toolbar(hide-gt-sm)
+        md-toolbar.xs-toolbar
           .md-toolbar-tools
             each item in locals.navbar
               +toolbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])
