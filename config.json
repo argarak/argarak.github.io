@@ -10,7 +10,8 @@
             ["archive.svg",     "archive",   "Archive",      4],
             ["microblog.svg",   "microblog", "Microblog",    5],
             ["rss.svg",         "/feed.xml", "RSS",          6],
-            ["new_release.svg", "changelog", "Changelog",    7]
+            ["new_release.svg", "changelog", "Changelog",    7],
+            ["projects.svg",    "",          "Projects",     8]
         ],
         "css": [
             "/css/angular-material.min.css",

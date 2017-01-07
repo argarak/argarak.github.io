@@ -2,16 +2,16 @@
   //md-progress-circular.progress-fixed(ng-hide="articlesLoaded" md-mode="indeterminate")
   p Unfortunately, microblogging is still under development.
   p See <a href="/#">here</a> for more information
-  md-list(flex)
-    md-list-item.md-3-line(ng-repeat="item in entries"
-                           ng-if="item.description != null && item.description != \"" + 
-                           locals.noteDelete + "\" && item.description != \"" + 
-                           locals.imageDelete + "\"") 
-      img.md-avatar(ng-src="{{image}}" aria-label="{{item.author}}")
-      .md-list-item-next(layout="column")
-        h3 {{item.author}}
-        h4 {{formatDate(item.date)}}
-        p(ng-bind-html="item.description")
-        a.permalink(ng-href="{{item.link}}") 
-          md-icon.pink-link(md-svg-src="/icons/link.svg")
-          |  Permalink
+    md-list(flex)
+      md-list-item.md-3-line(ng-repeat="item in entries"
+                             ng-if="item.description != null && item.description != \"" + 
+                             locals.noteDelete + "\" && item.description != \"" + 
+                             locals.imageDelete + "\"") 
+        img.md-avatar(ng-src="{{image}}" aria-label="{{item.author}}")
+        .md-list-item-next(layout="column")
+          h3 {{item.author}}
+          h4 {{formatDate(item.date)}}
+          p(ng-bind-html="item.description")
+          a.permalink(ng-href="{{item.link}}") 
+            md-icon.pink-link(md-svg-src="/icons/link.svg")
+            |  Permalink

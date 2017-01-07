@@ -16,22 +16,16 @@ html(ng-app="nexus")
 
     each src in locals.js
       script(src=src)
-
-  mixin navbarEntry(href, src, tooltip, index)
-    li.navbarLi(class="navbarl" + index)
-      if index == 6
-        a(href=href)
-          img(src=src)
-        md-tooltip(md-direction="right" class="tooltip" + index)= tooltip  
-      else  
-        a(ui-sref="navbar({ name: \"" + href + "\" })")
-          img(src=src)
-        md-tooltip(md-direction="right" class="tooltip" + index)= tooltip
   
   mixin toolbarEntry(href, src, tooltip, index)
       if index == 6
         a(href=href)
           md-button.md-icon-button(aria-label=tooltip)
+            md-icon(md-svg-icon=src)
+          md-tooltip(md-direction="top" class="tooltip" + index)= tooltip  
+      else if index == 8
+        a(href=href)
+          md-button.md-icon-button(aria-label=tooltip ng-click="showAlert($event, \"spook\", \"so spooky oh yes\", \"oki\")")
             md-icon(md-svg-icon=src)
           md-tooltip(md-direction="top" class="tooltip" + index)= tooltip  
       else  
@@ -48,7 +42,7 @@ html(ng-app="nexus")
           .text!= locals.noscript
       .container(layout="row" ng-controller="mainController" flex)
         md-content#main-content(flex)
-          ui-view      
+          ui-view.slidedown
         md-toolbar.xs-toolbar
           .md-toolbar-tools
             each item in locals.navbar

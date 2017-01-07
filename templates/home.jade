@@ -6,25 +6,25 @@ md-content.home-content#mainbody(flex layout="column" ng-controller="homeControl
   #homecontent(flex layout="row" layout-sm="column" layout-xs="column" ng-style="{'background-color': color}")
     #halfone(flex="30" flex-sm="100" flex-xs="100" layout="column" layout-align="center")
       a#title(ui-sref="blog({ name: link, title: title })" flex="90" animchange="title" layout="column" layout-align="center")
-        #date(layout="row" layout-sm="column" hide-xs)
-          hr.inlinehr(flex)
-          | {{date}} • Argarak
-          hr.inlinehr(flex)
+        //#date(layout="row" layout-sm="column" hide-xs)
+          //hr.inlinehr(flex)
+          //| {{date}} • Argarak
+          //hr.inlinehr(flex)
         | {{title}}
       #buttonControlContainer(flex="3" layout="row" layout-align="end center" ng-controller="homeController")
         
         .articleProgress(ng-bind="hc.articleIndex + 1 + \"/\" + hc.out.data._wrapped.length")
         
-        md-button(ng-click="hc.updatePrev();")
+        md-button.md-icon-button(ng-click="hc.updatePrev();")
           md-icon(aria-label="Skip to Next" md-svg-src="/icons/skip_prev.svg")
         
-        md-button(ng-click="hc.updateNext();")
+        md-button.md-icon-button(ng-click="hc.updateNext();")
           md-icon(aria-label="Skip to Previous" md-svg-src="/icons/skip_next.svg")
         
-        md-button(ng-hide="!hc.paused" ng-click="hc.pauseplay();")
+        md-button.md-icon-button(ng-hide="!hc.paused" ng-click="hc.pauseplay();")
           md-icon(aria-label="Play" md-svg-src="/icons/play.svg")
         
-        md-button(ng-hide="hc.paused" ng-click="hc.pauseplay();")
+        md-button.md-icon-button(ng-hide="hc.paused" ng-click="hc.pauseplay();")
           md-icon(aria-label="Pause" md-svg-src="/icons/pause.svg")
       
       //#color(flex="100" ng-style="{'background-color': color}" hide-sm hide-xs)
