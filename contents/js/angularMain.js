@@ -24,6 +24,16 @@ var updateHighlighting = function() {
         hljs.highlightBlock(codeElements[i]);
 }
 
+var navIndex = {
+    home: 0,
+    about: 1,
+    blog: 2,
+    programs: 3,
+    archive: 4,
+    microblog: 5,
+    changelog: 6,
+}
+
 var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                                    "truncate", "ngSanitize", "ui.router"])
                  .config(function($mdThemingProvider) {
@@ -59,6 +69,9 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                              },
                              controller: function($rootScope, $scope, $stateParams) {
                                  $rootScope.$stateParams = $stateParams;
+                                 $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options) {
+                                     var leaving = angular.element(document.getElementByTag(""))
+                                 });
                                  updateHighlighting();
                              }
                          });
@@ -72,6 +85,11 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
                  }]);
 
 app.controller("mainController", function($scope, $mdSidenav, $mdDialog, $state, $rootScope) {
+    $scope.getState = function() {
+        console.log($state.current.name);
+        return $state.current.name;
+    }
+
     $scope.getMonth = function(index) {
         switch(index) {
             case 0:  return "January";   break;
@@ -102,6 +120,8 @@ app.controller("mainController", function($scope, $mdSidenav, $mdDialog, $state,
                      .targetEvent(ev)
         );
     }
+
+    $scope.projectToolbar = false;
 });
 
 app.directive('animchange', function($animate, $timeout) {
@@ -117,6 +137,30 @@ app.directive('animchange', function($animate, $timeout) {
             }
         });
     };
+});
+
+app.directive("mdPermalink", function() {
+    return {
+        link: function($scope, elem, attr) {
+            elem.addClass("permalinkHeading");
+
+            function generatePermalink() {
+                return "<img class=\"headingPermalink\" alt=\"permalink\" \
+                        src=\"/icons/link.svg\" \
+                        ng-click=\"console.log('aoe'); $state.go({'#': '" + attr.id + "'});\">";
+            }
+
+            elem.on("mouseover", function() {
+                if(elem.find("img").length === 0)
+                    elem.append(generatePermalink());
+            });
+
+            elem.on("mouseleave", function() {
+                if(elem.find("img").length !== 0)
+                    elem.find("img")[0].remove();
+            });
+        }
+    }
 });
 
 app.filter("introFilter", function() {

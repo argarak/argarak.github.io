@@ -410,26 +410,26 @@ md-card-title
     width 100%
     height 100%     
 
-@keyframes slideIn
-  from
-    transform translateX(-100%)
-  to
-    transform translateX(0)
-
 @keyframes slideOut
   from
     transform translateX(0)
   to
     transform translateX(100%)
+
+@keyframes slideIn
+  from
+    transform translate(-100%)
+  to
+    transform translateX(0)
         
 .slidedown.ng-enter,
 .slidedown.ng-leave
-    -webkit-transition all 1s cubic-bezier(.01,.98,1,1)
-    transition all 1s cubic-bezier(.01,.98,1,1)
+    -webkit-transition all 0.25s cubic-bezier(.01,.98,1,1)
+    transition all 0.25s cubic-bezier(.01,.98,1,1)
     overflow hidden
 
 .slidedown.ng-enter
-    animation slideIn 1s ease
+    animation slideIn 0.7s ease-in-out both
     overflow hidden
 
 .slidedown.ng-enter-active
@@ -437,9 +437,41 @@ md-card-title
     overflow hidden
 
 .slidedown.ng-leave
-    animation slideOut 1s ease
+    animation slideOut 0.7s ease-in-out both
     overflow hidden
     
 .slidedown.ng-leave-active
     left translateX(10000px)
     overflow hidden
+
+@keyframes enlarge
+  from
+    opacity 0
+  to
+    opacity 1
+
+@keyframes shrink
+  from
+    opacity 1     
+  to
+    opacity 0
+
+#projectToolbar
+  width auto
+    
+.ng-hide-add
+  animation 200ms shrink cubic-bezier(.01,.98,1,1)
+
+.ng-hide-remove
+  animation 200ms enlarge cubic-bezier(.01,.98,1,1)
+
+em
+  font-style italic
+
+.headingPermalink
+  margin-left auto
+  height inherit
+
+.permalinkHeading
+  display flex
+  align-items center

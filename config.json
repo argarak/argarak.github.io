@@ -3,15 +3,15 @@
         "url": "http://argarak.github.io/",
         "name": "Argarak's Nexus",
         "navbar": [
-            ["nexus.svg",       "home",      "Home",         0],
-            ["about.svg",       "about",     "About",        1],
-            ["blog.svg",        "blog",      "Blog",         2],
-            ["programs.svg",    "programs",  "Repositories", 3],
-            ["archive.svg",     "archive",   "Archive",      4],
-            ["microblog.svg",   "microblog", "Microblog",    5],
-            ["rss.svg",         "/feed.xml", "RSS",          6],
-            ["new_release.svg", "changelog", "Changelog",    7],
-            ["projects.svg",    "",          "Projects",     8]
+            ["nexus.svg",       "home",      "Home",          0],
+            ["about.svg",       "about",     "About",         1],
+            ["blog.svg",        "blog",      "Blog",          2],
+            ["programs.svg",    "programs",  "Repositories",  3],
+            ["archive.svg",     "archive",   "Archive",       4],
+            ["microblog.svg",   "microblog", "Microblog",     5],
+            ["rss.svg",         "/feed.xml", "RSS",           6],
+            ["new_release.svg", "changelog", "Changelog",     7],
+            ["projects.svg",    "",          "Project Pages", 8]
         ],
         "css": [
             "/css/angular-material.min.css",
@@ -32,7 +32,7 @@
             "/js/truncate.js",
             "/js/angular-ui-router.js"
         ],
-        "introCutoffs": ["<span class=\"more", "<h2", "<hr", "<p"],
+        "introCutoffs": ["<span class=\"more", "<h2", "<hr", "<p", "<hr", "<h1"],
         "licenseTitle": "Licensing Information",
         "licenseText": "All text on this page is licensed by CC-BY-ND, any artwork or video made by myself is licensed by CC-BY unless specified.",
         "dataTitle": "Article Data",

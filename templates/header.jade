@@ -25,7 +25,7 @@ html(ng-app="nexus")
           md-tooltip(md-direction="top" class="tooltip" + index)= tooltip  
       else if index == 8
         a(href=href)
-          md-button.md-icon-button(aria-label=tooltip ng-click="showAlert($event, \"spook\", \"so spooky oh yes\", \"oki\")")
+          md-button.md-icon-button(aria-label=tooltip ng-click="projectToolbar == false ? projectToolbar = true : projectToolbar = false;")
             md-icon(md-svg-icon=src)
           md-tooltip(md-direction="top" class="tooltip" + index)= tooltip  
       else  
@@ -41,9 +41,22 @@ html(ng-app="nexus")
         .noscript-message
           .text!= locals.noscript
       .container(layout="row" ng-controller="mainController" flex)
-        md-content#main-content(flex)
+        md-content#main-content(flex state="{{getState()}}")
           ui-view.slidedown
         md-toolbar.xs-toolbar
           .md-toolbar-tools
             each item in locals.navbar
               +toolbarEntry(item[1], "/navbar/" + item[0], item[2], item[3])
+            md-toolbar#projectToolbar(ng-show="projectToolbar")
+              md-fab-actions.md-toolbar-tools
+                md-button.md-icon-button(aria-label='comment')
+                  md-icon(md-svg-src='/navbar/about.svg')
+
+                md-button.md-icon-button(aria-label='label')
+                  md-icon(md-svg-src='/navbar/blog.svg')
+
+                md-button.md-icon-button(aria-label='photo')
+                  md-icon(md-svg-src='/navbar/microblog.svg')
+                  
+                md-button.md-icon-button(aria-label='' ng-click="projectToolbar = false;")
+                  md-icon(md-svg-src="/icons/close.svg")

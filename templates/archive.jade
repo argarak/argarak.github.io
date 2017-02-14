@@ -20,9 +20,9 @@ md-toolbar.md-tall.toolbar-padding
     h2.year-section= year
       hr.hr-margin
       each month in monthsK
-        ul.month-section
+        ul.month-section.flow-text
           | {{getMonth(#{month})}}
           each item in months[month]
-            li.post-item
+            li.post-item.flow-text
               a(ui-sref="blog({ name: \"" + item.url.substring(10, item.url.length - 1) + "\" })")
                 = item.title
