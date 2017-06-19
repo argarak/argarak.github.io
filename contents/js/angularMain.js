@@ -139,29 +139,29 @@ app.directive('animchange', function($animate, $timeout) {
     };
 });
 
-app.directive("mdPermalink", function() {
-    return {
-        link: function($scope, elem, attr) {
-            elem.addClass("permalinkHeading");
+// app.directive("mdPermalink", function() {
+//     return {
+//         link: function($scope, elem, attr) {
+//             elem.addClass("permalinkHeading");
 
-            function generatePermalink() {
-                return "<img class=\"headingPermalink\" alt=\"permalink\" \
-                        src=\"/icons/link.svg\" \
-                        ng-click=\"console.log('aoe'); $state.go({'#': '" + attr.id + "'});\">";
-            }
+//             function generatePermalink() {
+//                 return "<img class=\"headingPermalink\" alt=\"permalink\" \
+//                         src=\"/icons/link.svg\" \
+//                         ng-click=\"console.log('aoe'); $state.go({'#': '" + attr.id + "'});\">";
+//             }
 
-            elem.on("mouseover", function() {
-                if(elem.find("img").length === 0)
-                    elem.append(generatePermalink());
-            });
+//             elem.on("mouseover", function() {
+//                 if(elem.find("img").length === 0)
+//                     elem.append(generatePermalink());
+//             });
 
-            elem.on("mouseleave", function() {
-                if(elem.find("img").length !== 0)
-                    elem.find("img")[0].remove();
-            });
-        }
-    }
-});
+//             elem.on("mouseleave", function() {
+//                 if(elem.find("img").length !== 0)
+//                     elem.find("img")[0].remove();
+//             });
+//         }
+//     }
+// });
 
 app.filter("introFilter", function() {
     return function(x) {

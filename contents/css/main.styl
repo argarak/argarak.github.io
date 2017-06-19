@@ -9,10 +9,19 @@ primary         = #F44336
 important-background(color)
   background color !important
 
+// @font-face
+//   font-family "Roboto"
+//   font-style normal
+//   font-weight 300
+//   src url(/font/roboto/Roboto-Light.ttf) format('truetype')
+//       url(/font/roboto/Roboto-Light.woff2) format('woff2')
+//       url(/font/roboto/Roboto-Light.woff) format('woff')
+      
 @font-face
   font-family "Roboto"
-  src   url('/font/roboto/Roboto-Light.woff2') format('woff2')
-        url('/font/roboto/Roboto-Light.woff') format('woff')
+  font-style normal
+  font-weight 300
+  src url(/font/roboto/Roboto-Light.ttf) format('truetype');
       
 @font-face
   font-family "Ubuntu-Mono"
@@ -465,13 +474,13 @@ md-card-title
 .ng-hide-remove
   animation 200ms enlarge cubic-bezier(.01,.98,1,1)
 
+#buttonControlContainer button.ng-hide-add
+#buttonControlContainer button.ng-hide-remove
+  animation none
+
 em
   font-style italic
 
 .headingPermalink
   margin-left auto
   height inherit
-
-.permalinkHeading
-  display flex
-  align-items center

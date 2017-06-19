@@ -2,8 +2,8 @@ meta(name="Description" content="A development blog written by an unexperienced 
 
 link(rel="stylesheet" href="/css/index.css")
 
-md-content.home-content#mainbody(flex layout="column" ng-controller="homeController as hc")
-  #homecontent(flex layout="row" layout-sm="column" layout-xs="column" ng-style="{'background-color': color}")
+md-content.home-content#mainbody(flex layout="column" ng-controller="homeController as hc" ng-style="{'background-color': color}")
+  #homecontent(flex layout="row" layout-sm="column" layout-xs="column")
     #halfone(flex="30" flex-sm="100" flex-xs="100" layout="column" layout-align="center")
       a#title(ui-sref="blog({ name: link, title: title })" flex="90" animchange="title" layout="column" layout-align="center")
         //#date(layout="row" layout-sm="column" hide-xs)

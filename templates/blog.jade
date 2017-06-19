@@ -3,6 +3,11 @@
 - for(var i = 0; i < articles.length; i++) {
 -     articleUrls.push("\"" + articles[i].url + "\"");
 - }
+-
+- introFilter = function(x) {
+-   if(x !== undefined)
+-     return x.substring(0, x.indexOf("</p>"));
+- }
 
 .blog(ng-controller="blogController as ctrl")
   md-toolbar#blogtoolbar.md-whiteframe-5dp(layout="row" flex layout-align="center")
@@ -41,4 +46,4 @@
           md-card-content
             section.content
               if article.intro.length > 0
-                != typogr(article.intro).typogrify()
+                != introFilter(typogr(article.intro).typogrify())

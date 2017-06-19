@@ -117,7 +117,7 @@ It’s not necessary to describe how XOR operations work, as it’s just OR, but
 
 Shifts are a little different from regular logic operations. These move binary numbers a specific number of places either left or right. 
 
-**Mention that _BV() is a better way of using left bitshift in AVR**
+**Mention that \_BV() is a better way of using left bitshift in AVR**
 
 ## Right Shift{md-permalink=""}
 
