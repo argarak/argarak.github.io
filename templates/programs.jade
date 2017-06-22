@@ -1,11 +1,28 @@
 .flex-items#post(flex ng-controller="programsController" ng-init="fetch()")
-  md-progress-circular.progress-fixed(ng-hide="programsLoaded" md-mode="indeterminate")
-  md-list(flex)
-    md-list-item.md-3-line(ng-repeat="item in data" ng-click="null" ng-href="{{item.html_url}}") 
-      md-icon.md-avatar.repo-icon(md-svg-src="{{repo}}" aria-label="{{item.who}}")
-      .md-list-item-next(layout="column")
-        h3 {{item.name}}
-        h4 Last commit at: {{formatDate(item.pushed_at)}}
-        p {{item.description | characters: 70}}
-      span(flex)
-      span.small-lang(hide-sm hide-xs) {{item.language}}
+  md-progress-circular.progress-fixed(ng-hide="programsLoaded > 1" md-mode="indeterminate")
+  .items-container(ng-hide="programsLoaded < 2")
+    .subtitle-inline
+      h2 Repositories
+      .line
+    md-list(flex)
+      md-list-item.md-3-line(ng-repeat="item in data['argarak']" ng-click="null" ng-href="{{item.html_url}}") 
+        md-icon.md-avatar.repo-icon(md-svg-src="{{repo}}" aria-label="{{item.who}}")
+        .md-list-item-next(layout="column")
+          h3 {{item.name}}
+          h4 Last commit at: {{formatDate(item.pushed_at)}}
+          p {{item.description | characters: 70}}
+        span(flex)
+        span.small-lang(hide-sm hide-xs) {{item.language}}
+    .subtitle-inline
+      h2 Repositories in <a href="https://github.com/mirpm">mirpm</a> organisation
+      .line
+    md-list(flex)
+      md-list-item.md-3-line(ng-repeat="item in data['mirpm']" ng-click="null" ng-href="{{item.html_url}}") 
+        md-icon.md-avatar.repo-icon(md-svg-src="{{repo}}" aria-label="{{item.who}}")
+        .md-list-item-next(layout="column")
+          h3 {{item.name}}
+          h4 Last commit at: {{formatDate(item.pushed_at)}}
+          p {{item.description | characters: 70}}
+        span(flex)
+        span.small-lang(hide-sm hide-xs) {{item.language}}
+    

@@ -277,6 +277,9 @@ blockquote
   #halftwo
     background body-color
     height 100vh
+    @media screen and (max-width 470px)
+      max-height none
+      height 300vh
 
 #progress
   position fixed
@@ -430,6 +433,31 @@ md-card-title
     transform translate(-100%)
   to
     transform translateX(0)
+      
+
+@keyframes moveToLeftFade
+	from
+	to
+	  opacity 0.3 
+	  transform translateX(-100%)
+
+@keyframes moveFromLeftFade
+	from
+	  opacity 0.3 
+    transform translateX(-100%)
+  to
+
+@keyframes moveToRightFade
+	from
+	to
+	  opacity 0.3
+	  transform translateX(100%)
+
+@keyframes moveFromRightFade
+	from
+	  opacity 0.3
+	  transform translateX(100%)
+	 to
         
 .slidedown.ng-enter,
 .slidedown.ng-leave
@@ -438,7 +466,7 @@ md-card-title
     overflow hidden
 
 .slidedown.ng-enter
-    animation slideIn 0.7s ease-in-out both
+    animation moveToLeftFade 0.7s ease-in-out both
     overflow hidden
 
 .slidedown.ng-enter-active
@@ -446,7 +474,7 @@ md-card-title
     overflow hidden
 
 .slidedown.ng-leave
-    animation slideOut 0.7s ease-in-out both
+    animation moveToRightFade 0.7s ease-in-out both
     overflow hidden
     
 .slidedown.ng-leave-active
@@ -484,3 +512,13 @@ em
 .headingPermalink
   margin-left auto
   height inherit
+  
+.subtitle-inline
+  display flex
+  flex-direction row
+  align-items center
+  
+.line
+  border-bottom 1px solid white
+  flex 80
+  margin 20px

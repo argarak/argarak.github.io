@@ -86,7 +86,6 @@ var app = angular.module("nexus", ["ngMaterial", "ngAnimate", "mdLightbox",
 
 app.controller("mainController", function($scope, $mdSidenav, $mdDialog, $state, $rootScope) {
     $scope.getState = function() {
-        console.log($state.current.name);
         return $state.current.name;
     }
 
@@ -367,25 +366,36 @@ app.controller("blogController", function($scope, $timeout, $q, $log,
 });
 
 app.controller("programsController", function($scope, $http) {
+    var users = ["argarak", "mirpm"];
+    var currentIndex = 0;
+    
     $scope.method = "GET";
-    $scope.url = "https://api.github.com/users/argarak/repos";
+    //$scope.url = "https://api.github.com/users/argarak/repos";
     $scope.repo = '/icons/repo.svg';
-    $scope.programsLoaded = false;
-
+    $scope.programsLoaded = 0;
+    $scope.data = {};
+    
     $scope.fetch = function() {
-        $scope.code = null;
-        $scope.response = null;
-
-        $http({method: $scope.method, url: $scope.url}).
-        then(function(response) {
-            $scope.status = response.status;
-            $scope.data = response.data;
-            $scope.programsLoaded = true;
-        }, function(response) {
-            $scope.data = response.data || "Request failed";
-            $scope.status = response.status;
-            $scope.programsLoaded = true;
-        });
+        for(var currentUser in users) {
+            $scope.code = null;
+            $scope.response = null;
+    
+            $http({method: $scope.method, 
+                   url: "https://api.github.com/users/" + users[currentUser] + "/repos"}).
+            then(function(response) {
+                $scope.status = response.status;
+                $scope.data[response.data[0].owner.login] = response.data;
+                
+                ++$scope.programsLoaded;
+                ++currentIndex;
+            }, function(response) {
+                $scope.data[response.data[0].owner.login] = response.data || "Request failed";
+                $scope.status = response.status;
+                
+                ++$scope.programsLoaded;
+                ++currentIndex;
+            });
+        }
     }
 
     $scope.formatDate = function(date) {
